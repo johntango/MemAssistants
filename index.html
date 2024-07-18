@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Managing Assistants MIT Mark 1</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <style>
+      .label-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: left;
+        margin-left: 20px;
+      }
+      .card {
+        margin: 20 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+      }
+      .card-body {
+        padding: 30px;
+      }
+    </style>
+    <!-- jQuery library -->
+
+    <script>
+      let data = {
+        assistant_id: "",
+        assistant_name: "",
+        dir_path: "",
+        news_path: "",
+        thread_id: "",
+        message: "",
+        func_name: "",
+        run_id: "",
+        status: "",
+      };
+
+      function get_data_from_elements() {
+        data.assistant_id = document.getElementById("assistant_id").value;
+        data.assistant_name = document.getElementById("assistant_name").value;
+        data.dir_path = document.getElementById("dir_path").value;
+        data.news_path = document.getElementById("news_path").value;
+        data.thread_id = document.getElementById("thread_id").value;
+        data.message = document.getElementById("message").value;
+        data.run_id = document.getElementById("run_id").value;
+        data.status = document.getElementById("run_status").value;
+      }
+      function write_data_to_elements(data) {
+        document.getElementById("assistant_id").value = data.assistant_id;
+        document.getElementById("assistant_name").value = data.assistant_name;
+        document.getElementById("dir_path").value = data.dir_path;
+        document.getElementById("news_path").value = data.news_path;
+        document.getElementById("thread_id").value = data.thread_id;
+        document.getElementById("message").value = data.message;
+        document.getElementById("run_id").value = data.run_id;
+        document.getElementById("run_status").value = data.status;
+      }
+
+      function write_to_div(route, message) {
+        // Ensure response is a valid array;
+        if (!Array.isArray(message)) {
+          let responseDiv = document.getElementById("response");
+          responseDiv.innerHTML = JSON.stringify(message);
+          return;
+        }
+
+        // Select the target div
+        let responseDiv = document.getElementById("response");
+        if (!responseDiv) {
+          console.error("No div with id 'response' found.");
+          return;
+        }
+
+        // Clear previous contents
+        responseDiv.innerHTML = "";
+
+        // Iterate through each object in the array
+        message.forEach((item) => {
+          // Create a new span element for each item
+          var span = document.createElement("span");
+
+          // check if item.content or item.function
+          if ("content" in item) span.textContent = item.content;
+          // check if item.function exists
+          if ("function" in item) {
+            span.textContent = JSON.stringify(item.function);
+          } else {
+            span.textContent = JSON.stringify(item);
+          }
+
+          // Assign color based on the role
+          switch (item.role) {
+            case "user":
+              span.style.color = "green";
+              break;
+            case "assistant":
+              span.style.color = "blue";
+              break;
+            case "system":
+              span.style.color = "red";
+              break;
+            case "function":
+              span.style.color = "purple";
+              break;
+            default:
+              span.style.color = "black"; // Default color
+          }
+
+          // Append the span to the div
+          responseDiv.appendChild(span);
+          responseDiv.appendChild(document.createElement("br")); // Add a line break for readability
+        });
+      }
+      async function sendRequest(route) {
+        get_data_from_elements();
+        console.log(`sending data: ${JSON.stringify(data)} to ${route}`);
+        let response = await fetch(`/${route}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+          mode: "cors",
+        });
+        let res = await response.json();
+        console.log(`In UI response: ${JSON.stringify(res)}`);
+        await parse_response(route, res);
+        return;
+      }
+      async function parse_response(route, response) {
+        data = response.focus;
+        write_data_to_elements(data);
+        write_to_div(route, response.message);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-body">
+        <section class="part2">
+          <div class="container">
+            <div class="row" style="width: 70%">
+              <div class="col-sm-4">
+                <img
+                  alt=""
+                  class="resize-image left-side"
+                  id="image1"
+                  src="logo001.jpg"
+                  width="70"
+                  height="50"
+                />
+              </div>
+              <div class="col-sm-4">
+                <h4 class="left-side-text">MIT Assistant Builder 0.0.3</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+        <label for="assistant_id" class="label-container">Assistant</label>
+
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('run_assistant')"
+        >
+          Create and Run
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('get_assistant')"
+        >
+          Get Assistant by Name
+        </button>
+        <input type="text" id="assistant_name" name="assistant_name" />
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('list_assistants')"
+        >
+          List
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('delete_assistant')"
+        >
+          Delete
+        </button>
+        <input type="text" id="assistant_id" name="assistant_id" />
+
+        <label for="dir_path" class="label-container"
+          >File Load from Directory:</label
+        >
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('upload_files')"
+        >
+          Upload Files
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('create_file')"
+        >
+          Attach
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('list_files')"
+        >
+          List
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('delete_file')"
+        >
+          Delete
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('run_whisper')"
+        >
+          Run Whisper
+        </button>
+        <input
+          type="text"
+          id="dir_path"
+          name="dir_path"
+          value="Input Directory Path"
+        />
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('news_path')"
+        >
+          Get News Feed
+        </button>
+        <input
+          type="text"
+          id="news_path"
+          name="news_path"
+          value="Input News Topic"
+        />
+
+        <label for="thread_id" class="label-container">Thread ID:</label>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('create_thread')"
+        >
+          Create
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('delete_thread')"
+        >
+          Delete
+        </button>
+        <input type="text" id="thread_id" name="thread_id" />
+
+        <label for="run_id" class="label-container">Run ID:</label>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('create_run')"
+        >
+          Create
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('delete_run')"
+        >
+          Cancel Run
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('run_status')"
+        >
+          Get Status
+        </button>
+        <input type="text" id="run_id" name="run_id" />
+        <input type="text" id="run_status" name="run_status" />
+
+        <label for="message" class="label-container">Messages:</label>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('create_message')"
+        >
+          Create Message
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('get_messages')"
+        >
+          Get Messages
+        </button>
+        <input type="text" id="message" name="message" />
+
+        <label for="func_name" class="label-container">Add Tools:</label>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('list_tools')"
+        >
+          Add Tools
+        </button>
+
+        <div>
+          <label for="response">Response from GPT:</label>
+        </div>
+        <div
+          id="response"
+          style="width: 80%; height: 700px; background: rgb(196, 238, 175)"
+        ></div>
+        <div id="functions"></div>
+      </div>
+    </div>
+  </body>
+</html>

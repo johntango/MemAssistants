@@ -1,0 +1,21 @@
+Metadata: 
+  
+
+Title: "The Efficiency of Locomotion and the Power of Technology"
+Author: Steve Jobs
+Publication: Scientific American
+Date: N/A
+Keywords: tool builders, efficiency of locomotion, species, planet, condor, humans, crown of creation, Scientific American, insight, bicycle, computer, remarkable tool, minds 
+
+ Original Text: 
+ I think one of the things that really separates us from the high primates is that we're tool builders and I read a study that measured the efficiency of locomotion for various species on the planet. The condor used the least energy to move a kilometer and humans came in with a rather unimpressive showing about a third of the way down the list. It was not too proud of a showing for the crown of creation. So that didn't look so good but then somebody at Scientific American had the insight to test the efficiency of locomotion for a man on a bicycle. And a man on a bicycle or a human on a bicycle blew the condor away completely off the top of the charts. And that's what a computer is to me. What a computer is to me is it's the most remarkable tool that we've ever come up with and it's the equivalent of a bicycle for our minds.Metadata: 
+  
+
+Title: The Importance of Programming and Communication Skills for Data Engineers
+Author: Jesse Anderson
+Source: The Ultimate Guide to Switching Careers in Big Data, written by Jesse Anderson, Managing Director of the Big Data Institute
+Date: N/A
+Keywords: data engineers, talents, programming background, communication skills, social skills, Python, data pipelines, acquisition, processing, internal customers, data scientists, data analysts, cost control, monitoring, storing, data, corporation, center, course 
+
+ Original Text: 
+ So, where do data engineers start? What are the talents that you need? Jesse Anderson is both a data engineer and the managing director of the Big Data Institute, and he's author of the book, The Ultimate Guide to Switching Careers in Big Data. And he believes you can't stress enough the importance for a data engineer to have a strong programming background. Everyone in this area needs to have at least one programming language. Here, we're going to teach you Python and many of the libraries that go with Python. It's a great start to becoming a data engineer, but you also need good communication and social skills so that you can interface with the data science team and your product development team and your C-suite. So, what are the things that you're going to be doing? Well, you need to ensure that the data pipelines, the acquisition and the processing of data is working. You need to serve the needs of internal customers, the data scientists and the data analysts. And you need to control the cost of monitoring and storing of data. As we've said, data is the lifeblood of a corporation today, and the data engineer is at the center of that. So, we hope you enjoy this course. We think it covers what you'll need to become a data engineer. OK, bye for now.
