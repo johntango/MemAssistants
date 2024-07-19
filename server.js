@@ -411,6 +411,7 @@ app.post('/create_run', async (req, res) => {
 //
 // this is the main loop in handling messages calling functions etc
 //
+/*
 app.post('/run_status', async (req, res) => {
     let thread_id = req.body.thread_id;
     let run_id = req.body.run_id;
@@ -441,7 +442,7 @@ app.post('/run_status', async (req, res) => {
         res.status(500).json({ message: 'Run Status failed' }, focus);
     }
 })
-
+*/
 app.post('/delete_run', async (req, res) => {
     let thread_id = req.body.thread_id;
     let assistant_id = req.body.assistant_id;

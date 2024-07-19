@@ -286,7 +286,7 @@ const execute = async (document, question) => {
 
         // Get the most relevant URL
         const mostRelevantUrl = similarityScores[0].url;
-        console.log("mostRelevantUrl", mostRelevantUrl);
+        console.log("mostRelevant Fact", crawledData.contents[mostRelevantUrl]);
 
         // Fetch the content of the most relevant URL
         let htmlContent;
