@@ -390,16 +390,22 @@ app.post('/create_run', async (req, res) => {
     let assistant_id = req.body.assistant_id;
     console.log("create_run thread_id: " + thread_id + " assistant_id: " + assistant_id);
     try {
-        let response = await openai.beta.threads.runs.create(thread_id, {
-            assistant_id: assistant_id
+          // run and poll thread V2 API feature
+        let run = await openai.beta.threads.runs.createAndPoll(thread_id, {
+            assistant_id: focus.assistant_id
         })
-        focus.run_id = response.id;
-        console.log("create_run response: " + JSON.stringify(response));
-        res.status(200).json({ message: JSON.stringify(response), focus: focus });
+        let run_id = run.id;
+        focus.run_id = run_id;
+     
+        // now retrieve the messages
+        let messages = await openai.beta.threads.messages.list(thread_id);
+        messages = messages.data;
+        let message_content = messages[0].content[0].text.value
+        res.status(200).json({message:message_content, focus:focus});
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ message: 'Run Delete failed' });
+        res.status(500).json({ message: 'Run failed' });
     }
 });
 //
@@ -409,6 +415,8 @@ app.post('/run_status', async (req, res) => {
     let thread_id = req.body.thread_id;
     let run_id = req.body.run_id;
     try {
+
+        
         let response = await openai.beta.threads.runs.retrieve(thread_id, run_id)
         let message = response;
         focus.status = response.status;
@@ -475,12 +483,11 @@ app.post('/get_messages', async (req, res) => {
     let run_id = focus.run_id;
     console.log("get_messages: on thread_id: " + thread_id + " run_id: " + run_id);
     try {
-
         await get_run_status(thread_id, run_id);
         // now retrieve the messages
         let response = await openai.beta.threads.messages.list(thread_id)
         let all_messages = get_all_messages(response);
-        let content = response.content[0].text.value;
+        let content = JSON.stringify(response.data);
         console.log(`content from LLM : ${content}`);
         res.status(200).json({ message: all_messages, focus: focus });
     }

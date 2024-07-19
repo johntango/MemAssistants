@@ -229,7 +229,7 @@ const execute = async (document, question) => {
      */
     function cosineSimilarity(a, b) {
         if (!a || !b) return;
-        console.log("start cosineSimilarity", a, b);
+        //console.log("start cosineSimilarity", a, b);
         const dotProduct = a.reduce((sum, _, i) => sum + a[i] * b[i], 0);
         const magnitudeA = Math.sqrt(a.reduce((sum, val) => sum + val * val, 0));
         const magnitudeB = Math.sqrt(b.reduce((sum, val) => sum + val * val, 0));
@@ -353,11 +353,12 @@ const execute = async (document, question) => {
         const answer = await answerQuestion(inputText,crawledData);
         console.log("Question", inputText);
         console.log("Answer:", answer);
-        return answer
+        return `${inputText} gives this ${answer}`
     } else {
         console.log(`no question to answer`)
-        return "New fact stored but no question to answer"
+        return "No question to answer"
     }
+
 }
 
 const details = {
@@ -371,11 +372,11 @@ const details = {
             },
             "question": {
                 "type": "string",
-                "description": "The qestion to answer"
+                "description": "The question to answer"
             }
         },
         "required": ["document", "question"]
     },
-    "description": "Given either a document(of tokens) to store and/or an optional question to answer, it generates and stores the tokens and embeddings, filters the most relevant document and answers the question"
+    "description": "Given either a document to store and question to answer, it generates and stores the tokens and embeddings, filters the most relevant document and answers the question"
 };
 export { execute, details }
