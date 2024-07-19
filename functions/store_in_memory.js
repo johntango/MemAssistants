@@ -30,13 +30,11 @@ const execute = async (document, question) => {
     // memory store location
     const contentsOutputPath = path.join(process.cwd(), "contents.csv");
     console.log("contentsOutputPath", contentsOutputPath);
-    if (document != null){
-        let newFact = {}
-    }
     
     // retrieve stored documents and push into contents
     const contents = [];
     let lastUrl = 0;
+    let crawledData = { contents: {} };
     try{
         
         await new Promise((resolve) => {
@@ -58,39 +56,47 @@ const execute = async (document, question) => {
                 });
         });
 
-        let crawledData = { contents: {} };
+        
         crawledData.contents = contents;
-        console.log("finish main...");
+        await addDocumentToMemory(document);
+
+        console.log("finished add document to memory ...");
     } catch (error) {
         // if no csv file found create it 
             console.log("CSV files not found. Crawling domain...", error);
-            if(document != null){
-                let newFact = {url : lastUrl, tokens : document}
-        
-                crawledData.contents = newFact;
-
-                // Save crawled contents to CSV file
-                const csvWriter = createCsvWriter.createObjectCsvWriter({
-                    path: contentsOutputPath,
-                    header: [
-                        { id: "url", title: "URL" },
-                        { id: "content", title: "Content" },
-                    ],
-                });
-                const records = crawledData.contents.map(({ url, tokens }) => ({
-                    url,
-                    content: typeof tokens === "string" ? tokens : tokens.join(" "),
-                }));
-                await csvWriter.writeRecords(records);
-                console.log(`Contents saved to ${contentsOutputPath}`);
+            if (document != null){
+                await addDocumentToMemory(document);
             } else {
                 console.log(`No document to save and memory not available`)
             }
     }
+    async function addDocumentToMemory(document) {
+        if(document != null){
+            let newFact = {url : lastUrl, tokens : document}
+    
+            crawledData.contents.push(newFact);
+
+            // Save crawled contents to CSV file
+            const csvWriter = createCsvWriter.createObjectCsvWriter({
+                path: contentsOutputPath,
+                header: [
+                    { id: "url", title: "URL" },
+                    { id: "content", title: "Content" },
+                ],
+            });
+            const records = crawledData.contents.map(({ url, tokens }) => ({
+                url,
+                content: typeof tokens === "string" ? tokens : tokens.join(" "),
+            }));
+            await csvWriter.writeRecords(records);
+            console.log(`New contents saved to ${contentsOutputPath}`);
+        }
+        else{console.log(`No document to save`)}
+    }
 
     async function tokenizeContent(content) {
         const cleanContent = removeHTMLElementNamesFromString(content);
-        const tokenizer = new WordTokenizer();
+        const tokenizer = new natural.WordTokenizer()
         const tokens = tokenizer.tokenize(cleanContent);
         return tokens.slice(0, 3000);
     }
@@ -194,13 +200,16 @@ const execute = async (document, question) => {
      */
     async function getEmbeddings(tokens) {
         console.log("start getEmbeddings");
+        // make tokens a string
+        const tokenString = tokens.join(" ");
 
         let response;
         try {
             console.log("initiating openai api call");
+
             response = await openai.embeddings.create({
                 model: "text-embedding-3-small",
-                input: tokens,
+                input: tokenString,
                 embedding_format: "float"
             });
         } catch (e) {
@@ -208,7 +217,7 @@ const execute = async (document, question) => {
             throw new Error("Error calling OpenAI API getEmbeddings");
         }
 
-        return response.data.embedding;
+        return response.data[0].embedding;
     }
 
     /**
@@ -268,7 +277,7 @@ const execute = async (document, question) => {
      * @param {object} crawledData - The crawled data.
      * @returns {string} The answer to the input text question.
      */
-    async function answerQuestion(inputText, crawledData) {
+    async function answerQuestion(inputText) {
         console.log("start answerQuestion");
         if (!inputText) inputText = "What is the Lunarmail answer to life, the universe and everything?";
         const similarityScores = await calculateSimilarityScores(
@@ -283,12 +292,11 @@ const execute = async (document, question) => {
         const mostRelevantUrl = similarityScores[0].url;
         console.log("mostRelevantUrl", mostRelevantUrl);
 
-        // Fetch the HTML content of the most relevant URL
-        let response;
+        // Fetch the content of the most relevant URL
         let htmlContent;
         try {
-            response = await axios.get(mostRelevantUrl);
-            htmlContent = response.data;
+            //response = await axios.get(mostRelevantUrl);
+            htmlContent = crawledData.contents[mostRelevantUrl].tokens;
         } catch (e) {
             console.error("Error fetching URL:", mostRelevantUrl);
             throw new Error("Error fetching URL");
@@ -345,14 +353,14 @@ const execute = async (document, question) => {
         return strippedContent;
     }
 
-    if (question != null){
-
-        const answer = await answerQuestion(inputText, crawledData);
+    if (question != ""){
+        const answer = await answerQuestion(inputText,crawledData);
         console.log("Question", inputText);
         console.log("Answer:", answer);
         return answer
-    }else{
+    } else {
         console.log(`no question to answer`)
+        return "New fact stored but no question to answer"
     }
 }
 
@@ -374,4 +382,4 @@ const details = {
     },
     "description": "Given either a document(of tokens) to store and/or an optional question to answer, it generates and stores the tokens and embeddings, filters the most relevant document and answers the question"
 };
-export { execute, details };
+export { execute, details }

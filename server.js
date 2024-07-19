@@ -479,7 +479,6 @@ app.post('/get_messages', async (req, res) => {
         await get_run_status(thread_id, run_id);
         // now retrieve the messages
         let response = await openai.beta.threads.messages.list(thread_id)
-        let 
         let all_messages = get_all_messages(response);
         let content = response.content[0].text.value;
         console.log(`content from LLM : ${content}`);

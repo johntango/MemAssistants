@@ -21,7 +21,7 @@
     "ffmpeg-extract-audio": "^1.0.2",
     "fs": "^0.0.1-security",
     "langchain": "^0.0.214",
-    "natural": "^6.10.4",
+    "natural": "^6.12.0",
     "node-html-parser": "^6.1.12",
     "openai": "^4.52.2",
     "path": "^0.12.7",
