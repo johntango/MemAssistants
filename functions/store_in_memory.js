@@ -201,7 +201,7 @@ const execute = async (document, question) => {
     async function getEmbeddings(tokens) {
         console.log("start getEmbeddings");
         // make tokens a string
-        const tokenString = tokens.join(" ");
+        const tokenString = tokens.toString();
 
         let response;
         try {
@@ -246,24 +246,20 @@ const execute = async (document, question) => {
     async function calculateSimilarityScores(inputText, crawledData) {
         console.log("start calculateSimilarityScores");
         const inputTokens = await tokenizeContent(inputText);
-        const inputRelevantTokens = await getRelevantTokens(inputTokens);
-        const inputEmbedding = await getEmbeddings(inputRelevantTokens)[0];
+        //const inputRelevantTokens = await getRelevantTokens(inputTokens);
+        const inputEmbedding = await getEmbeddings(inputTokens);
 
         const similarityScores = [];
 
         for (const { url, tokens } of crawledData.contents) {
-            const relevantTokens = await getRelevantTokens(tokens);
-            const contentEmbedding = await getEmbeddings(relevantTokens)[0];
-
-            const avgEmbedding = [];
-            for (let i = 0; i < inputEmbedding?.length; i++) {
-                avgEmbedding[i] = (inputEmbedding[i] + contentEmbedding[i]) / 2;
-            }
-
+            //const relevantTokens = await getRelevantTokens(tokens);
+            const contentEmbedding = await getEmbeddings(tokens);
+            
             const similarityScore =
-                cosineSimilarity(inputEmbedding, avgEmbedding) *
-                cosineSimilarity(contentEmbedding, avgEmbedding);
+                cosineSimilarity(inputEmbedding, contentEmbedding) 
+              
             similarityScores.push({ url, similarityScore });
+        
         }
 
         console.log("finish calculateSimilarityScores");
