@@ -19,9 +19,8 @@ const MAXCOUNT = 10;
 // DocIds/Fact_Ids will be integers 0,1,2 etc
 // Facts will be created based on solely on LLM (store_in_memory function call xxxx)
 
-const execute = async (document, question) => {
+const execute = async ( document, question) => {
     dotenv.config();
-
     const inputText = question;
     // get OPENAI_API_KEY from GitHub secrets
     const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
@@ -31,7 +30,7 @@ const execute = async (document, question) => {
     const contentsOutputPath = path.join(process.cwd(), "contents.csv");
     console.log("contentsOutputPath", contentsOutputPath);
     
-    // retrieve stored documents and push into contents
+    // retrieve stored documents and push into contents {url, tokens, embedding}
     const contents = [];
     let lastUrl = 0;
     let crawledData = { contents: {} };
@@ -47,7 +46,9 @@ const execute = async (document, question) => {
                             typeof data.Content === "string"
                                 ? data.Content
                                 : data.Content.toString(),
+                        embedding: data.Embedding,
                     });
+                  
                     lastUrl = contents.length;
                 })
                 .on("end", () => {
@@ -72,7 +73,9 @@ const execute = async (document, question) => {
     }
     async function addDocumentToMemory(document) {
         if(document != null){
-            let newFact = {url : lastUrl, tokens : document}
+            // embed the document
+            let documentEmbedding = await getEmbeddings(document);
+            let newFact = {url : lastUrl, tokens : document, embedding : documentEmbedding};
     
             crawledData.contents.push(newFact);
 
@@ -82,11 +85,13 @@ const execute = async (document, question) => {
                 header: [
                     { id: "url", title: "URL" },
                     { id: "content", title: "Content" },
+                    { id: "embedding", title: "Embedding" },
                 ],
             });
-            const records = crawledData.contents.map(({ url, tokens }) => ({
+            const records = crawledData.contents.map(({ url, tokens, embedding }) => ({
                 url,
                 content: typeof tokens === "string" ? tokens : tokens.join(" "),
+                embedding: embedding
             }));
             await csvWriter.writeRecords(records);
             console.log(`New contents saved to ${contentsOutputPath}`);
@@ -175,7 +180,8 @@ const execute = async (document, question) => {
             path: outputPath,
             header: [
                 { id: "url", title: "URL" },
-                { id: "relevantTokens", title: "Relevant Tokens" },
+                { id: "relevantTokens", title: "Tokens"},
+                { id: "embedding", title: "Embedding" }
             ],
         });
         const records = [];
@@ -252,7 +258,7 @@ const execute = async (document, question) => {
         const similarityScores = [];
 
         for (const { url, tokens } of crawledData.contents) {
-            //const relevantTokens = await getRelevantTokens(tokens);
+            // const relevantTokens = await getRelevantTokens(tokens);
             const contentEmbedding = await getEmbeddings(tokens);
             
             const similarityScore =

@@ -11,6 +11,7 @@ let assistants = {}
 //let tools = [{ role:"function", type: "code_interpreter" }, { role:"function",type: "retrieval" }]
 let tools = [];
 
+
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });
@@ -34,6 +35,13 @@ async function get_and_run_tool(response) {
         if (functionToExecute.execute) {
             let args = JSON.parse(toolCall.function.arguments);
             let argsArray = Object.keys(args).map((key) => args[key]);
+            // insert as first argument pointer to memoryDB
+            // check if functionToExecute contains match to  store_in_memory
+            /*  if (functionName == "store_in_memory") {
+                argsArray.unshift(memoryDB);
+            }
+                */
+            
             let functionResponse = await functionToExecute.execute(...argsArray);
             toolOutputs.push({
                 tool_call_id: toolCall.id,

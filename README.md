@@ -1,5 +1,21 @@
 # Assistant Manager Builder Mark 0.0.4
-## Simulate Data Storage called MemAssistant
+
+## Simulate Data Storage called MemAssistant that mimics MemGPT
+
+We tell the LLM to store relevant facts by calling function store_in_memory
+Presently it can also ask and answer a question but only from single document
+Facts should be consolidated into documents with significant say about "John"
+These documents could be attached to OpenAI Assistant's VectorDB or ChromaDB locally.
+The advantage of OpenAI VectorDB is that it is integrated into our Assistant and has been tuned by them
+The advantage of ChromaDB is it gives us more flexibility in interaction with other LLMS or Agents
+
+Problem: store_in_memory does not have access to web-server data structure eg MEMORY. 
+Can we pass pointer in when store_in_memory is called eg execute(memory, document, question)
+At presen store_in_memory "regains" its state by reading in file. 
+
+Install ChromaDB
+npm install --save chromadb chromadb-default-embed 
+
 
 jrw@mit.edu (email me if you find issues)
 Thanks to following for their tools
