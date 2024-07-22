@@ -34,11 +34,12 @@ const execute = async ( memory_db, document, question) => {
     
     // retrieve stored documents and push into contents {url, tokens, embedding}
     let contents = [];
-    let lastUrl = 0;
+    let nextUrl = 0;
     let crawledData = { contents: {} };
     try{
 
-        /*
+        /* This is if we want to read from a csv file
+
         await new Promise((resolve) => {
             fs.createReadStream(contentsOutputPath)
                 .pipe(csvParser())
@@ -62,55 +63,60 @@ const execute = async ( memory_db, document, question) => {
         */
         // get sqlite3 data and push into contents
 
-        contents = await readDocumentsAndEmbeddings();
-        console.log(contents);
-            
-        crawledData.contents = contents;
-        await addDocumentToMemory(document);
+        contents = await readDB(memory_db);
+        // get last url
+        nextUrl = contents.length; // should be zero based 
+        let documentEmbedding = [];
+        if (document != null){
+            documentEmbedding = await getEmbeddings(document);
+        }
+        let fact ={url: nextUrl, document: document, embeddings: documentEmbedding };
+        await insertDB(memory_db, fact);
+        
+        contents = await readDB(memory_db);
 
+        crawledData.contents = contents;
         console.log("finished add document to memory ...");
     } catch (error) {
         // if no csv file found create it 
             console.log("CSV files not found. Crawling domain...", error);
-            if (document != null){
-                await addDocumentToMemory(document);
-            } else {
-                console.log(`No document to save and memory not available`)
-            }
     }
-    async function readDocumentsAndEmbeddings() {
-        let rows = memory_db.all("SELECT * FROM agent_memory", [], (err, rows) => {
+    
+    async function readDB(db) {
+        const sql = 'SELECT * FROM agent_memory';
+        let contents = [];
+        await db.all(sql, [], (err, rows) => {
             if (err) {
                 throw err;
             }
-            
-            // Deserialize embeddings if necessary
-            let contents = rows.map(row => {
-                return {
-                    url: row.id,
+            rows.forEach((row) => {
+                console.log(row);
+                contents.push({
+                    url: row.url,
                     document: row.document,
-                    embedding: Buffer.from(row.embedding)
-                    // Add deserialization here if using JSON or another format
-                    // embedding: JSON.parse(row.embedding.toString())
-                };
+                    embeddings: row.embeddings
+                });
             });
-    
-            return contents;
         });
+        return contents;
     }
+    async function insertDB(db, data) {
+        const sql = `
+            INSERT INTO agent_memory (url, document, embeddings) 
+            VALUES (?, ?, ?)
+        `;
+       
+        db.run(sql, [data.url, data.document, data.embeddings], function (err) {
+            if (err) {
+                return console.error("Error inserting data:", err.message);
+            }
+            console.log(`Row inserted with ID: ${this.lastID}`);
+        });
+        
+    }
+
     
     async function addDocumentToMemory(document) {
-        if(document != null){
-            // embed the document and insert int db 
-            let documentEmbedding = await getEmbeddings(document);
-            let newFact = {url : lastUrl, tokens : document, embedding : documentEmbedding};
-            // write new row to database
-            memory_db.run("INSERT INTO  (url, document, embedding) VALUES (?, ?, ?)", [lastURL, document, documentEmbedding], 
-                function(err) {
-
-                if (err) {console.log(err.message);}
-                console.log(`A row has been inserted with rowid ${this.lastURL}`);
-            });
     
             /* crawledData.contents.push(newFact);
 
@@ -132,8 +138,7 @@ const execute = async ( memory_db, document, question) => {
             await csvWriter.writeRecords(records);
             console.log(`New contents saved to ${contentsOutputPath}`);
             */
-        }
-        else{console.log(`No document to save`)}
+    
     }
 
     async function tokenizeContent(content) {
@@ -422,4 +427,4 @@ const details = {
     },
     "description": "Given either a document to store and question to answer, it generates and stores the tokens and embeddings, filters the most relevant document and answers the question"
 };
-export { execute, details }
+export { execute, details };

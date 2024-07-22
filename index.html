@@ -47,6 +47,7 @@
         data.message = document.getElementById("message").value;
         data.run_id = document.getElementById("run_id").value;
         data.status = document.getElementById("run_status").value;
+  
       }
       function write_data_to_elements(data) {
         document.getElementById("assistant_id").value = data.assistant_id;
@@ -310,7 +311,13 @@
         >
           Add Tools
         </button>
-
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('close_db')"
+        >
+          Close DB
+        </button>
         <div>
           <label for="response">Response from GPT:</label>
         </div>

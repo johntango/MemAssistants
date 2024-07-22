@@ -4,7 +4,7 @@ import express from 'express';
 import path from 'path';
 const app = express();
 const port = 4000;
-import fs from 'fs';
+import fs, { read } from 'fs';
 import OpenAI from 'openai';
 import { URL } from 'url';
 import {openai, __dirname, focus, assistants, tools, get_and_run_tool, extract_assistant_id, create_or_get_assistant, create_thread, getFunctions} from './workerFunctions.js';
@@ -41,25 +41,48 @@ app.get('/', (req, res) => {
         document TEXT NOT NULL,
         embeddings BLOB NOT NULL
     )`;
-    let facts = [{url: 1, document: "This is a test document", embeddings: [0.1, 0.2, 0.3]}]
+    let facts = [{url: 0, document: "This is a test document", embeddings: [0.1, 0.2, 0.3]}]
     // write into 
     memory_db.run(create_table, (err) => {
         if (err) {
             return console.error('Error creating table:', err.message);
         }});
     //inssert into agent_memory table data
-    const insert = 'INSERT INTO agent_memory (url, document, embeddings) VALUES (?, ?, ?)';
-
-    memory_db.run(insert, [facts[0].url, facts[0].document, facts[0].embeddings], function(err) {   
-        console.log('Table created successfully');
-    });
+    
+// test data inserted
+    insertIntoTable0(memory_db, facts[0]);
     // add a row to the table
-   
     // close database and write all to file
+    readFromTable(memory_db);
+    
    
     
     res.sendFile(path.join(__dirname, '/index.html')); 
 });
+async function readFromTable(db) {
+    const sql = 'SELECT * FROM agent_memory';
+    db.all(sql, [], (err, rows) => {
+        if (err) {
+            throw err;
+        }
+        rows.forEach((row) => {
+            console.log(row);
+        });
+    });
+}
+
+async function insertIntoTable0(db, data) {
+    const sql = `
+        INSERT INTO agent_memory (url, document, embeddings) 
+        VALUES (?, ?, ?)
+    `;
+    db.run(sql, [data.url, data.document, data.embeddings], function (err) {
+        if (err) {
+            return console.error("Error inserting data:", err.message);
+        }
+        console.log(`Row inserted with ID: ${this.lastID}`);
+    });
+}
 //
 // Run 
 app.post('/run_assistant', async (req, res) => {
@@ -770,6 +793,16 @@ function getConnection(dbPath) {
         }
     });
 }
+app.get('/close_db', (req, res) => {
+    
+    memory_db.close((err) => {
+        if (err) {
+            return console.error(err.message);
+        }
+        console.log("Database connection closed.");
+    });
+    res.status(200).json({ message: "Database connection closed." });
+});
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
