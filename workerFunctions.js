@@ -1,9 +1,10 @@
 // this is the function that runs the writer assistant
 import OpenAI from 'openai';
 import fs from 'fs';
-import { get } from 'http';
+import { Server, get } from 'http';
 import path from 'path';
 import { URL } from 'url';
+import {memory_db} from './server.js';
 
 const __dirname = new URL('.', import.meta.url).pathname;
 
@@ -16,7 +17,7 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });
 // Define global variables focus to keep track of the assistant, file, thread and run
-let focus = { assistant_id: "", assistant_name: "", dir_path: "",news_path:"", file_id: "", thread_id: "", message: "", func_name: "", run_id: "", status: "" };
+let focus = { assistant_id: "", assistant_name: "", dir_path: "",news_path:"", file_id: "", thread_id: "", message: "", func_name: "", run_id: "", status: "" } ;
 
 // requires action is a special case where we need to call a function
 async function get_and_run_tool(response) {
@@ -37,10 +38,10 @@ async function get_and_run_tool(response) {
             let argsArray = Object.keys(args).map((key) => args[key]);
             // insert as first argument pointer to memoryDB
             // check if functionToExecute contains match to  store_in_memory
-            /*  if (functionName == "store_in_memory") {
-                argsArray.unshift(memoryDB);
+              if (functionName == "store_in_memory") {
+                argsArray.unshift(memory_db);
             }
-                */
+                
             
             let functionResponse = await functionToExecute.execute(...argsArray);
             toolOutputs.push({

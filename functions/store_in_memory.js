@@ -19,7 +19,9 @@ const MAXCOUNT = 10;
 // DocIds/Fact_Ids will be integers 0,1,2 etc
 // Facts will be created based on solely on LLM (store_in_memory function call xxxx)
 
-const execute = async ( document, question) => {
+// the function has access to SQLITE3 database to store the embeddings and tokens via global variable db
+
+const execute = async ( memory_db, document, question) => {
     dotenv.config();
     const inputText = question;
     // get OPENAI_API_KEY from GitHub secrets
@@ -31,11 +33,12 @@ const execute = async ( document, question) => {
     console.log("contentsOutputPath", contentsOutputPath);
     
     // retrieve stored documents and push into contents {url, tokens, embedding}
-    const contents = [];
+    let contents = [];
     let lastUrl = 0;
     let crawledData = { contents: {} };
     try{
-        
+
+        /*
         await new Promise((resolve) => {
             fs.createReadStream(contentsOutputPath)
                 .pipe(csvParser())
@@ -56,8 +59,12 @@ const execute = async ( document, question) => {
                     resolve();
                 });
         });
+        */
+        // get sqlite3 data and push into contents
 
-        
+        contents = await readDocumentsAndEmbeddings();
+        console.log(contents);
+            
         crawledData.contents = contents;
         await addDocumentToMemory(document);
 
@@ -71,15 +78,44 @@ const execute = async ( document, question) => {
                 console.log(`No document to save and memory not available`)
             }
     }
+    async function readDocumentsAndEmbeddings() {
+        let rows = memory_db.all("SELECT * FROM agent_memory", [], (err, rows) => {
+            if (err) {
+                throw err;
+            }
+            
+            // Deserialize embeddings if necessary
+            let contents = rows.map(row => {
+                return {
+                    url: row.id,
+                    document: row.document,
+                    embedding: Buffer.from(row.embedding)
+                    // Add deserialization here if using JSON or another format
+                    // embedding: JSON.parse(row.embedding.toString())
+                };
+            });
+    
+            return contents;
+        });
+    }
+    
     async function addDocumentToMemory(document) {
         if(document != null){
-            // embed the document
+            // embed the document and insert int db 
             let documentEmbedding = await getEmbeddings(document);
             let newFact = {url : lastUrl, tokens : document, embedding : documentEmbedding};
+            // write new row to database
+            memory_db.run("INSERT INTO  (url, document, embedding) VALUES (?, ?, ?)", [lastURL, document, documentEmbedding], 
+                function(err) {
+
+                if (err) {console.log(err.message);}
+                console.log(`A row has been inserted with rowid ${this.lastURL}`);
+            });
     
-            crawledData.contents.push(newFact);
+            /* crawledData.contents.push(newFact);
 
             // Save crawled contents to CSV file
+            
             const csvWriter = createCsvWriter.createObjectCsvWriter({
                 path: contentsOutputPath,
                 header: [
@@ -95,6 +131,7 @@ const execute = async ( document, question) => {
             }));
             await csvWriter.writeRecords(records);
             console.log(`New contents saved to ${contentsOutputPath}`);
+            */
         }
         else{console.log(`No document to save`)}
     }

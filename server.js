@@ -10,14 +10,12 @@ import { URL } from 'url';
 import {openai, __dirname, focus, assistants, tools, get_and_run_tool, extract_assistant_id, create_or_get_assistant, create_thread, getFunctions} from './workerFunctions.js';
 import { get } from 'http';
 import { types } from 'util';
-
-//import { OpenAI } from "@langchain/openai"
-//const sqlite3 = require('sqlite3');
+import sqlite3 from 'sqlite3';
 
 
-//const get_weather = require('./functions/get_weather.js');
- 
-// Serve static images from the 'images' folder
+const memory_db = new sqlite3.Database('my_memory.db');
+ //const db = new sqlite3.Database(':memory:');
+
 
 app.use(express.static(__dirname +'/images'));
 
@@ -35,6 +33,31 @@ app.use(express.json());
 //get the root directory
 
 app.get('/', (req, res) => {
+    // check if table memory exists if not create table called memory with unique url as primary key
+    // table consists of url, document (TEXT), embeddings (float array)
+    const create_table = `
+    CREATE TABLE IF NOT EXISTS agent_memory (
+        url INTEGER PRIMARY KEY AUTOINCREMENT,
+        document TEXT NOT NULL,
+        embeddings BLOB NOT NULL
+    )`;
+    let facts = [{url: 1, document: "This is a test document", embeddings: [0.1, 0.2, 0.3]}]
+    // write into 
+    memory_db.run(create_table, (err) => {
+        if (err) {
+            return console.error('Error creating table:', err.message);
+        }});
+    //inssert into agent_memory table data
+    const insert = 'INSERT INTO agent_memory (url, document, embeddings) VALUES (?, ?, ?)';
+
+    memory_db.run(insert, [facts[0].url, facts[0].document, facts[0].embeddings], function(err) {   
+        console.log('Table created successfully');
+    });
+    // add a row to the table
+   
+    // close database and write all to file
+   
+    
     res.sendFile(path.join(__dirname, '/index.html')); 
 });
 //
@@ -750,3 +773,5 @@ function getConnection(dbPath) {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+
+export {memory_db }
