@@ -65,15 +65,16 @@ const execute = async ( memory_db, document, question) => {
 
         contents = await readDB(memory_db);
         // get last url
-        nextUrl = contents.length; // should be zero based 
+        nextUrl = contents.length; // should be zero based id
         let documentEmbedding = [];
         if (document != null){
             documentEmbedding = await getEmbeddings(document);
         }
-        let fact ={url: nextUrl, document: document, embeddings: documentEmbedding };
+        let fact ={url: nextUrl, tokens: document, embeddings: documentEmbedding };
         await insertDB(memory_db, fact);
         
         contents = await readDB(memory_db);
+        // need to make sure that the contents are in the correct format for crawledData [{ url, tokens, embedding }]
 
         crawledData.contents = contents;
         console.log("finished add document to memory ...");
@@ -85,28 +86,20 @@ const execute = async ( memory_db, document, question) => {
     async function readDB(db) {
         const sql = 'SELECT * FROM agent_memory';
         let contents = [];
-        await db.all(sql, [], (err, rows) => {
-            if (err) {
-                throw err;
-            }
-            rows.forEach((row) => {
-                console.log(row);
-                contents.push({
-                    url: row.url,
-                    document: row.document,
-                    embeddings: row.embeddings
-                });
-            });
+        return new Promise(function(resolve,reject){
+            db.all(sql, function(err,rows){
+               if(err){return reject(err);}
+               resolve(rows);
+             });
         });
-        return contents;
     }
     async function insertDB(db, data) {
         const sql = `
-            INSERT INTO agent_memory (url, document, embeddings) 
+            INSERT INTO agent_memory (url, tokens, embeddings) 
             VALUES (?, ?, ?)
         `;
        
-        db.run(sql, [data.url, data.document, data.embeddings], function (err) {
+        db.run(sql, [data.url, data.tokens, data.embeddings], function (err) {
             if (err) {
                 return console.error("Error inserting data:", err.message);
             }

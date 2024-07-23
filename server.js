@@ -38,10 +38,10 @@ app.get('/', (req, res) => {
     const create_table = `
     CREATE TABLE IF NOT EXISTS agent_memory (
         url INTEGER PRIMARY KEY AUTOINCREMENT,
-        document TEXT NOT NULL,
+        tokens TEXT NOT NULL,
         embeddings BLOB NOT NULL
     )`;
-    let facts = [{url: 0, document: "This is a test document", embeddings: [0.1, 0.2, 0.3]}]
+    let facts = [{url: 0, tokens: "This is a test document", embeddings: [0.1, 0.2, 0.3]}]
     // write into 
     memory_db.run(create_table, (err) => {
         if (err) {
@@ -73,10 +73,10 @@ async function readFromTable(db) {
 
 async function insertIntoTable0(db, data) {
     const sql = `
-        INSERT INTO agent_memory (url, document, embeddings) 
+        INSERT INTO agent_memory (url, tokens, embeddings) 
         VALUES (?, ?, ?)
     `;
-    db.run(sql, [data.url, data.document, data.embeddings], function (err) {
+    db.run(sql, [data.url, data.tokens, data.embeddings], function (err) {
         if (err) {
             return console.error("Error inserting data:", err.message);
         }
@@ -793,7 +793,7 @@ function getConnection(dbPath) {
         }
     });
 }
-app.get('/close_db', (req, res) => {
+app.post('/close_db', (req, res) => {
     
     memory_db.close((err) => {
         if (err) {
