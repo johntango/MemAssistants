@@ -453,8 +453,13 @@ app.post('/create_run', async (req, res) => {
         // now retrieve the messages
         let messages = await openai.beta.threads.messages.list(thread_id);
         messages = messages.data;
-        let message_content = messages[0].content[0].text.value
-        res.status(200).json({message:message_content, focus:focus});
+        let content = ""
+        if (messages.length > 0) {
+            let role = messages[0].role;
+            content = messages[0].content[0].text.value;
+            focus.message = content;
+        }
+        res.status(200).json({message:content, focus:focus});
     }
     catch (error) {
         console.log(error);
