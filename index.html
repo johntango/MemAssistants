@@ -47,9 +47,9 @@
         data.message = document.getElementById("message").value;
         data.run_id = document.getElementById("run_id").value;
         data.status = document.getElementById("run_status").value;
-  
       }
       function write_data_to_elements(data) {
+        console.log(`writing data to elements: ${JSON.stringify(data)}`);
         document.getElementById("assistant_id").value = data.assistant_id;
         document.getElementById("assistant_name").value = data.assistant_name;
         document.getElementById("dir_path").value = data.dir_path;

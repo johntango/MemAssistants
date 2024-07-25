@@ -98,13 +98,16 @@ app.post('/run_assistant', async (req, res) => {
     const openai = new OpenAI({
         apiKey: process.env.OPENAI_API_KEY,
     });
-    let assistant = await create_or_get_assistant(name);
+    let assistant = null;
+    assistant = await create_or_get_assistant(name);
     let thread = await create_thread()
-
-    focus.assistant_id = assistant.id;
     focus.thread_id = thread.id;
-    focus.assistant_name = assistant.name;
-    messages = await runAssistant(focus.assistant_id, focus.thread_id, instructions);
+    // chaeck that assistant is not null
+    if(assistant != null) {
+        focus.assistant_id = assistant.id;
+        focus.assistant_name = assistant.name;
+    }
+    messages = await runAssistant(assistant_id, thread_id, instructions);
     res.status(200).json({ message: JSON.stringify(messages), focus: focus });
 });
 
@@ -132,9 +135,12 @@ app.post('/create_assistant', async (req, res) => {
 app.post('/get_assistant', async (req, res) => {
     let name = req.body.assistant_name;
     let instruction = "";
-    let assistant = await create_or_get_assistant(name, instruction);
-    focus.assistant_name = assistant.name;
-    focus.assistant_id = assistant.id;
+    let assistant = null;
+    assistant = await create_or_get_assistant(name, instruction);
+    if (assistant != null) {
+        focus.assistant_id = assistant.id;
+        focus.assistant_name = assistant.name;
+    }
     console.log('Modify request received:', req.body);
     let message = `got Assistant ${name} :` + JSON.stringify(assistant);
     res.status(200).json({ message: message, focus: focus });
@@ -187,7 +193,7 @@ app.post('/upload_files', async (req, res) => {
         files.push(`${dirname}/${file}`)
     });
     if (files.length<1) {
-        return res.status(400).send('No files were uploaded.');
+        return res.status(400).json({message:'No files were uploaded.',focus:focus});
     }
     try {
         // loop over filelist and create a stream for each file
@@ -212,7 +218,7 @@ app.post('/upload_files', async (req, res) => {
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ message: 'Upload action failed' });
+        res.status(500).json({ message: 'Upload action failed', focus: focus });
     }
 });
 
@@ -252,7 +258,7 @@ app.post('/run_whisper', async (req, res) => {
         // get list of files from directory
    
     if (files.length<1) {
-        return res.status(400).send('No files were uploaded.');
+        return res.status(400).json({message:'No files were uploaded.', focus:focus});
     }
     try {
         // loop over filelist and create a stream for each file
@@ -275,7 +281,7 @@ app.post('/run_whisper', async (req, res) => {
         fs.writeFileSync("transcription.txt", output_text);
     } catch (error) {
         console.log(error);
-        res.status(500).json({ message: 'Whisper action failed' });
+        res.status(500).json({ message: 'Whisper action failed', focus:focus });
     }
 
 });
@@ -328,14 +334,14 @@ app.post('/news_path', async (req, res) => {
 // get news from newsapi and write to a file to news directory with name + date
     let news = await get_news(topic);
     if (news == "") {
-        res.status(400).json({ message: "No news found" });
+        res.status(400).json({ message: "No news found", focus: focus });
     }   
     let date = new Date();
     let filename = `${dirname}/news_${date}.txt`;
     // write or create file and write 
     fs.writeFileSync(filename, news);
 
-    res.status(200).json(  {message: `News written to file:  ${filename}`});
+    res.status(200).json(  {message: `News written to file:  ${filename}`, focus: focus});
 })
 async function get_news(topic){
    
@@ -371,7 +377,7 @@ app.post('/list_files', async (req, res) => {
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ message: 'List files action failed' });
+        res.status(500).json({ message: 'List files action failed' , focus:focus});
     }
 });
 
@@ -390,7 +396,7 @@ app.post('/delete_file', async (req, res) => {
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ message: 'List files action failed' });
+        res.status(500).json({ message: 'List files action failed' , focus: focus});
     }
 });
 
@@ -414,7 +420,7 @@ app.post('/create_thread', async (req, res) => {
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ message: 'Thread Create failed' });
+        res.status(500).json({ message: 'Thread Create failed' , focus: focus});
     }
 });
 
@@ -428,7 +434,7 @@ app.post('/delete_thread', async (req, res) => {
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ message: 'Thread Delete failed' });
+        res.status(500).json({ message: 'Thread Delete failed' , focus: focus});
     }
 });
 
@@ -452,7 +458,7 @@ app.post('/create_run', async (req, res) => {
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ message: 'Run failed' });
+        res.status(500).json({ message: 'Run failed' , focus: focus});
     }
 });
 //
@@ -502,7 +508,7 @@ app.post('/delete_run', async (req, res) => {
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ message: 'Run Delete failed' });
+        res.status(500).json({ message: 'Run Delete failed' , focus: focus});
     }
 });
 app.post('/create_message', async (req, res) => {
@@ -521,7 +527,7 @@ app.post('/create_message', async (req, res) => {
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ message: 'Create  Message failed' });
+        res.status(500).json({ message: 'Create  Message failed' , focus: focus});
     }
 });
 
@@ -534,17 +540,17 @@ app.post('/get_messages', async (req, res) => {
         await get_run_status(thread_id, run_id);
         // now retrieve the messages
         let response = await openai.beta.threads.messages.list(thread_id)
-        let all_messages = get_all_messages(response);
+        let all_messages = await get_all_messages(response);
         let content = JSON.stringify(response.data);
         console.log(`content from LLM : ${content}`);
         res.status(200).json({ message: all_messages, focus: focus });
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ message: 'Get messages failed' });
+        res.status(500).json({ message: 'Get messages failed' , focus: focus});
     }
 });
-function get_all_messages(response) {
+async function get_all_messages(response) {
     let all_messages = [];
     let role = "";
     let content = "";
@@ -575,7 +581,7 @@ async function runAssistant(assistant_id, thread_id, user_instructions) {
         await get_run_status(thread_id, run_id); // blocks until run is completed
         // now retrieve the messages
         let response = await openai.beta.threads.messages.list(thread_id)
-        return get_all_messages(response);
+        return await get_all_messages(response);
 
     }
     catch (error) {
@@ -655,7 +661,7 @@ app.post('/loopLC', async (req, res) => {
         res.status(200).json({ message: JSON.stringify(textMessage), focus: focus });
     } catch (error) {
         console.log(error);
-        res.status(500).json({ error: "An error occurred" });
+        res.status(500).json({ error: "An error occurred", focus: focus });
     }
 });
 
@@ -684,7 +690,7 @@ app.post('/loop', async (req, res) => {
     }
     catch (error) {
         console.log(error);
-        res.status(500).json({ message: 'Get messages failed' });
+        res.status(500).json({ message: 'Get messages failed' , focus: focus});
     }
 });
 // some code that might be useful
@@ -802,7 +808,7 @@ app.post('/close_db', (req, res) => {
         }
         console.log("Database connection closed.");
     });
-    res.status(200).json({ message: "Database connection closed." });
+    res.status(200).json({ message: "Database connection closed." , focus: focus});
 });
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
