@@ -55,8 +55,6 @@ app.get('/', (req, res) => {
     // close database and write all to file
     readFromTable(memory_db);
     
-   
-    
     res.sendFile(path.join(__dirname, '/index.html')); 
 });
 async function readFromTable(db) {
@@ -329,12 +327,15 @@ app.post('/news_path', async (req, res) => {
     let topic = req.body.news_path;
 // get news from newsapi and write to a file to news directory with name + date
     let news = await get_news(topic);
+    if (news == "") {
+        res.status(400).json({ message: "No news found" });
+    }   
     let date = new Date();
     let filename = `${dirname}/news_${date}.txt`;
     // write or create file and write 
     fs.writeFileSync(filename, news);
 
-    res.status(200).json(  {"message": `News written to file:  ${filename}`});
+    res.status(200).json(  {message: `News written to file:  ${filename}`});
 })
 async function get_news(topic){
    
@@ -620,7 +621,7 @@ function addLastMessagetoArray(message, messages) {
         messages.push({ role, content });
     }
 }
-// Langchain version of Loop
+// Langchain version of Looping over Assistants - Runable 
 app.post('/loopLC', async (req, res) => {
     let thread_id = focus.thread_id;
     let writer = assistants.Writer;

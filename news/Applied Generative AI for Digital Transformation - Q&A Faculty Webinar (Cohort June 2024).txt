@@ -1,0 +1,1072 @@
+MIT Professional Education
+Alright! Everybody! Welcome! Welcome! Welcome to our 4th generative AI session, everybody. Hello! I'm a Federal Ga, friend. I do. Professional education
+also. Wanna welcome our faculty once again, Dr. O. Sanchez, Professor John Williams, gentlemen, thank you once again for being with us. Before we get started everybody once again. Let's just go over very briefly. Our ground rules just to remind everybody. So 1st of all, you can see my slide. Oh, the slide! Oh, page on that. I'm sharing on my desktop.
+The the meeting code is 4, 1, 8, 2, 1, 3, 3, and the link is on the chat. If you just wanna save yourself the trouble and just click on that.
+And as always, we wanna try to keep it equitable and have your questions be submitted outside of, and everybody's been doing such a great job. I just wanna compliment everybody on on you know, making our lives easier on this side of it and using the side of for your questions
+and voting which is just as important voting on those questions that you really wanna hear? Answered by our faculty.
+And I also wanna thank you for not putting questions. That you want answered by faculty on the chat, because that, of course, presents a an unfair advantage to those questions. And and as always, please keep your comments and your conversations and non faculty questions on the chat, so that everybody can be a party to those to that conversation, and make it very fruitful as well
+as always. Also, the session is being recorded and the recording will be available on your canvas online platform A in the next 24 h with subtitles in your native language. I do apologize if any of the sessions were not easy to find. But trust me, they are, all the recordings of all of our sessions are on canvas.
+And all of the Powerpoint slides for from our faculty are also posted within the next day they're posted on canvas if you don't. If you don't have a chance to get them during the session, and also once again, just to remind you.
+The the our faculty will post their slides
+on the on the chat as soon as they're done presenting they will post them on the
+they will post them on the on the chat as well. So just look forward to that, and no need to request them, because we will. And I will make sure to repost them for those of you who don't like to scroll up on the on the chat to find the links. I will try to just repeat
+the the post, the links to slide oh, and to the slide decks, and with that I wanna turn it over once again to our faculty. Dr. O. Sanchez! John Williams, thank you once again, and the floor is yours.
+
+Abel Sanchez
+00:03:09
+Thank you, Fred. I'm gonna go ahead and share my slides.
+And today I wanted to talk about ethics.
+Now, this can be a thorny subject, and I know it elicits a lot of questions. And so at the outset, let me say I'm not trying to say what the right thing or the wrong things are but to try to present many of the issues that are being considered.
+So with that in mind, let me go ahead and get started. I'm going to go ahead and start with the topic of change.
+We have as humans, many reactions to technology. And I wanted to start out here with a bit of comic relief. And this comes from Douglas Adams, the famous author of Hitchhikers Guide to the Galaxy.
+and he says that if you're under 15.
+This is the way it's always been.
+You don't think much of it. If you are under 35, or 15, and under 35, you think this is a career opportunity? And you think it's great
+if you are over 35. This is just against the natural order of things, and it's very wrong. And so, when it comes to considering our reactions to artificial intelligence, I wanted to pose the following
+question to you.
+can only human creators win a grammy or an Oscar that is
+artificial. Intelligence cannot only a human can.
+And so this is a simple yes or no question, and I'm going to go ahead and ask the course staff to please run that poll.
+Barbara. Oh, there it goes!
+And so, if you can please select
+Grammy, of course, is the
+music award
+to artists in the United States. And Oscars is the
+acting award right? That that it's widely known.
+And so I'm gonna go ahead. I think there are
+already quite a bit. 100% answered, Okay, thank you. Thank you for participating. I appreciate that. So I'm going to go ahead and end it, and
+there's still a few more votes coming in. I'm going to go ahead and end the poll. I'm going to go ahead and share the results.
+And as you can see, there, it is almost even
+51% to 49%. So I'm going to go ahead and shut that down.
+and I'm going to go ahead and close that up and go back to sharing my slides.
+Now some of you might be surprised by that result
+that we are almost even, and the thing that might surprise you more is that I've been running this for about a year, and I've done it with live audiences, and I've done it with 300 people in the room, and the numbers are always the same.
+And part of what I'm going to argue is that
+many of our objections have a lot to do with how we are made up.
+and when it comes to change, we struggle with it all the way back from 1818
+Mary Shelley wrote, nothing is so painful to the human mind as a great and sudden change.
+If you're not familiar with her. She is the author of Frankenstein.
+And when it comes to technology innovations that we've seen throughout our history, especially throughout the last 200 years, we can see
+similar types of reactions throughout.
+One of the ones that gets me the most is that of radio.
+You can see here headlines from the top newspapers around the world. In the Us. For example, radio is going to threaten the culture of the Us. And and what I mean what I mean by radio. By the way, it's that device that we used to use
+to sentinel, you know, to to be able to catch radio waves in our homes and listen to music and other things, not talking about anything else other than that. You can see here that there were headlines saying that a 3rd of Uk children could not read properly because of radio.
+You could see here that there were proposals that no politics should ever go on the airwaves, that every speech should be submitted to the authorities 1st for approval.
+and that last one should resonate with you that there was a deep concern that the balance of elections would be tipped.
+Now it turns out that this
+wiring that we have.
+this reactions, that we have to change, that near equal split that we had in the voting that I asked you, you know, between AI and a human is reflected
+in our makeup, in many other things, in politics especially.
+and a
+very successful author in the United States. His name is Jonathan Hayde, has written about this, and he wrote about it in the context of politics. The title of his books is the of this book is the righteous mind. Why, good people are divided by politics and religion.
+and you can see there a lot of what I have been discussing these 2 camps.
+and I will refer to them here as the press does AI boomers and AI doomers.
+And, in fact, when it comes to
+these positions. I could even map it back to publications. There's a publication that I'd like to read, simply because I know that they take the negative aspect of anything to do
+with artificial intelligence, and that's not to say that they don't write something positive once in a while, but overall, their tone is negative. They are a doomer when it comes to artificial intelligence.
+And there's another one techcrunch that takes a the opposite. Most of what they write about about AI tends to be positive.
+Now, when it comes to our own organizations, you have a lot of the same makeup.
+and you're going to have many of the same struggles, right?
+And the advantage of doomers is that it's easy to criticize
+a speaker that I
+used to listen to. Clay. Sharkey used to say it is a
+good intellectual high. It makes you feel good because you're right most of the time. Most of the new things that we try don't work.
+and if we did, our world would be very different. Right? Every politician's new plan would work, every new product or every new business insight would lead to success. And so most of the time, these do not work.
+Now. The
+the position that most of the time they do not work does not mean that they don't always work right? And this is where we get, you know, the innovations we get the Ubers, we get the Openai's. And in here I'll refer to Google the Transformer.
+the architecture that is powering genitive AI
+was discovered at Google.
+And when this happened they went to the leadership of Google. And they said, This is so great we need to redo search. And we need to transform our technology approach using the transformer
+and the leadership of Google, said Nope.
+I don't see it.
+It took Openai to pick that up and build a new company that potentially could take over that side of things throughout throughout the industry. Right
+now, when it comes to the boomers, what is the disadvantage? You have the opposite. Here you have high risk.
+and it goes against the organizational, conventional wisdom I just spoke about. You know, the challenges of trying to bring in innovation right?
+And the other thing that you need to do is you need to go against
+best practice. You need to go against many times conventional wisdom, and that's really hard to do.
+And so
+in throughout our organizations. A lot of what we need to do is we need to be able to go through that failure scenario much faster, because ultimately the world is becoming harder to predict, and we need to be able to cycle faster. There's a lot of it that's been written. We have a course, in fact, on devops. Lean startup was. This was the goal in many ways, and you can see there some of my other sources.
+Now, when it comes to the technology and the displacement. I'll say more of that later. But you can see here that we've had a number of them that have, in fact, not created the outcome that many predicted. For example, photography didn't kill paintings right? And many times now we're starting to see some of the return, because we're trying to understand or we've
+we've come back to some of the human factors that have made products successful. So one of the the fascinating ones here is that of Vinyl, right? That is outselling Cds for the second year. That's surprising.
+Now, the other one is retro cameras right? There are cameras today in the field, and, as you know, I've mentioned photography before that are not as capable as some of the high end equipment.
+Yet because of the styling, because of the nostalgia because of the human factors. As I mentioned, they're outselling
+much more capable equipment.
+And so this is an interesting aspect as well.
+But, to be fair, there are some big issues that we need to address.
+And I'm going to go ahead and play you here a small clip
+of a video.
+We live in this era where we leave digital traces throughout the course of our everyday lives.
+What is this data? How is it collected? How is it being used
+one way it's being used is to make predictions about who might commit a crime.
+Give me all your money, man, and who should get bail, count one. You're charged with felony intimidating. The idea is that if you look at past primes you might be able to predict the future.
+We want safer communities. We want societies that are less incarcerated.
+But is that what we're getting? Are the predictions reliable?
+I think algorithms can in many cases be better than people. But of course, algorithms don't have consciousness. The algorithm only knows what it's been fed
+because it's technology. We don't question them as much as we might a racist judge or a racist officer.
+They're behind this veneer of neutrality.
+We need to know who's accountable when systems harm the communities that they're designed to serve.
+Can we trust the justice of predictive algorithms.
+And should we?
+So this is just a bit of the questions that are being raised when it comes to the data that is being used in order to make decisions when they have consequences in human lives. Right? In some ways. And I will argue later, this is not new right, the impact of the data that's being used in order to assess a situation. But you can see here many of the headlines start starting to flag scenarios, and where this has happened to a negative effect.
+And so one of the questions that I would pose here is, what is bias
+and the picture that I'm going to illustrate this
+this concept with is the following.
+if I were to ask you to describe
+this picture in in artificial intelligence sense.
+the labels that you would might give. It
+might be watermelon, watermelon slices.
+
+John Williams
+00:14:40
+Good morning!
+
+Abel Sanchez
+00:14:41
+Seeds, juicy watermelon.
+But the question that I would pose to you
+is, how many of you
+would have thought to describe it as red watermelon.
+And one of the issues that we face
+is that there are some biases that we have
+that are so deeply ingrained
+that they are invisible. None of you think.
+for those of us that grew up in the world of red watermelons. Think of them as red watermelons. They just you just think of them as watermelon, and, in fact, if you were shown a picture such as the following, you would qualify it
+yellow watermelon.
+And so
+why did we not say that, in the 1st place, and that is precisely what I just mentioned? Right? It is the expected color. It is our geographical bias. It would be different than different parts of the world.
+and to some degree biases have always existed. Right? I will argue in a moment that it's part of our learning.
+What is the big deal?
+And part of it is that we're not creating products that go out into the world to communities that potentially don't have that type of representation within that data, and it has. And it leads to some of the scenarios that I just described. Right?
+We've seen some of this. During the pandemic there was a lot of headlines trying to
+address
+the biases that existed in image recognition. And you can see here that certain groups did much worse.
+There's also a correlation with income and geography as opposed to population, where most of the people in the world work right? And you can see here the headlines, and, by the way, I will share my slides. As Fred mentioned at the end of my turn.
+so you can see them.
+and it turns out that most of the time we function in what Caramon Nova Laureate described the system one. This automatic mode that we have
+that we use to be able to navigate the world. We can't think deeply about everything that we encounter. If we did that system, too.
+it would burn up all our energy. And, in fact, when it comes to being able to present material, this is one of the things that I worry about. Am I taxing you too much is my cognitive load and the material that I'm presenting to you too heavy, right? And so I tend to try to make sense on System one. But as we navigate our world.
+this is part of what we navigate our world with that bias. If you are an engineer, this is part of your bias. If you are a lawyer, this is part of your bias. And so we have this, and we have it everywhere. And so when it comes to bias and the AI lifecycle. We have it at all stages of it.
+Now, when it comes to voices, there is a tremendous amount that is being discussed
+in the public sphere.
+and I've tried to give you here a sampling. If you have not started to read up on this literature of what some of the arguments are the 1st 3 there are, or the 1st 2. There are those that are doomer type arguments. Right? They're arguing against artificial intelligence. There's some that I have included there that are pro AI,
+one of the 1st ones that I would flag there is that of, and raisin he is. Perhaps I can't think of someone that has advocated more strongly for AI than him.
+and I've provided you there with a source from Mark Schwartz, and I'll say more, I believe, towards the end on him.
+Now, when it comes to what the impact on our organizations on our governments is, this is rapidly heading towards regulation, and in some places it has already
+started to meaning. The proposals are on the table, and some of them have are already in place when it comes to the Us. The stand, the standards, and some of the frameworks that are being created are being done under Nest, the National Institute of Standards. And if you're interested again, I provided when you get the the slides you'll be able to follow the links and so on.
+In the UK.
+There is the AI Safety Institute, and surprisingly earlier, I believe it was maybe a couple months back
+they posted already. Code.
+So not only are they taking a position. They're actually posting code. And this is something that you can actually run.
+Now, I've long been a proponent of models that you can use to evaluate claims that are made, because, if nothing else.
+this grounds the conversation, you know it might be not to your liking, but at least we have something that
+it's it's right before our eyes. And then we can argue about whether the model is right or wrong.
+I talked about Mark Schwartz. He talks about adaptive adaptive ethics for digital transformation. And part of that, of course, is AI.
+It really interesting? One of the most practical books I have seen? It's not like the philosophy ones.
+Now, part of what we are
+having a conversation of is control.
+How much can we control this
+Jeffrey Hinton? You know a name that you might have not heard of. But if you were to study some of the history of AI, you'd see that he made big contributions.
+had resigned his post and has been going around, and you can again look him up, and you can see some of his arguments. But he's very worried about control. And so I thought I'd talk a little bit about some of the control scenarios, because at times I see them
+as binary, and there's no nuance to them. And so I wanted to talk 1st about what most people think about when it comes to control. And many of us can point to the high expertise AI teams. These are the elites that are working on something that it's for one company, like, for example, autonomous driving, and that they're monitoring closely
+and continuously making updates. However, when it comes to the
+resources or when it comes to the assistance, or when it comes to the plugins that we're going to get. This is very different.
+This is scenarios, and and I'll talk about 3. And the very 1st one is human led where a human is leading the way. But you're getting suggestions from an AI you can think here about, you know, a copilot type model where you're
+building software yourself, an application potentially and periodically. You're getting advice from an artificial intelligence, and it's up to you whether you accept it or not.
+And can we scale this up? Sure you can envision a scenario where every employee of the company is getting an advisor, and we're relying on that person's judgment to be able to to be able to filter and have control.
+Now a separate scenario is where the AI is leading and the human is reviewing. In this scenario you can imagine a marketing campaign where the AI creates everything beginning to end.
+Right? All of the graphics, all of the videos, all of the copy that needs to be distributed. And then the human is looking at it and saying, Yes, that's good. Go ahead.
+and you can imagine again as well a scenario where this gets scaled up pretty well, because you have a human overlooking it.
+and to some degree for those of you who might have some pause when it comes to this, this is what we have already at every stage of our pipelines and building software. Today we have human reviewing.
+and many times these are compromise and failures happen, and people scramble to try to figure it out. But we already have a pretty high level of automation that is, a human
+leading, a number of pieces that are highly automated or potentially now can be AI assistance.
+Now, the other scenario that you might have, and this is the 3rd one is where you have
+AI leading AI, and this is agentic type reasoning right?
+This is different than where you have
+a high scalability scenario. But the issue is control.
+And so here are those 3 different control scenarios that I mentioned right
+now, one of the things that is being talked about and debated quite a bit is agents, and where this level of control lies, I can tell you that at the high end we have things such as auto Gbt, which only succeeds about 12% of the time. And this is per publications, right?
+But it's fascinating to watch and what it can do right at the other end. You have examples, such as the one I provided you last time of being able to do customer support, and have different pieces that are supported by the Llm. This could be fully automated, but this is a very controlled scenario, very little leeway there for things breaking, and the middle is what a lot of people are investing on. Could we get some more autonomy? Could we get some more flexibility
+and sort of
+move to a middle ground? And so
+this is a diagram that I drew for myself right now of where
+the
+where the control scenario lies, and you could imagine that you have applications that are complex or that are simple, or that you have general reason or domain, specific reasoning. And you can see here that if you have something that it's simple, addressing it within Llm. And a prompt and prompt engineering much like the example that I showed you about
+again. Customer support right? This could be addressed readily there. But if you're going to be on that upper left quadrant, then you need domain specific rules that need to be followed. The Lm needs to be directed by some logic that is specific to your company, and in time some of these that capture wide big business scenarios or concerns may become companies themselves, but as well, this could become IP to your company
+now, when it comes to jobs right?
+I have here some of the world economic Forum projections, right? That big surprise. You know, a lot of the jobs are moving to our automation. And a lot of humans are going to be replaced. And 50% of them need rescaling
+interestingly
+in economists from Mit. David, author that was just written up, in fact, today in the Wall Street Journal. For those of you who have subscriptions and want to read up about them
+is making an argument that AI could democratize the opportunities that have not been within reach for many in the workforce.
+and this is the opposite of what has been talked about when it comes to automation, and I'll post that publication as well as well with my slides at the end of of my turn again. So this is something that that I think it's worth looking at
+now, when it comes to the objections. I I've thought about this quite a bit, and one of the questions that I would pose to you
+is, what do we object when it comes to the capabilities that AI gives us
+from the very 1st time I told you this is something that we could do before. The difference is the time, as I mentioned here, is the cost of the access and the time is it that we object to the cost, reduction to the speed, to the access to the quality. Why is it different?
+And some of the considerations for regulation?
+Now
+I'm going to go ahead. I'm running out of time here, so I'm going to go ahead and simply talk about cybersecurity as an opportunity. You can think about it much in the same terms that you do. Many of the initiatives that are undertaking for cybersecurity.
+You can think of it as as red teams and trying to find the limitations and systems that you have. You can think of it as having external companies come in and audit you practicing recovery. But ultimately this is a picture that I would recommend for you to think of when it comes to cybersecurity.
+What is it that you're trying to protect?
+How do you protect it?
+If it's breach? How do you detect the pre the breach.
+How do you respond responding is a really important part of this companies in the cybersecurity domain practice the response going before the press, their communications, and so on once a year. And ultimately, how do you recover?
+So I'm gonna go ahead and skip here towards the end, because I am running short on time.
+And
+let me make a couple of last comments.
+a lot of what
+is being discussed. It's not really about AI.
+If you were to go through the
+ethics, documents of the big tech giants, and you were to look at this list.
+This list when it comes to fairness and bias, trust and transparency, accountability, social benefit. And so on.
+This list was the same 10 years ago before
+AI started to be widely used. And so are we fighting battles of the Internet or battle fighting battles of AI.
+When it comes to the data that we're using again, this is not new linear regression. You can go to the Wikipedia page from 18 5,
+was the data that they were using to make decisions then fair. This is a question to ask as well, right?
+And I'll end up with this one because I want to be fair to John.
+What's easier to change?
+It's a humans or machines. This is another poll that I've run with many audiences and overwhelmingly, the consensus is that machines are easier to change. We fail with humans. Basically
+and so when it comes to that, there's also an opportunity as well as that risk. There is an opportunity for us to be better.
+So let me go ahead and stop there and pass it back.
+
+John Williams
+00:28:49
+Like you John.
+
+Abel Sanchez
+00:28:51
+John.
+
+John Williams
+00:28:52
+Great thanks, Sable.
+give me a lot of things to think about. I was chewing away on things when
+when he was speaking.
+I've just posted a link to my deck. Let me
+get these and.
+
+Abel Sanchez
+00:29:06
+By the way.
+
+John Williams
+00:29:07
+And to.
+
+Abel Sanchez
+00:29:07
+I haven't forgotten about the slides. It's just it takes me a few minutes to be able to generate the Pdfs. And so on. Okay.
+
+John Williams
+00:29:18
+Hey, what am I just done? Here.
+guys.
+let's check into the screen.
+Okay, good.
+Okay.
+So I want to talk a a bit about innovation and speed of innovation.
+And to some extent innovation is about design
+and
+design is one of those things that we really don't
+teach much on.
+We've got some people that do design in mit
+but there are very few
+principles of design, if you like, and so
+it does seem that
+if you're looking for where machines might play and humans might play.
+Certainly identifying. What you want to do is one area that
+it's unlikely that machines
+will have that need
+that
+in some sense they they don't eat, they don't breathe. They don't have any needs that humans have.
+And so humans innovate because they have these needs.
+But certainly it's clear that the speed of innovation is changing.
+you know, if we look at
+design of things.
+And I was, I was looking the other day at some
+stale races.
+and if you go back to the America's cup
+the
+was a history of America winning the cup, for I think it was a hundred 30 years.
+and then somebody it was Australia came up with a catamaran design
+and and beat the single hull on a hull.
+But since then there's been quite a lot of innovation, and I'll I'll talk a little bit about it. But 1st
+let's take a look at some of the things that you can use immediately. Your tools. Now that we have
+Github Co. Pilot
+co pilots work really well, and we've been using it now for
+probably 2 years, and it's been, you know, very successful. The other area I'd look is, take a look at chrome extensions. There's probably over a thousand. Now, chrome extensions, the check gpt.
+so it'll give you a good idea of what other people around the world
+are thinking about, and areas that they're already applying.
+Gpt and Chat. Gpt. T. 2. So this is an extension that you you just add it to chrome, and the other browsers will have similar, but Chrome is probably one of the most popular
+armed.
+It gives you a capability. For example, if you're reading your gmail, you can just highlight Gmail, and it will automatically send it. Say, to Gpt to write an answer for you. Similarly, with video, it'll do video transcriptions for you change languages, etc. So that's 1 area to to look at, you know, 4 ideas
+when it comes to design. It's pretty clear that
+it's not that well understood.
+but experimental. AI features. No, thanks
+the path.
+But there is certainly
+frameworks out there, and
+some of the ones that are more recent. It was the Toyota production system
+that
+asked people to continually innovate. They gave people on their on their production line
+some time and some space to innovate.
+These are 3 books that I think are worth reading. That lean start up by Eric Rice is a great book. The Art of Business value by mark Schwartz is a great book, because it's uncle. He makes. It
+makes the point. That business value is very unclear.
+you know, in your company.
+If you ask.
+you know, what's creating business value?
+Is it the people running the Gmail systems, or whatever email systems you have? Are they creating value?
+It's it's very unclear. Mick Kirsten does a great job
+of looking at frameworks
+in the software area.
+you know the experience there is very mixed. I think I mentioned last time that
+Roger Sessions is a great book and has made a career.
+Looking at projects that fail.
+and clearly as the project size increases, or the money that you're spending
+your chances of success drop drastically
+once you're up at the 100 million level
+you've got very little chance of coming in on time and on, on budget.
+And so
+I'd say, these are 3 great books to look at.
+Before you start a major project in the in the AI space.
+I think when we're talking about AI, it's.
+I think, Steve Jobs.
+apparently when he was 14, read an article in scientific America
+about the most efficient animal species
+for motion.
+and the apparently the condor
+was at the top of the list.
+and
+the humans were way down. But if you gave a human a bicycle.
+then human becomes very efficient at motion.
+And
+if you've ever watched the Tour de France, you can see.
+I mean, they're cycling a hundred 20 kilometres a day.
+and they're doing it for 3 weeks.
+So he comes up with a phrase that
+you know the computer is the bicycle of the mind. And I think you could say the same thing now about
+the large language models
+that they can increase our
+productivity.
+And hopefully, our innovation, too.
+So
+with innovation, we've certainly got a clock tick here that
+other people are.
+If you look across the world.
+you know, there are literally millions of people now thinking of ideas of how to apply AI,
+and in some sense
+everyone is looking for a niche. Everyone's looking for something where they have some advantage and can leverage it.
+We've covered this before, but if you go back at the beginning of the last century.
+it took about 100 years for knowledge to double, whereas now knowledge is doubling
+every 18 months, or some people say even faster than that in some areas.
+And so it becomes a real challenge of how to keep up that we're all racing this doubling curve.
+Where
+the
+rate of knowledge is basically feeding into our our ability to innovate.
+And certainly we're seeing that in the biotech area we're obviously seeing it now in the AI area.
+And it's pretty clear that
+the large language models have been around a few years now the transformer
+architecture, which was a major breakthrough, and the idea of attention
+that's fairly well understood.
+What's not well understood is
+whether we can turn out smaller models
+that are as performant.
+There's still a lot of research on that, and we'll maybe talk a little bit more about that about tuning, and
+there's some areas called pruning, where you get rid of a lot of weights. If a weight is negligible, then you may as well remove it from the calculation.
+And so there's some techniques of pruning where you get
+very much fewer weights. So that means that your
+your ability to run prompts through that architecture will be faster.
+But I'd like to talk a little bit about language, because to some extent
+language is our tool of thought, that
+as humans.
+it's pretty much
+at the basis of our thinking.
+So we we tend to think of language as a communication tool that it's for talking to other people.
+But it's actually as well
+the conversations that you have with yourself. Your internal thought processes are based on language.
+And we can talk about the structure of knowledge and next time.
+but it's pretty clear that
+it's very different to innovate
+at a very mature stage of a technology than to innovate at the early stage. And
+you know, we're clearly at this early stage here
+that
+we understand
+how the Llms work roughly.
+We don't have a great understanding of exactly what's going on.
+but it's pretty clear that they perform very well with language, that
+they can interpret languages from one language to another
+pretty well.
+So you've got a very different
+environment when you're innovating
+at the beginning of a technology
+than at the when it's a mature technology.
+Now the disadvantages are that
+the things that you're relying on like libraries are changing very fast.
+For example.
+I think it was
+4 5 months ago they did away with plugins for Chat Gpt.
+I had a lecture on Plugins for Chat Gpt. That is now useless because they just killed them off.
+And so you're in an environment where
+you've got this, you're trying to decide what to build on
+and
+what to build in the house.
+And that's that's quite a tricky
+decision point.
+It's clear at the moment that Openai are probably in the lead. They've got good, pretty good libraries.
+other other technologies are coming along with their libraries. But again, most of them are changing over time. So it means. Whatever you build on top is not going to be that stable
+that you're going to have to keep a watch on what changes are occurring, and maybe have to rewrite your interfaces.
+If you think about sailing. This is what I was mentioning here, Australia.
+one for the 1st time in a hundred 32 years.
+And that was with a catamaran.
+Now it's pretty amazing. There was very little innovation till then.
+and then.
+What you've got now is the hydrofoils.
+They've even got hydrofoils now for single
+single boats. You've got hydrofoils, that
+you have a little small little sale that
+you can personally hang up there.
+Another case of innovation is taking advantage of instability as a feature.
+So these kind of aircraft with wings that faced forward
+actually are unstable.
+And it's only with technology
+that we can make them stable. So humans can't fly these on their own. They're just too unstable.
+But with
+automated control, humans can fly them.
+though these are making adjustments, you know, many times a second
+to keep the plane stable.
+And so I think what we're seeing and as able's pointing out with
+when we go into cyber security
+that we're going to be. And in a lot of other controlled situations, we're going to be relying on automated control.
+And to some extent
+this is what we're already seeing in the data pipelines.
+You know, Uber has automated the pricing. It's not as if somebody is sitting there deciding what to charge you. It's all automated.
+So these are too fast for human control. There are many systems out there now that
+are too fast for human control. Certainly cybersecurity is probably one.
+I just want to
+highlight some of the things that
+if you, if you start to code against AI,
+some of the the structures or the architectures that you need to consider.
+The 1st one is that since the worldwide web came along.
+almost
+all of our apps
+are communicating
+or are hosted
+by a web server.
+So this is
+typically with web pages. This was sitting out there at an IP. Address, and you could from your cell phone, for example, hit a web page just by typing a URL.
+And
+for most of us this is what we're doing when we're hitting chat. Gpt.
+we're using a URL. So it's a message that's being sent to a web server that's hosted by Openai.
+So
+these web servers are the basic building blocks. This is probably what you will be programming if you're making some
+innovation with the large language models. So what I'm showing here is just
+how you're typing in a URL or you're typing in something that is sending a message to an IP. Address.
+And it turns out that you can actually address a function
+in that app.
+So, for example, on my cell phone. If I had a drone flying over Hong Kong.
+I could tell it to take a picture just from my phone by sending a message that would be transmitted across the web
+to that web server, and that web server, then would fire the function for me.
+So this is the way we're generally interacting.
+And
+when it comes to
+building.
+for example, agents, what we're building is something that's going to talk to the transformer
+here. I'm showing we're probably going to take one step back even further and talk to to
+basically an Api.
+and so that Api itself is a web server.
+But the thing that we will be programming is our own web server. That so we may be programming these agents
+that have certain capabilities to.
+though
+the web server here, and the Openai Api are not limited in the way that the transformer is the transformer is sitting on
+architecture on chips that run.
+Basically.
+the transformer really fast.
+It doesn't store any data.
+It just
+takes your prompt, your context window.
+puts it into the transformer and takes the response out and pushes that back.
+So the the way to do it is that the Llm. Is probably sitting on specialized hardware.
+Now, in front of that, we've got the opportunity to have access to the whole of the cloud.
+so we can build our web server. Most web servers today will be sitting in the cloud.
+So this is where we would probably be building our web server, our agents.
+and they'll be they'll have access to running functions.
+accessing
+databases or data stores, etc.
+So I think it's important to, you know. Understand exactly what you're communicating with.
+and you'll be writing code. That's sending messages to the various Apis.
+My sense is that
+we're still, these are going to be part of an infrastructure where data is important.
+It certainly
+you'll be trying to make decisions with this large language model based on data that you're you're monitoring.
+And that's still
+the hardest part or one of the hardest parts of whatever system you're you're building will be managing those data feeds.
+You've got some.
+these would be the targets at various levels and timescales that your personal productivity
+able. And I. Now we use it every day.
+We're basically have been programming against it, using the copilot to generate code, etc.
+Actually using it, as I was saying, for strategy, it's it's excellent at the strategy of figuring out what to do.
+And certainly you can pick that up in days
+or weeks at the most.
+Team leader
+or team productivity, empowering a team that's going to take a little bit longer.
+But you certainly got a role there that you can immediately leverage whether it's
+taking minute notes from minutes, condensing them down, etc. Handling the the typical workflow that you have in teams.
+The enterprise one is going to be that that requires more thought
+and people. It's it's there've been several articles recently about.
+It's fairly slow to see enterprise scale
+generative AI being used.
+I mean it. There are
+examples out there, but
+they're they're not that many.
+When you go and think about designing your system, you're going to go through some formalized framework, and, you know, gather gathering requirements, figuring out what's the low hanging fruit that you can provide to your company.
+you know, if you've got a small team you want to take a project that you pretty much know you're going to be a success set. And
+today that that probably should be less than 6 months project that you're you're going to be aiming to roll something out pretty quickly.
+And
+typically that will be fairly cheap.
+Try and try and keep it cheap, because the more complex you make it, you're the less your chance of success.
+So you'll be going through some kind of framework like that. This is just
+the kind of tools that we teach at Mit. And even there, you see, there's a fair number that
+you're you're kind of wrestling into place.
+and these would be some of the languages that if you're
+this would be your your data. Engineers would
+be familiar with probably most of these.
+The
+and you know this is the data engineer that take the raw data and push it into data sets that can be pushed either into, you know, business business intelligence tools, machine learning tools or operational analytics. And today would be maybe used to train fine tune
+generative models.
+And
+this is just some of the the
+data,
+settings.
+And these would be some decisions about what Llm to use the Gpt. 4.
+This is slightly old now.
+but
+typical for quality, you know, higher is better. This would be
+these people
+doing testing on the various Llm models out there
+throughput
+you're seeing now, Mistral is very fast for throughput.
+So
+actually running
+through the transformer
+depends a lot on how that model is structured.
+And
+the latest GPT. 4 0. Is. Actually, it's not in this list yet, but is pretty fast, and that was their goal is to speed that up.
+So it depends what you're looking for, you know. Higher speed
+tokens
+price per token.
+That's different.
+Ability and quality. You're going to trade off these
+that for some applications.
+you might want to go cheaper
+and
+context window size again. It's a trade off
+that
+you're going to be looking at. Which one of these should should I use?
+And the models
+here we're showing the commercial models. But you can fine tune a model.
+And there are literally thousands of fine tuned models already out there.
+And so typically, say, in open AI, you might fine tune a model.
+and then
+you'd be able to pick that up and run it
+in their environment.
+And then quality versus price. Again, another trade-off that you need to decide about depending on what application
+you're going to deal with.
+So I just wanted to kind of throw those concepts out there. My sense is that humans
+up
+can do things in the design space
+that I'm not sure the AI machines can do at the moment.
+I'm not sure you can throw a very abstract problem at these and have them innovate in a way that humans
+have have been able to innovate.
+So we could come back and later talk about design, because it's it's 1 of those things that doesn't have equations. Usually.
+you know, we know how to optimize systems. But the problem with optimization is, you have to know what system you're you're optimizing. You've already made decisions about the system
+and design is about okay, I'm going to change how what the system looks like.
+So it's not like, you can throw optimization at a lot of these things. Design is very different to
+optimizing.
+So let let me stop there and we'll take some questions.
+I think I posted. Yeah, I think I posted the link to the deck so that should be up there.
+
+Abel Sanchez
+00:53:41
+So while John recovers, I'll I'll go ahead and take the 1st question
+and the question is about Roi. And this is a great question in the end. Why do we care
+right? Does this make anything better? Or we just having some fun generating images and and being creative?
+And the the long answer is, we're still discovering it, or they should say, That's the the short, the short answer the longer question is there. There's already a few areas in where Roi is is very clear the very 1st one. No big surprise out of the gate is that a software engineering.
+The numbers are very clear, and when I'm done speaking I'll post some of the numbers that have been reported on the improvements. You know everything we do today means building digital products, right?
+And so if we can do that faster, this is a tremendous impact. So Roi is clear there, I have seen it in my personal experience, working with companies. I have seen it from the numbers that are being reported in the field. The second one is customer support
+clear examples across the field, and a number of various Kleiner is one of the one that stands out out there. Look that one up, that one has great returns. They were able to replace 700 humans with AI
+and their satisfaction. Customer satisfaction didn't drop, in fact, that improved. And so those. Those are 2 areas that are clear, the the other ones. It depends on what you're building, and there's many more caveats. But there's a couple of them that that stand out.
+John!
+
+John Williams
+00:55:23
+Yeah, I was noting that,
+Nvidia has now become the largest company in the world.
+Just just overtook.
+I mean, it's pretty pretty amazing the rate at which it's.
+
+Abel Sanchez
+00:55:38
+By the way.
+
+John Williams
+00:55:39
+That's great!
+
+Abel Sanchez
+00:55:39
+Great. There's a great discussion there between them and Cisco
+that Cisco became the most valuable company in the days of the Internet.
+and.
+
+John Williams
+00:55:49
+And it's right.
+
+Abel Sanchez
+00:55:49
+They weren't. They weren't. No, I mean, they're they're still valuable. They're just not as valuable as people thought. So. Is this plumbing, or can they do more? And and that's that's that's a great.
+I don't know if you want to comment on that, John.
+
+John Williams
+00:56:03
+Oh, my sense is that
+for the next 10 years they're probably in a very strong position that you know that they're already planning their
+Then then next 5 years of chips I mean the thing to to that I was amazed by is that these Gpu chips weigh 70 pounds.
+These. These replace old racks of machines.
+you know, Jason Wang is saying that
+just just the cabling on the machines that it's replacing
+would cost about $250,000.
+So when we talk about the new, these Gpu chips that they're more they're more like
+monster monster trucks than
+the chips you think about in the cell phone?
+when would this call? Just take this question quickly about publications to keep up with
+my sense is, there's obviously leaders in the field. So anything coming out of Microsoft?
+Google.
+Aws.
+X and Tesla.
+any of those leaders?
+We'll give you a high level view.
+It depends what you're looking for.
+If you're coding, you'll be monitoring some of the chat groups
+that Openai and Google Deepmind.
+And again, it depends what level of
+detail you're looking for.
+because
+I think all of us are looking. Where do we play in this
+a supply chain?
+And you know, as we've said, it's pretty clear that some some places are already taken.
+The the big companies are already there.
+so I think that's part of the challenge. And you know, if you're if you're trying to start up.
+are you trying to keep your company afloat? You know, what are you trying to do? It'll depend
+a lot on where
+what niche you're in as to what you'll be monitoring
+able. Maybe you want to
+say something about that.
+
+Abel Sanchez
+00:58:21
+Sorry, John. I was looking at the chat and writing something up. What was it that
+
+John Williams
+00:58:26
+No, I I'll I'll just give a list, you know, aliases for the top level.
+
+Abel Sanchez
+00:58:31
+Oh, yeah. Yeah.
+
+John Williams
+00:58:32
+Leaders of the company. Samuel, when it comes.
+
+Abel Sanchez
+00:58:34
+Yeah, when it comes to synthesizing the information of the field. In fact, this is something that I'm working on, and that I plan to share publicly. So in a couple of weeks you can actually ping me, and I will point you to something that I'm working on that is trying to integrate all of the information from the field on AI on a daily basis. Now, at the moment I have it, but it's a bit verbose and a little bit I think hard to digest.
+And so what I'm trying to get it is to to to produce something that's, you know, a little bit like the Wall Street Journal subscriptions, but more focused on AI.
+Now, my personal strategy is to take a look at the AI developments that are happening in startups. That's the best way to get a sense for what is coming.
+I also look at venture capitalists. They are in the business of trying to parse out what makes sense. You know, they have every incentive to get it right because they're gonna spend money, and, as we will say, everything changes when it comes to actually opening your wallet. Right? And you go. Okay, well, let me look at this a little bit closer. Right? So Sequoia andersen heroids
+others as well. And so I look at the venture capitalist, I look at you know the new startups. I look a little bit at what Google aws others produce a, you know, Openai on a daily basis, but those tend to be
+a little bit flatter, as you might expect. You know, they're not taking as much risk. So there's less that they're less aggressive on the things that they that they're doing. But yeah, I mean, as I will mention again on our closing one. I I've spent, you know, years trying to polish a number of sources that are
+that are what. Give me the market signals and field signals for what should be what you should read right? And I think ultimately the
+the hard part comes. And how do you understand? The potential of tech of a technology right? Like, Ilyases just started a new company you know. And they're he's pushing for AI safety. Is this something that the market wants? You know the the write ups made sure to show that he was not doing this as a nonprofit he wants to sell this. This is a for profit company. And so is this something that the market wants. One of the things that I
+that I'm always struck by is a great product or a great technology does not mean you can run a business right. And if you can't run a business, typically that means your technology will not get adopted right? There's a few cases where that's different. Like docker technologies there were. They did not do well in the business part, although they had huge potential, and I'd still say that they're pretty pretty good.
+But
+these are some of the considerations that I take that I take into account.
+John. I don't know if you want to take the next one.
+
+John Williams
+01:01:34
+Yeah, I just posted a a, a link to the cloud. Native computing foundation. People are asking about tools.
+Unfortunately, I mean, it's just a blizzard. We're we're not talking about tens of tools. We're talking about a.
+you know, thousands of tools out there for various
+purposes.
+So I mean, there's basic.
+It depends what you're talking about. Basic tools like Github, you know, well understood
+other tools.
+They'd just be too voluminous for us to cover.
+And
+I guess, yeah, again, it depends what what area you're talking about for the tools.
+Like, I say, I I tend to monitor the the groups on open AI. I've chosen pretty much to go after the Openai SDK
+and understand that.
+There you you'll see from the chat groups. You know what things they haven't haven't got in their products at the moment.
+You'll see people complaining about this. Doesn't you know you don't have this capability. You don't have that capability.
+So my sense, if you if you try to monitor, for example, Microsoft, that that will be a full-time job for somebody just to figure out.
+you know what a
+a 2 trillion dollar or 3 trillion dollar company is producing
+the
+It's yeah. It's it's it's a challenge.
+And again, I'd I'd say, it depends. You need to choose an area that you're interested in.
+The high level stuff is kind of interesting, but
+most of us can't play there.
+Table.
+
+Abel Sanchez
+01:03:26
+Yeah, I just posted a screenshot of my tools and the browser the ones I use. So as you can see. There, I have a lot of the ones that we have mentioned. Discord, by the way, is a great one, because they function as a platform. So mid journey. The graphics engine that many of you may be familiar with.
+launched on top of the scored and so have several others. And so wiggle. For example, you know that video that I showed about me dancing right? That that was created on Wiggle. And you can see there's some of the other startups. These are sort of
+you know, bleeding edge type things. Not not chat. Gbt, of course, right. But many of the other startups, the ones that you haven't heard of, and they're fun to try to get a sense of where what's going on. When it comes to tooling. There's some general, you know I would refer you back to the diagram that I showed when it came to. You know where AI is going, and you know I had the the
+the quadrant there of the Llm. But giving you general reasoning, and then, you know, some, some prompt engineering, and then that specialized on the upper left. As you get into the upper left, you're looking at new capabilities and new platforms and new IP in a way right that they're providing support for workflows, and so on. And so I also showed you. I'll I'll post it again into the chat right now a a screenshot of where the industry is.
+With regard to verticals and and layers of the architecture, and that gives you also a good sense of who is right now gaining market share, and what the verticals are, you know there's 1 even for defense. There's 1 for healthcare, there's 1 for entertainment, and so on. So so those those will give you a good sense of you know what today's picture is.
+And by the way, that picture came from Sequoia capital.
+from their their market research.
+As I, as I note on my slide.
+John.
+
+John Williams
+01:05:28
+Yeah, I'm in the. I'm looking at so many books articles. It's overwhelming. I think that's exactly how you know we feel
+that it. It is overwhelming. The volume out there.
+you know, and what you're trying to do, or at least what we're trying to do is to figure out what's vapor and what's real?
+sometimes, that's not so easy. The you know, most of the companies, or a lot of the companies out there are trying to sell their products. So they're, gonna you know.
+Say, everything is fine. But just use this, and your life will be good.
+I mean, this is this is a major challenge, I think.
+for people today is
+we've we've got information overload. And so
+the the trick, I think, is, you have to just take a slice of
+you know. Say, okay, this is where I want to apply this model.
+And
+even when we say this model.
+he, we're talking about Llms. So they're just dealing with text.
+Then you've got all the models that are dealing with images and video.
+and they're very different.
+Some of the models are using
+reinforcement learning.
+So for example, if you're producing an avatar, they're using reinforcement learning to figure out, okay, how does this work?
+So we're we're talking.
+even in the generative AI space
+about
+quite a number of different kinds of models.
+So you know, if you're if you're taking
+speech and turning it into text.
+That will be
+one model of Openai. If you're dealing with
+generating graphics, you know. That would be, darling. That's another model, very different model.
+So
+even within this generative AI,
+it's it's quite a wide area. And you're going to see.
+you know, a lot of innovation in various applications of this. So, for example, I'm thinking about materials design. There's a lot of research at Mit in designing new materials. So they're applying the Lm models.
+Excuse me to explore spaces. You know. Large design spaces
+the.
+You'll stand a much better chance of success if you take a you know, a very narrow area and go into it.
+The joke for about Phds now is that you need to go into a an area nobody else is interested in, because if if it's a really topical area, you'll be, you know, pitting yourself against millions of other people that are out there in that area.
+One thing I would mention is a lot of people are going to be taking out. IP.
+I was talking to a company yesterday, and they're taking out IP. Already on quantum computing as cybersecurity.
+So it's
+already there'll be a lot of take a look, you know. Search the IP.
+Before you go off and develop a product that somebody else might have IP on
+Bible.
+
+Abel Sanchez
+01:08:53
+So, if you remember, in my 1st presentation, I showed you that picture of the library that said, you know.
+There are a hundred 30 million books back in 2,010, by the way, and the average number of books that we can read as a human is 750, right?
+So we were there a long time ago. It's just that we feel it more today.
+and it is clear that we don't have the capacity to be able to operate in this world right?
+Our biology is that of early men right living in caves and hunting down animals. Right? We went bombarded with, you know, a thousand documents a day.
+And so when it comes to that we have, we need tools. So, for example, think about our ability to do arithmetic and think about a spreadsheet
+that has, you know, thousands of rows, and you know, hundreds of columns. We can't do that right. So we need tools
+when it comes to genitive AI. Think about what he has managed and has consumed all of the public information.
+and you can have a chat with it about it right? And so, when it comes to our consumption of information, and remaining informed and being able to digest the field.
+You need at the very least, what I've been calling a concier urge that is going to prepare this for you, and then you can ask questions from it, and if
+I am at all successful and and doing this we might be able to do it. This is what I'm trying to do right, and I'm doing it out of selfish reasons, because I have the same challenge that you have. Right. I'm trying to keep.
+you know. I could spend all day just trying to keep track of what's going on.
+But I want to be able to move through this, you know. Say, in an hour's time and a day. Want to be able to set these bots out to consume the information and provide me with the gist of it. Right? And I'll comment, by the way, on, on
+on strategy, because I I love commenting on that in a moment. But I just wanted to give you this context because ultimately, this is a challenge that we all have. And we have to take advantage of the tooling because we're not gonna be able to do it as humans. John.
+and
+I'll play the I'll play the timers here to keep us both on time.
+
+John Williams
+01:11:14
+Okay, join. Okay? You can play mine.
+I I
+I don't.
+I don't get too much involved in the AI ethics. I I
+I'm not sure about that. I know. I mean, I'm noticing that Gpt is getting less performance in the sense that it's blocking an awful lot of things now, an awful lot of prompts
+that.
+I'd I'd like, answered.
+Maybe you've got some. You can talk more about the ethical issues that I think we've got the top?
+3 questions are ethical.
+able? Oh.
+
+Abel Sanchez
+01:11:56
+It's.
+
+John Williams
+01:11:56
+I mean I can. I mean
+supermethics.
+
+Abel Sanchez
+01:11:59
+Yeah. So I think you know the the at the outset. I'll say what I mentioned when I started down this road my goal was to surface the issues that are being considered. Population by population will make its own decisions. We all know it. We move about the world. There are different, ethical
+principles that come into play in different nations. Right? And so
+with that in context.
+you know. Let me see, how do I address?
+What do you think the future of?
+Well.
+I actually don't see ethics in those 2 questions. There.
+
+John Williams
+01:12:35
+Oh, so they they sorry! It's it! Flip.
+
+Abel Sanchez
+01:12:37
+I think the 3, rd the 3rd one is
+how to address ethical use of AI on a global scale. So on a global scale, this is a great question. International law and communities are slow and ineffective. Right? So when it comes to this.
+there are few positions. And again, I'm not advocating for one another. I'm simply raising the issues right. Openai is
+going to do evaluations to what they determine to be ethical or not, and they have an open source project, as I mentioned, you know, that's called evals right?
+And this is how they determine whether they will answer a question or not.
+Cohere.
+Take has a very different perspective. They have what's referred to as constitutional AI. There are a set of principles from which they are built.
+and in fact, the founders had this idea.
+and Openai did not like it, and so, like Elias Eskiba, they split off from the company, and they found it cohere. And what if you listen to them? And they speak about this openly? They say that they are adhering to the United Nations Charter of what all nations on earth agree to now whether they are, you know, whether the experience or the product actually translates into that
+in a meaningful, valuable way for business and governments and organizations. Time will tell, but this is a very different approach than Openai.
+John. I don't know if you want to take a different one.
+
+John Williams
+01:14:05
+I'm I'm looking here at the one Gp models. Wh? Why don't they say I don't know.
+I think they do but say it in a polite way.
+I haven't come. I haven't come across that one as a problem.
+Google search.
+I think. I think we both agree that Google searches in trouble
+in in that. I know I'm I'm doing far less Google searching now than I
+than I used to.
+I'm I'm letting. I'm letting some of the Gpt models do it.
+
+Abel Sanchez
+01:14:46
+So I I can go ahead.
+
+John Williams
+01:14:48
+Yeah, I.
+
+Abel Sanchez
+01:14:49
+I can go ahead and comment on that one. So when it comes to search, this is the article, and I'm gonna go ahead and paste it on right now.
+The the headline, or the title of it, is called Modern AI, and it chronicles the history of how the group that wrote attention is all you need, the paper that introduced the transformer model to the world. And the reason I flag it is that oftentimes organizations. And this goes back to what I was saying before.
+Have the innovation or the discovery
+in-house!
+And they choose not to pursue it, as is in the case of the transformer. Right? Google had it. And it is now it is only now, right.
+Many years later. I think it's 7 years later, 2,017, or something like that, that they are coming around and saying, Yes, yes, we need this. And so to me
+the challenge, and this is now able making an opinion is that when I search on Google Google is giving me a bunch of hits that may have my answer, and I can I have to go into each one of them and dig out what might help me
+when I search on Openai or in Llm.
+I'm getting the answer directly.
+And so, even if it's not the answer I want. And it it turns out to not help me. I'm shortening that cycle again, as we mentioned, as we've mentioned a few times, going through that cycle right of experimenting, assessing, and going back again, the faster we can go through it the better off we are. And so when I'm using Google.
+it's much slower.
+John.
+
+John Williams
+01:16:30
+Yeah, the question about protecting your property with the Llm is, basically you, you need to have
+an agreement with whoever you're using. If you're using Openai
+you you can purchase
+access, so that they say that they will not record your your prompts.
+whatever whatever you're saying.
+But you can see with Chat gpt at the moment.
+That they pretty much are recording them, and
+it's in some sense it's useful, and you can go back to
+prompts that you made in the past and replay them. But
+my sense is you. But you you will have to trust somebody.
+but I mean that's how business works mostly is that you have contracts with people.
+And certainly the big companies. It's in their interest
+to protect your data where I think it runs into
+problems quite quickly
+is.
+you know, you're not quite sure who
+certain companies are.
+There's lots of Llm
+products out there where they may have a front of a company in the Us. But be owned by a company in Cayman Islands be owned by somebody else.
+My sense is that you know, there, there will be
+fronts out there that are not legitimate companies.
+And
+you need to. You really do need to then check who you're using.
+But it's going to be a matter of trust. And you know, we obviously trust
+dropbox and other companies like that.
+With our information. And it's not in the interest of
+these companies like Microsoft to steal your information.
+In fact, they probably won't. They've got too much to lose.
+So I I think you know, we. We compare it with like cyber security that
+you need to trust some companies. Otherwise
+you really can't move
+Everett.
+
+Abel Sanchez
+01:18:46
+So there's there's a question about the ethical frameworks. You know, Mark's book criticizes ethical frameworks, because in the end it's not about the document or the policy. You know, Enron, had one of the best ethics documents that you'll ever come across, and of course they were the most eth unethical company that that you might see.
+But if you want framework, background and information, Nest has some recommendations, and I would also recommend Mark's book from a practical perspective. I also wanted to answer about the strategy, and I'm gonna go ahead and post the same diagram that I had on the slides.
+And as you can see there, if you look at things that are simple.
+and you can address with general reasoning.
+these are the least defensible ones. Right? You can address them simply with the Llm. And some light prompting. But as you move into the domain specific
+and the complex, then you're gonna have specialized workflows. I I keep on coming back to the Salesforce Company, right? Because people criticize that because it was simply SQL. Scripts on top of databases, but in time they developed the the workflows that really served an industry right. And if you wanna go back even further, is the same thing for sap, right.
+But in this scenario, if you want to think about how to differentiate yourself, you know I was talking before about the concierge for a course that could mirror us. This is a
+competitive advantage to any other faculty member out there that is trying to answer questions like we are, because if they have a smart enough person that knows what they have. And I'm talking here about in AI,
+right? This is something that would have market value because you could speak with it, and it wouldn't get tired, and it would be accessible to all right. And so, as you move into that upper left quadrant, you know, for things that are complex and that need domain specific reasoning. I think those are defensible, and those a bunch of companies will come from that quadrant.
+John.
+
+John Williams
+01:20:52
+Yeah, I mean, I think as well, you know, there's a question about AI doing the laundry
+My sense is, the area of robotics is moving very quickly as well.
+I mean, I'm I'm hoping I'm planning that I will have a robot pretty soon. I noticed there's
+a robot.
+and it's about $16,000 now being produced by a Chinese company
+that is is fairly performant. It's not. It's not quite human size, but it's it's pretty good.
+And I think, as we were saying, that
+you know, once somebody has discovered something in the
+Adam's.
+either in the software world or the machine world. It's pretty easy to replicate it across.
+you know, lots of machines. So my sense is, there's got to be a whole whole load of
+new robotics coming down down the pipeline. I mean.
+Elon Musk is turning his Automobile company Tesla into basically an AI robotics company and just raised 6 6 billion.
+So my my sense in all of this, it will be for companies of a decent size.
+you know, if you're a mid-sized company, hiring talent is going to be a problem
+that getting people that actually
+you know, know something about this area.
+I think that's that's a major challenge that there won't be sufficient cha talent out there
+to fill the jobs.
+certainly, if you're a data engineer at the moment you can pick this up pretty quickly.
+I I think the challenge is at the strategic level, and it's not clear
+my my worry is most come. Well, not most companies, but certainly most universities are closing their eyes to this. The education
+is going is going to change radically, I think.
+with
+these Llms.
+And we we haven't really discussed it.
+I'm so I'm surprised, actually, that there hasn't been
+more discussion at at Mit. What's your sense able that.
+
+Abel Sanchez
+01:23:22
+So wh, when it comes to organizations adopting new technologies. Oddly enough, universities are very slow.
+and they're very slow to change as well, you know there's a lot of friction there that's in place, and but this is not different than many other organizations, you know. I'm sure there are bankers here, and you know how hard it is to change banks. Right? So this is something that I think is just part of that struggle of change. And I I gave you a link to to my to my book. Recommendation switch is the book that I would recommend there for change. It's it's 1 of the change management is one of the big bears we have to
+address in organizations. We have to change faster. The world is moving faster. And so how do we do it? That's 1 recommendation there. When it comes to Roi. I wanted to comment on a couple of other questions when it comes to Roi
+in the billions that Roi is not there yet. The investment far
+outpaces any Roi, any income that's being generated. If you look at the most successful app at the moment, which is Chat Gbt. It trails far behind Youtube, Instagram Whatsapp and many of the others, and so it is not there yet, but it is like, if you're old enough. The early days of the Internet people are throwing money.
+hoping that one of these will hit right the other one that I wanted to comment on is explainability and when it comes to, you know, how do we? You know I I post. This scenario of.
+you know, some judge or some system making a decision against you based on the data. And how do we? How do we argue against this right. And when it comes to agents, people are talking about chain of thought.
+that is that the agent starts off and outlines a number of steps that it's gonna move through and then, whatever the outcome is, you at least understand what it went through. And so some of that is what's being talked about. But, agent reasoning, it's at the very, very early parts of any of this
+John.
+
+John Williams
+01:25:27
+Yeah, there was a comment as well about hallucination that
+the
+Llm. Being confused, I think it was
+I mean, basically, it's just doing statistics.
+The problem I see is that you're often not aware of what's in that context window that's going to
+the Llm.
+You know, if you're having a conversation.
+There's a load of things that that the Chat Gpt is doing for you
+in packing out that context window with previous
+progress.
+So my sense is often it's due to that that you're not seeing exactly what the Llm. Is being fed.
+So if you're in a conversation, and
+you know you've changed your mind
+about something. It's it's better to start with a clean context window. So you know exactly what's what's going on
+that. Otherwise, if you've got a polluted context window.
+you know, the machine is just doing statistics on the whole, what whatever's being passed to it?
+So my sense is at some stage controlling that
+context window is a key issue that you need to be able to control it.
+And be very much aware
+of. You know what what's being passed with?
+You know the problem with once once you get into
+like Abel's mentioning chain of thought.
+you've already got a context window. That's
+you either need to clean out, or you need to be sure.
+what's in that window. So my sense is that it's not that the machine is getting confused.
+It's I suspect there's a load of junk in that context. Window.
+so
+just just my just my own particular
+thoughts on
+the problems with context windows.
+
+Abel Sanchez
+01:27:28
+So. So I'll address the education topic, and I gave myself only a minute because we're running short on time here. But when it comes to those of you who are saying, you know, there's interesting questions. They're fundamentally.
+you know, transformative, truly disruptive issues when it comes to education. If you think about the professional exams in order to be able to practice professionally as a doctor, as a lawyer, etc. These are being passed by these platforms. What? So what does that say about us? Wasting time and all of these things that that we do right? And so I think
+there's a reckoning coming to education, and on the a positive side of this, for the 1st time ever we might be able to have the one on one tutor experience that we've always known is the best. But we haven't been able to build systems that are that make sense financially. And so that's that's my upside.
+
+John Williams
+01:28:29
+Yeah, I mean, I would just. I would just say that
+about explainability. I think it is key.
+However, you can ask.
+You know, how did you make that decision? And it's it's probably better than most humans at having some sense of.
+you know. Why it made that decision.
+As humans. If you ask a human, why do you decide that it's like
+we're not. We're not great at explaining things.
+so I I think there's hope with explainability that we'll be able to get a deeper insight into what's going on.
+
+Abel Sanchez
+01:29:10
+Fred. I see you're back.
+MP
+MIT Professional Education
+01:29:12
+Yes. Well, thank you. I I just wanted to thank you both once again
+for an excellent, excellent session. And also congratulate our our participants. You you guys as a group are doing fantastically with the questions
+and with sticking to our guidelines. So I wanna thank all of you for that. We'll see each other at our next session, everybody, and and with that have a great rest of your week, and we'll see you soon thanks so much.
+
+Peter Guentert
+01:29:39
+Thanks, bye, bye.
+
+Urooj
+01:29:40
+Thank you so much.
+
+Raj
+01:29:41
+You, bye, bye.
+
+Vidhu
+01:29:42
+And on, yeah.
+
+Abel Sanchez
+01:29:43
+All for your family. Yeah.
+
+Javier Amaya
+01:29:44
+All questions.
+
+Ritesh Gupta
+01:29:44
+Thank you very much.
+
+Abel Sanchez
+01:29:45
+Thinking about education. That's a wonderful one.
+
+adam
+01:29:51
+Thanks everybody that was really very interesting, fascinating.
+
+Jose GG
+01:29:53
+Everyone.
+
+VenuGopal Taritla
+Thank you. Bye, bye.

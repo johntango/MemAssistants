@@ -1,0 +1,952 @@
+MIT Professional Education
+All right, everyone welcome, welcome as you are filing into the meeting room. Hello! My name is Betty Gokiha for mit professional education. Welcome to the 5th and final session of applied generative AI. I want to give a very special welcome and thank you to our faculty. Once again press John Williams, Doctor Sanchez.
+Before we get started. Everybody pretty much by now. You all know the drill.
+you are. I'm going to share my screen right now, so that you can see the
+the credentials for today's Slido
+and the meeting. The meeting code is
+2, 4, 2, 3, 6, 6, 8
+and
+and you can go to slido.com for that I will post the link in the chat briefly. Once I turn it over to our faculty as always. Please. You've done a great job so far. So I mean, just please remember to put your comments and conversations on the chat, no direct questions to faculty on the chat. Please put the direct questions that you want answered by faculty
+on the slide. Oh, and we will keep it. We'll try to keep it as as as swift today as possible, so that we can get as many questions answered in this. Our final
+conversation with all of you.
+And with that. And and of course, you know, sessions be recorded. Recording will be available on your canvas online platform the next 24 h with subtitles in your native language. So look forward to that also. Nola, it no no voice questions our faculty, as everybody knows. You were. Gonna you're gonna they're gonna take your questions in Slido.
+just to be fair, and also don't forget to vote on the questions that will make it even better to get the salient questions up to the top of the order so that we can get them answered. And with that one last time I wanna I wanna turn it over to our faculty. Professor Williams, doctor of Sanchez.
+gentlemen, thank you once again, and the floor is yours.
+
+John Williams
+00:02:11
+Great. Thank you, Fred. Let me just share my screen.
+Okay, can you see? Does that?
+Yep.
+okay. Let me just adjust it a little here.
+Okay? So I wanna talk about the impact that generative AI is gonna have.
+But also talk about
+driving change in organizations, because
+it seems to me that our experience at Mit is that it's been extremely difficult
+to get an organization to change the way that it's doing business.
+And Abel and I,
+F.
+Numerous discussions on you know. What's the problem? Why, why is it so difficult?
+And
+perhaps, you know, we can take some lessons from various companies that have been fairly successful of it.
+both able and I enjoy f 1. And certainly the Netflix series on f 1, as
+basically driven driven the whole campaign that now
+lots of people watch f, 1 racing but one of the teams that was highly successful. This is, looks like the Ferrari team
+in red here, but certainly
+the Mercedes team for many years dominated it. Toto wolf
+was the head of that, and it's kind of interesting, and he makes, you know, some statements which I think
+perfectly true that.
+But he says it's not about racing cars. I run people that run racing cars.
+and also that
+he makes an environment where you can learn not only from your mistakes, but actually pay attention to what, when you when you do win, and when you do get something right, you know, understanding
+why did it work?
+And because
+sometimes you just say, Oh, we won, everything went well, whereas, in fact, there are still things you can improve on.
+and also
+one of the things he, you know, makes part of the team work, and he has about 1,800 people. I I was surprised by the size of the team. It's about 1,800 people.
+and their headquarters happened to be in the Uk. Which surprised me as well.
+But when they make a mistake
+he wants people to know that they don't need to lie to retain their jobs.
+There's a good article here that was in the Harvard Business Review, on basically their management procedures.
+So the culture.
+You can look at your own organization, maybe, and take a look, you know, at which one of these fits best.
+I'd say, certainly
+in Mit. We're probably the bureaucratic organization.
+We're organized into departments, and
+those are the things that you know you you
+detect, or you'll protect your own turf
+and
+each department has its own Mini culture, if you like.
+But you know there's an overall administration that also has procedures that we have to
+abide by.
+And
+but there are other organizations that are certainly appearing.
+That you might call generative organizations that focus on the mission.
+and
+everything is subordinated to good performance.
+But those are pretty rare, and
+we'll talk a little bit about some of them.
+But one of the frameworks I just want to quickly go over is the Toyota production system.
+because that was one of the 1st
+where they systematized how they ran a company.
+you could go back to Ford if you like, and the tailor kind of system of time management. But this was a much more modern system.
+He's was 1st in weaving and generated the one of the 1st
+powered weaving machines.
+and
+then came to the States and saw motor cars and decided. So this was their Toyota G loom that was fully powered
+but then realized that they needed to
+go after motorcars. And in 1950 basically
+dotted producing cars and trucks. This was actually a union
+protest here. So they had protests way back in those days, too.
+So these were the 2 2 of the Toyota
+founders.
+and by 1975
+they produce the Toyota production system.
+and it was just in time.
+though
+with supply chains they actually change to a pull system rather than pushing and storing lots of things on the factory floor. They would just in time pull those things into the factory that they needed.
+and had they had what they called intelligent automation continuous improvement.
+and gave people time, actually, and the power to make suggestions how to improve.
+You know things at a fairly low level in the company
+and certainly respect for the people.
+So
+they focused on throughput operational expense and inventory. And they had key performance indicators.
+And basically
+the Us. Companies. At some stage this is 1,984 roughly realized that these were, you know, superior systems, and that
+we needed in this country to adopt some of those.
+And
+this was their development and deployment pipeline.
+And this is a typical.
+a system where you, you know.
+produce things and gather feedback about how they're working and improve your system continuously. These are some great books which I think apply today. The lean thinking is morphed to lean enterprise, and today you'll see lean devops, for example.
+by
+This is Jean Jez Humble and Jean Kim.
+But this is the Devops revolution where we're seeing things produced. This here was 400 times faster.
+We're seeing some companies these days that are over 2,000 times more productive, 2,000 times faster than others. But these are using. This is mainly in the software area.
+But this really reorganized the structure of how software was produced.
+And what we saw was that
+permission to deploy was pushed down
+so that you didn't have layers of management decision making
+that you had to go through to deploy code.
+They even found that
+code reviews didn't need
+to be so time consuming, and found that, in fact, that by
+having the
+the developers actually deploy code
+and test their own code that they had less problems.
+Let me just get rid of that for my screen.
+One of the companies that see has been, you know the modern poster child is Netflix, where
+they were tackling the problem of as you got bigger
+things got
+more
+chaotic, and to
+counter that.
+they figured that
+they needed either to impose rules and regulations processes.
+But the problem with processes is that that
+cuts into employee freedom, so employees will be coming
+less able to innovate, and what they found was their best employees were leaving. So they needed to tackle that problem.
+MP
+MIT Professional Education
+00:11:18
+Was really awesome.
+
+John Williams
+00:11:19
+And so
+somebody's if you can mute, that'd be great. Thanks.
+So the growth of the corporation you have to manage this complexity that is increasing, and one way, as I say, is to increase the processes, but that has the unfortunate consequence that perhaps your highest performing employees leave.
+So this
+is, there's a trade-off that
+what we're seeing I'd say in our in universities now we have so many rules and regulations, and you know
+they're announced every few months. We have a new rule, but
+rules aren't retired. It's not as if processes are retired that
+we become more highly regulated if you like.
+So Netflix had the mantra that
+they said, We're we're not
+like a family. We're like a sports team
+that we hire the best.
+and we pay top market value.
+And we give those people the freedom to innovate. They don't have to report. They can take vacation days anytime. They want
+they don't even have to report how many that they're taking.
+And so they they run on a very different
+kind of value system.
+So one of the things that
+you need to understand in your company is kind of how it's organized.
+And you know, you might say that it's organized like something like this diagram here where you have some internal structure. And that groups communicate. So via these connections say, and that information, you get external information flowing in that affects the company.
+but that organization has some purpose.
+Now you might have a different organization. This would be a highly hierarchical one.
+you know, where you have functional domains like marketing finance, HRIT. etc.
+and changing how those operate is still an issue.
+And so what we're seeing in some companies today is that command and control structure that this exemplifies is being changed.
+This guy.
+David Snowden, not not the Snowden, that Edward Snowden, that famously.
+you know, now resides in Russia. This is a different one.
+He kind of says, you need different management practices depending on the systems that you're dealing with.
+that. If the system is simple, then you can. You can apply best practice. You know how things work.
+If it's complicated.
+you need to apply at least good practice.
+If it's complex, adaptive.
+So that means it's never in the same state again. You need to probe sense and respond, and it may have emergent behavior.
+And if it's chaotic, you certainly need to do something quickly, and you may need to act 1st and then
+based on those actions, either magnify them or or cut them down.
+So
+it's fairly clear today that we can build systems
+that we may not know their behavior. We won't know necessarily which of these 4 boxes that they fall into.
+And that's especially true if we adopt a large language model, for example, as the orchestrator of
+an operating system, and that's the kind of direction that we see things going is that we could have the Llm. Making all the decisions about what to run next.
+So
+different systems require different management practices is
+what David Stone believes
+this is, I'm going to play a short video here, and
+tired of typing tons of notes during class. There's finally a better way. It's called Otter.
+
+Stefanie Knospe
+00:16:05
+Let's imagine, if you can, that you've got to organize a party for a bunch of eleven-year-old boys.
+and you want to apply the 3 different types of systems that apply in nature.
+Well, if you assume the party's chaotic, the children are acting at random.
+you might as well buy the drugs and alcohol, so the children can go on a personal experience of self-discovery. Your house may burn down in the process, but what does that matter? All property is theft, and it was socially constructed. In the 1st place, I have friends in California who've tried this. I don't recommend it. The recovery cost is high, but it's a legitimate approach.
+On the other hand, the one we'll be more familiar with is the ordered systems approach
+here. It's of critical importance to construct clearly articulated learning objectives in advance of the party itself.
+The learning objective should, of course, be aligned with the mission statement for education in the society to which you belong. Ideally, you should print the learning objectives off on motivational posters, with pictures of eagles soaring over valleys
+and water, dropping into ponds, and placed those around the room
+where you're going to hold the party.
+You then produce a project plan for the party.
+The project plan should have clear milestones throughout the party against which you can measure progress against ideal party outcome.
+Once you've done that, the senior adult can start the party with a motivational videotape.
+After all, you don't want the children wasting time in play, which isn't aligned with the learning objectives of the party itself.
+and then they should use Powerpoint to demonstrate their personal commitment to the objectives of the party.
+and to show the children how pocket money is linked to the achievement of the milestone targets.
+Of course, the 3rd approach, the complexity approach is even simpler.
+Here we draw a line in the sand known as a boundary in complexity theory.
+and we turn to the children and say, Cross that, you little bastards, and you die.
+And one of the things you learn pretty fast as an adult is the value of flexible, negotiable boundaries.
+because rigid boundaries have a habit of becoming brittle and breaking catastrophically.
+We then use catalytic probes, and I'm deliberately using the jargon of complexity theory. Now.
+a football, a videotape, a barbecue, a computer game, something which will stimulate a pattern of activity which is called an attractor.
+And if it's a beneficial attractor. We stabilize it, we amplify it. If it's a negative attractor, we dampen it or destroy it very quickly.
+So what we do is we manage the emergence of beneficial coherence within attractors within boundaries.
+And in that simple phrase we see the promise of complexity theory for organizations and government alike.
+
+John Williams
+00:18:46
+So he's kind of saying you've got to look at what kind of system that you're trying to
+change, that depending on which one of these boxes you fall into that you'll need to take a different approach.
+And there's a whole institute in Santa Fe
+and Phase 2 that looks at
+what we call systems theory and
+complex adaptive systems. So this might be, for example, like ants. But
+today you see that
+some companies are organized very much along these patterns that they're pushing down decision making. So you have here. You've got an alpha layer and a beta layer.
+and
+the emergent behavior is coming at the alpha layer and is pushed up.
+and the the C-suite, if you like.
+see what's happening.
+See these signals and make adjustments.
+But
+this is very unusual. Most companies still are hierarchical and in the command and control era
+it's pretty clear that
+corporations have their own kind of immune system against change. You try to change it. You're going to get a whole load of pushback.
+There's going to be people that
+they know. We've got rules and regulations which prohibit that, you know, we can't possibly have the large language model making decisions for us.
+So the good news is that startups are are the easiest place in which you can make these changes that you start out with.
+You know no baggage that you don't have these rules and regulations, and you're inventing them as you go along.
+So to some extent.
+that's
+the easiest way to change is to have some small group, some kind of flagship group that adopt
+large language models and move forward. We'll come back and talk about.
+This is Jonathan Hype that both label and I recommend that you read
+called the Righteous mind, and he's got several other books as well, which are a very good reading. But it's pretty clear that as humans, we make a lot of decisions based on this massive, primitive brain that we have. We think that we're very logical people. And this is
+signified by the rider that's sitting on top that thinks it's controlling the elephant. But in many ways it's not that the primitive brain, if it decides to do something, the elephant just charges off in a direction, and the rider then justifies that direction.
+You know. Post the event.
+DOE.
+Another framework that has been adopted by the military is John Boyd's udder loop, where he observed that the faster you act, the faster you go around this loop, the better your chances of winning. So at any stage you're observing what's happening.
+You're figuring out whether that's in your best interest, or that it's an attack of some kind on you. So, or you orient yourself. You decide, and then you act.
+And this works
+very well. If you're in a chaotic type of situation. So this would be like a war zone. But also today you're seeing that the world is moving and changing very fast.
+And so applying this to, for example, generated AI
+would be that
+you think that you can apply it somewhere.
+you know, define a minimal viable product.
+develop it and act upon it.
+I won't go into more details on that. But certainly
+human knowledge which
+we can look at its structure.
+But today
+the generative AI machines, the Llms have been trained on
+millions of books
+and have that knowledge embedded in their weights, and can answer questions quite well.
+I'll finish off just with this quick
+demonstration of an avatar that we've built that
+can speak different languages quite well.
+so this is a digital human, if you like, Abel and I welcome you to our course. On applying generative AI for digital transformation, our avatars can answer any question you can think of Abel lemoix, sweeton labnu de notre generative transformation, numeric
+nuz avatar pavriepondre, ha toute le castillion d'on vu poure
+abelicio osamos Labien Benida nuestrocurso applicant de la intellencia artificial generativa paral la transformation di hital
+nuestro sabatares podent responder qualcier prejunta quesetio curra
+abel hwa huan yingin sanjia woman in Yongshang Jin Qing shoots the Hua chanting Ko-cheon
+woman, the Sunni Xinxiang Koi hua dan in Nangshangdao Jiang Hovan t
+Abel Yamina toyotansinutervettul lexicle Me applied generative AI for digital transformation.
+Avatar imevo vatvostata kai king kusumuxin yost avoid havala
+Ms. Abelian privatis to invest nascent prima guinness coustuino intellect let's transform ace nasha avatar mogot Vasva pros.
+So basically, what's happened is that
+this system has been trained on about 5 min of video
+that is uploaded. It learns how in this case, how I speak, and my gestures, and how my lips move!
+It builds a model, and it uses reinforcement learning to do that.
+But then it can make this.
+digital avatar
+speak, and as you see, it can speak many languages, so you can take in this case it with the text was in English, and just
+roll off. However many languages you want, it has something like a hundred 4 languages that it can produce.
+so you can imagine that
+they have a streaming version of this which
+basically will give them the question will go out to the Llm. Get the answer, and then speak it back
+and can speak it in any language.
+And so my sense is that
+you know you're looking for low hanging fruit in your company, where you can do a project that can have some immediate effect here. Able and I are building these so that we can have course Tas, that can actually answer questions about our courses.
+and these are fairly fairly fast to build.
+So if you're looking for some low hanging fruit that may convince your Ceos or your c-suite that they should spend money on a project. Something like this may be the way that you'd want to go.
+I think I'm just about a
+up to 12 o'clock able, so I'll
+stop sharing there.
+
+Abel Sanchez
+00:27:01
+Go ahead and pick up from my side.
+see? I'll go ahead. And
+and so I wanted to pick up
+and talk about the AI enabled economy and remark over some of the patterns that I'm seeing. And, by the way, for those of you who are interested in, hey, Jen?
+And I know many of you were posing questions. It's fairly easy to do. It takes one good segment of video.
+And then if you can capture good audio in that video. That's all it takes. So as you can imagine, we record a lot for courses. So I took one of my videos and was able to create an avatar that I'll show you later. And when it comes to cost the cost about
+$30, once you add tax and things. So it's it's fairly easy to do, and we'll see a lot of them. But let me go ahead and and start on my topic here.
+and as I mentioned, I wanted to talk today about the AI enabled economy.
+We started out by talking about many of our limitations. And I talked about data
+being one of the things that we could use to overcome some of those limitations.
+But when it comes to AI,
+oftentimes the definition in simple terms can be elusive.
+And so when it comes to generative AI. I wanted to give you what I think of when I think about generative AI, more so than just AI on itself.
+And so the 1st property that I think about is that it gives us our ability and ability to create. We've shown you many of the wonderful things that it can do. For example, John just showed you, by the way, that video is great. John.
+John just showed you that video right? It is a new creation.
+The second thing that it can do is that it can reason.
+And there's philosophical debates about this. But I would argue that at the very least it can reason in the way that code can reason. Even before AI. You know, Code could run through a number of parameters and make decisions based on the data that you gave it.
+So it can create, it can reason. And the 3rd thing that it can do is that it can interact
+and it can. And it can interact in a very different way than pretty much anything that we've used before
+software that we use by clicking on buttons. You know, assistants, that we could post questions to like Alexa. All of them fell rigid and
+limited and frustrating at times.
+As soon as you start to have an interaction with one of these platforms, you recognize that it's different.
+So that's what I would give you as a working definition. That's how I think about it.
+And the second question I would address is, Why do we care? And I would argue that those 3 properties together, any which of, by the way
+has. Can. You know you could put entire industries under each one of them right?
+But all 3 of those together is that it gives us the potential
+to be able to replace services with software.
+And the argument here being that if you think about all of the
+market industry of software back in 2,010.
+It was 350 billion. Today. It's about 650 depending on which geography you you look at and how you count it.
+But if you look at the world of services.
+it is 15 trillion
+right? And so this is. This has tremendous potential. And so that that's my argument as to why you should care.
+The other thing to take into account is that we're building here on the back
+of
+over 50 years
+of technology, right? Going all the way from the ground up. Right? We have the computation. We have the operating systems, the networking, the infrastructure to connect the world which was the web and the the years of the cloud and infrastructure that facilitated that the revolution of Mobile.
+And now we have the opportunity to be able to build a new generation. Now, when it comes to
+the opportunities, and many of us are grasping to see, how do we make heads of tails of this right? You can think here of the generational cloud, the generational mobile.
+And you can go through the layers of technology, the technology stack. And you can see clear.
+dominant players. Right? For example, if you look at data and there's Blanc, Snowflake Oracle databricks. Right? If you look at Mobile, there's icons that you recognize there readily.
+However, when it comes to AI, we have tremendous investments on the infrastructure. We have some
+layers of what goes above. Right clearly open. AI, right? It's it's out there leading the way. But the rest of
+those boxes are largely empty, and in a little while I'll show you a diagram of how that picture is starting to form.
+But my point here is that there's tremendous opportunity.
+So
+I also wanted to talk a little bit about where we are today. What is the state of the practice? Right?
+And if we look around, the AI budgets are skyrocketing.
+a lot of that funding is coming from AI.
+The implementation of this in many companies, because one of the patterns that has established itself is that companies are now buying the full stack.
+ready-made solutions from the cloud providers. They're going at it on their own.
+And so they require a lot of technical talent, and and many companies don't have that
+open source on that side of things is booming as well. For the same reason that I mentioned, the companies are cautious and and their concern, and so the the implementation of this is quite limited, even even though the potential is clear
+across the board.
+And one of the big concerns, right as I've mentioned is
+the the the limitations right? That many companies see the ethical concerns, the displacement of humans. And on and on right.
+a good upside of this is that we're having a model explosion model performance is converging. You see, every new Llm that's being proposed more or less matching those other ones that preceded it.
+And
+the spend projection for 2,024 is about 5 billion right
+now. Many of you often want to know where the Roi is on this. And if you look, if you've been reading the Wall Street Journal or other business publications, you've seen sort of the
+ground shift that's taking place that there's a lot of discussion around.
+Roi, there's a lot of discussion on, really. What have we gotten from all this investment that has been made.
+Nvidia. I opened up the day today by seeing Nvidia down 500 billion.
+And so we're we're a bit going through a bit of a loss of confidence here when it comes to these technologies. But I wanted to call out what, to my mind, are clear winners. The very 1st one is software engineering. I've used it myself
+even before 2,023. So I've used it now for about 2 years and a half.
+It is a clear winner. Most of what we create today are digital products, even if we are on non software companies. And so this is a boom to productivity. And if we can go through that cycle that John was mentioning at faster speed
+we all benefit. And so this, although it's a harder one to sell, say to C-suite, and and others because it's not as tangible as as others that I might mention. This is a clear winner, and you can see here some of the numbers on copilot.
+Another one that many people talk about is that of customer support. Right in in the
+case that everybody's been talking about is Klarner. This is a financial services company. They replace 700 human full-time agents, replaced them with
+generative AI bots.
+and you can see here that it led to
+even better customer service.
+The customer resolve errants in less than 2 min compared to 2 to 11 min before
+25% drop and repeat inquiries, and you can see there the projected profits. Right? So that's 1 that's been well documented.
+And the other thing that I will mention as well is, I talked about my example about generating marketing materials.
+and I wanted to simply reemphasize that huge disparity between the human produced good
+and the opportunities that are being
+afforded
+by generative AI. And so hundreds of thousands of times difference is going to change the market. And we saw examples of some of the 1st startups in the the field of law, and I talked about also mental health crisis and some of the opportunities that exist there.
+Now, a positive note here.
+and in spite of what I mentioned before, is that this is growing faster.
+Then cloud.
+It reached
+3 billion
+in one year.
+and it took cloud, although Cloud started very slow. Right it went from, you know.
+seeing the successes and the challenges that many of the it giants had internally, and thinking that the market might need it, and progressively rolling it out. But still it took 10 years
+for Cloud to reach that level.
+Now I'll speak more poignantly about
+some of the concerns that are being voiced. Right?
+Part of it is that
+all of this investment that has been made, and you can see here
+16 billion on infrastructure
+is targeting the plumbing
+and that the applications themselves
+are lacking behind.
+There's there's there's been reports that 50 billion alone outside of, you know, startup funding went just to Gpus in 2,023, right?
+And some of the concerns that have been raised are the following right, if we look around at the most successful apps that we have, for example, one month retention.
+And you see Youtube, you see, Instagram, you see, Tiktok, all of them clearly.
+I had
+of the products that are being generated
+with generative AI right.
+And if you see here the daily active users as well, Whatsapp is actually number one in the world right?
+And so these are some of the
+things that many people are taking a look at. And
+one of the reasons I believe Nvidia has lost that volume of value is because there's a lot of criticism. And there's a lot of analysis that's starting to be presented. And can they do more than just compute, like intel back in the nineties. And will they just become one more piece of hardware like Cisco has become in the Internet?
+And while they have value. They're not necessarily this valuable gem right when it comes to AI stack. I think about the plumbing, and I think about Nvidia right when it comes to the algorithms. I think about Openai. When it comes to data, I think about scale AI
+turns out that the companies that are building Llms are not gathering the data themselves. It's such hard work that there's a company just doing that which is scale AI.
+And so if
+if the compute
+happens to be a commodity.
+and there's other better computes, or the competition rises in a big way. Then they might suffer the same faith of Cisco, and I'm not saying that that's going to happen. But I think that's some of the questioning that's happening today, and certainly some of the questioning that I am doing
+now when it comes to. You know the stats, as I mentioned, they're leveling out right. The other thing that I'll say is that this is really early, right?
+We were talking earlier today about blockchain. Blockchain feels really new.
+But really
+it is over 15 years old. Right? It's been here since 2,008, and still it feels like
+it's about to happen. But it hasn't really happened in a big way, right? But a perhaps a more gentle example is that of Mobile, right? You can see here sort of the stars and the winners that were thought in the nineties, and how all of those companies, if you're old enough, went out of business.
+and then in 2,007, if you were to look at the top 10 apps, none of them would be there by 2,010, and it's only after 2,010 that we start to get some of the companies that we still recognize today. So it takes time.
+As I mentioned, you know, the clear 1st successes. Here is customer support interactivity with an Llm. That's chatgpt. I would add to that enterprise, knowledge, the enterprise search that we have in companies across the board. With rare exceptions, it's been terrible, absolutely terrible. And so, as I mentioned in my lecture when I talked about democratization of data. That's a huge opportunity. There.
+Now, when it comes to predictions, many of you like to ask, you know what's coming up ahead, you know. How do we think about this? Where's the? You know? The typical question is, where's this going to be in 5 years. Here are some observations that I would make, and you know the market may take this in a different direction, but some of what I would say it's coming.
+One of them is agentic reasoning.
+I talked about 3 levels of control, right? One where the human is making the decision so
+really good control. Right? Really, scripted workflows. You can use Llms. This works really well today, and it has applications all over the place right? But then there's the more ambitious route where you are letting the Llm. Run free.
+Decide on the plan, and you know, farm out the tasks and let it carry on. That fails most of the time the literature puts it at around 15%, right?
+But one of the questions is, could we find something in the middle, something that
+is not
+loose and wild, and that is not so scripted as what we have today, and some of those applications. If you restrict them enough by domain, you have an opportunity to do that. And so there's a great deal of work being done on that, and so I expect to see some in the future
+prototype into production as well. A lot of companies are running internal prototypes, and as they gain confidence on them they will move them into production. I've seen already, you know. At least a couple of companies do that, and the reliability and robustness will come.
+It needs to. And so this is part of
+what I see coming forward.
+And the big one, of course, is what I mentioned. You know, this move from human-led AI to AI being able to make decisions on its own.
+So, looking forward, here are
+some ways to think about this change right?
+When it comes to agriculture early on
+humans added tools right, and that made them more productive. In time collections of these tools came together and created machines, and that
+once again improve increased our productivity.
+Now today we have tools.
+we have machines.
+we have data.
+we have networks, and we're bringing all of that together to transform
+industry, such as farming right where
+still my romantic view of this is, you know, with your own hand touching the soil, putting a seed into the ground and watching it grow and watering it right. But this is something completely different.
+And so if we think about that transformation and that journey right, we've gone from the tool to the machine to the systems that are possible for us today.
+and part of what's taking place
+is that the cost
+to generate wealth is decreasing.
+You can see here a couple of charts
+that support.
+You know my argument.
+and you can see here that certain products, in fact, are dropping considerably. You know, one of them being televisions. I've been still thinking about buying a television set, a person that likes to think about things before they buy them. And every time I look at them, the price is lower and lower. Now imagine
+what we can do
+to education. You can see there that college and tuition has the opposite.
+But I will make an argument here in a moment
+that we can think about this differently. Right?
+Think about the production of the course that you're taking
+the design of it.
+the creation of the content, the production of the course, the running and operation, the feedback, and so on. All of this
+takes a long time.
+It takes up to about a year, and the company behind it
+has hundreds of employees.
+So this is expensive.
+and it takes a long time.
+Now, as my, you might imagine anything that's quite involved has a great deal of dependencies and things that need to be done.
+Now, if you think about the opportunities of generative. AI.
+I would say they come along 3 verticals.
+The 1st one is amplification. Don't change anything. Leave that course. Generation, as I mentioned on my
+arrows are not working for some reason.
+so leave it alone, however.
+add things to them.
+For example, the chat bot right? You should expect.
+You know I talked about predictions. You should expect courses to start to have chat bots
+that you can
+post questions to from the content of the course. Right? So this is an amplification. Simply leave it alone. How it is, just improve it a bit, right? Or at the margins
+a second one might be reimagining, taking a specific product or a business process
+in the case of the example, of course, is auto grading
+right and being able to
+provide this new feature, you can imagine that having immediate feedback.
+being able to get better answers would differentiate you from the market.
+So that's a reimagining right? But that 3rd one.
+it's where we take each of the components
+that humans were doing before.
+and we can do it in a fully autonomous way.
+right? So each of those pieces
+now being done by an agent
+and being brought together.
+And in this case I'm posing the questions here. Could we collapse that year into a few hours?
+And that is the question. Right? Could we do the Able Corp or John Corp
+right? And here is my avatar. Right. John showed you his.
+and I will just play a clip, because every time I play it my wife says I think you're tricking me, and she just sort of looks at me out of the corner of her eye and says, Oh, I don't know. And so, actually, before I play it, let me go ahead and make sure that I am. In fact. Yeah, I am sharing sound.
+So this is me, just just I'll just play it briefly, time. Understanding the entire life cycle of Llm applications.
+We examine models, prompting, testing, deployment and monitoring.
+But let's step back and look at the bigger picture. Imagine this process as a continuation.
+So I think you can see there that this is, and let me see, it's not. I want to be able to skip it, but lost my arrow. So let me just go ahead. Do this.
+this.
+as we like to say.
+it's good enough. You could imagine
+getting quality content at high scale at a fraction of the cost, in that you can do this real time. By the way, meaning you can post questions. You can formulate the answers using generative AI and preloaded with your own expertise or your own scripts, and have it answer.
+And so the possibility of the one person company, you know, forget education. Just think about it in more broader terms is now possible. And if you think this is a bit crazy.
+think about Instagram. If you do not know about this, the history of this company when they were purchased at billions. I forget exactly how much it was. I think it was 5
+by Facebook
+there were 11 employees.
+and so the day of the Unicorn Company that has a single person.
+I think, will come with generative AI.
+So let me talk a little bit about strategy. I think I'm running a little bit slow. I'm targeting here the the 30 mark, you know, 1230.
+When will it be adopted by the enterprise? As I said, there's a lot of concerns, reluctancy. So I'm going to go ahead and skip through some of this if you do it internally, like most companies are right now, there's some challenges. There's a lot of the obstacles that you would have run into if you do a traditional data practice
+data analytics to be able to make decisions. Many of you who have been involved in this knows it can take a company 3 to 5 years to be able to do that in that there are alternative technologies and different ways about going about this. I'm talking about the data picture that you can do in months.
+But
+a lot of what's happened is what is happening in the industry in general, that the concerns are shifting from the CIO to the CEO. This is becoming increasingly important to the C-suite.
+And there's a great deal
+of interest in
+transforming the corporation of using the opportunities of generative AI
+in a way that previous technologies haven't had.
+And so a lot of the conversation has to do with the questions that we get. It's I want to do it myself.
+I'm concerned about. IP. Going out the door, and I'm sure you'll have many of these questions, and we can address them in the conversation.
+But that's a lot of what we hear, and the next question, of course, is, Can I do it myself?
+And the response would be similar to what I have
+responded to when it comes to Cloud. Yes, you can run. Run your own data center. It's difficult to do. You're never going to be able to keep up. Most likely it'll be more expensive than what you pay for in the cloud.
+But many companies are doing.
+and so when it comes to these small models.
+and being able to use the open source and being able to do the experiment. That makes great sense. However, as you scale this.
+and you need to run it a cloud environment, even if you're just using it as bare metal makes a lot of sense.
+So I'm going to go ahead and skip. This is the slide that I mentioned about industry verticals, and you can see here how that picture is emerging. You can see here, already defined by industry, type of verticals, an enterprise stack. You can see here a productivity stack as well, and these are products below, on the infrastructure. There's where you have the plumbing, but everything above that are companies that are up and running today.
+and that you can use.
+So
+when it comes to the maturity that you need to have in order to be able to pursue some of these
+apps that you want to build, I would advise the following.
+at the very bottom there, where it's low complexity. You do not need much, much experience or maturity you can do in context learning, and it might turn out to be
+that this approach
+is
+perhaps the one
+that becomes the dominant programming model.
+because the context to that, as we've mentioned many times, keeps on growing.
+And already Gemini has 2 million tokens, which means over a thousand pages more like 2,000 pages.
+So that's a tremendous amount. Not only one book. You can imagine 10 books, not one movie, multiple movies, right? And the founder or the lead of this group has already talked about a 10 million context. Right?
+We've talked plenty about rags. Rags go hand in hand with in context, don't necessarily have to. But do. They're fairly easy to do. If you have a good engineering team and a good data engineering team. You do not need the AI talent. If you have it, it's better. But you don't need it. When it comes to fine tuning at the shallow end.
+It's very easy to do. It takes an hour or 2, and you can have a new instance that has been fine tuned the high end of it. It's not that different than training, and it's very expensive, very, very expensive.
+So when it comes to
+the marketplace.
+why is university struggling? And let me show you 2 graphs here when it comes to building significant systems in AI,
+look at where industry is 32. Look at where academia is. 3.
+Look at where nonprofits and government are down at the very bottom 0.
+If you look at where the talent is going.
+look at industry versus academia, and look at where government is. And so why is this happening?
+Let me go back to my slide
+funding. It is simply too expensive to play in this field. This is a report by Stanford, by the way, and I'll provide you there with the link, and you can read up the whole thing.
+It's too hard to get the gpus, at least until recently.
+The talent drain is massive. If you have a top end AI engineer today, and these are numbers that have been validated as recent as a couple of weeks ago, not more like 3 weeks ago. It's about 1.5 million, right?
+The salary of an Mit post. Doc is about 50,000.
+So when it gets to be that huge of a disparity.
+no one, or, practically speaking, is going to stay in university. And once you start to get that big movement, people want to go where things are happening right? And so you have a tremendous challenge of being able to compete
+in this space. And this in many ways, is the AI enabled economy.
+You can see here the comment that I'm making the key drivers to progress. Discovery and strategic advantage in AI are access or require access to people, data compute
+and finance. And here you will have to compete with the world. And this is why
+I think once again, that when it comes to in context learning, you can play in this field without
+having to enter that rarified level of of technology and of talent, and so on.
+There's a tremendous need to reskill. Of course, when it comes to workforces, and I think I'm here close to the end. Let me just go ahead and
+play you this this clip by our outgoing president here at Mit, remarking on this
+fundamental change that's taking place regardless of what your background or interests are.
+All I did is listen
+to what our students and faculty were doing, and they are the best way to identify where the future is. And students were basically saying by the choices of the courses they were teaching and the majors they were taking, that they recognized
+that the world needs bilinguals, and by that what they were saying and what I'm translating that to mean they come here to do a measure on whatever it is. They love the discipline. They love chemical engineering, physics, astronomy, whatever that is, but they realize they need to be very familiar with the tools of AI and computing they need to understand those, and how to use these tools to practice their profession.
+Or
+so. One of the things that I would argue you need today is this
+ability to be able to be a bilingual leader, whatever it is, as as
+Rafael Reif mentioned
+that you're interested in.
+You're also
+want to be grounded. You'll also want to be grounded
+in the tools of artificial intelligence, of data and technology.
+So let me go ahead and move here to some of the recommendations. These are some of the books that we've mentioned in the past, and I think I have a minute less left. So I just wanted to play you this last video for for motivation.
+Hello!
+The other hand.
+ever since his 1st album in 1986 with record Producer Kyle Lennon.
+I thought if we sold 40,000 copies they might let us make a second record. And what did that? First? st About 4 million.
+and then Fate took it all away. Another serious medical blow to country Music Star Randy Travis. He suffered a stroke last night at a hospital in Texas.
+
+John Williams
+00:57:35
+Besides the paralysis, the area of his brain that controls speech and language
+was hit. The hardest music.
+It's what he's made of. Music is his heart. It's his soul. It's not about how it sounds. It's about how it feels. And that's not something a computer can figure out. Not yet. Kyle knows Randy's voice almost better than Randy does. They work together for 40 years this time, though, the task was to take a computer, generated voice and give it Randy's country heart.
+2 months ago Warner music gathered a small circle of fellow musicians into a recording studio. Randy sat with a Cheshire cat grin.
+and then
+they hit play. She had eyes like diamond, holy crap.
+The reaction to his 1st song in more than a decade was a mix of joy and wonder.
+Oh, but they were dark and deeper, thought I.
+
+Abel Sanchez
+00:58:39
+So again for motivation. And
+we can go to the questions, I guess. Now.
+John, I don't know if you want to take the 1st one.
+
+John Williams
+00:58:57
+Yeah, sure.
+Yeah. I mean, I definitely say that
+an agile work frame
+is useful.
+It depends how you were what you mean by agile. There's various definitions of it.
+But certainly part of it is that
+you iterate quickly on your product, that a minimum getting a minimum viable product getting actual feedback from the customers.
+And
+you know, updating certainly in the software world. And
+it's pretty. That's pretty much what devops is is all about.
+I wouldn't go as far as the you know, scrum and things like that. These are things that
+have been added on later, and I'm not necessarily part of being agile.
+You know the fact that it becomes very structured
+My sense is that
+it's
+it's it's good to view the world, not as predictable, but as unpredictable.
+That's that's the learning. I think a lot of companies have had. Certainly Microsoft
+did a test with their engineers and found 2 thirds of their ideas were not good.
+that you know, only one in 3 played out to be a good idea. So you have to test them out. I think our assumptions about what the world is like out there.
+you know, are changing fairly rapidly in that. It's pretty clear that we're dealing with
+a lot of uncertainty now in the world.
+you know, some of the biggest uncertainty is going to be government regulation on this.
+that you know the Government could wade in at any time and really cripple the AI business.
+and
+fortunately they haven't at the moment. But certainly I think
+it's it's a problem, I would say.
+the way I view it actually is that AI,
+certainly, in the educational space can allow mass customization.
+It means that.
+you know, we we can talk directly to that student
+at the level that they need to be booked to.
+so that they can be brought up, you know, to speed
+at the moment when we teach
+classes, we have to guess the like, we're talking to you guys. Okay, we're having to guess where you are. You know there's lots of you out there, and we're going to miss with a whole load of you that you don't need some of these things, you know others. Maybe we need to talk in a different way. I I think education, I think it's going to. We're already seeing small schools starting up. I think it's going to be like that. I think it's going to be mess customization.
+Babel.
+
+Abel Sanchez
+01:02:07
+Yeah. So for those of you who asked, I just posted my slides.
+let me go ahead and go down to a couple of minutes here.
+One of the the issues that I have with Agile is that many people
+throughout the world again, I'm not singling any country out here
+when these topics come up, they say, oh, no worries. We're doing agile. We're good, right
+and agile.
+Could actually make things worse.
+And the reason, I say that is that it's really about improving communication. And I know that's a really uncomfortable thing, especially for people who are technical. We want everything to compile and be able to look at the code and say, Okay, yeah, I get it right. But if it's about improving communication and removing dependencies.
+you know you can follow management. You know, these these scrum management approach and get trained to be a scrum master, you know, and and so on
+but that's not gonna do it right. It's a little bit like going to business school and expecting that just because you took a bunch of courses, you're gonna be able to
+run a company exactly like you want. It's much harder than that.
+And so when you look at the literature, I think it's well intentioned.
+but it can be
+taken in a way that it becomes more rules and bureaucratic
+cruff you have to get through, you know. John talked about Netflix. There's many issues that Netflix has, however, being able to address complexity with talent
+is one of the things that they do well, right? And so I would say, you know, be very careful when it comes to
+being able to think that Agile will solve everything for you
+once again. I think it's about using the pieces of technology
+that can make you move fast. And one of the things. And this is Adrian Cockroff from Netflix and Group
+said, early on measure speed to market.
+If you're doing that faster, you're doing it right.
+If it's taking you twice as long, or you're remaining pretty much flat, then it doesn't really matter what you're doing right, because the goal is to be able to go through this loop faster, because there's always going to be someone out there who's going to challenge you in the marketplace is going to create something that you need to respond to. And so if you can
+react fast at speed again. Think of it as a hurricane. You can get hit. Nobody blames anyone from getting hit, but if you can rebuild its speed. That's a wonderful feature to have John.
+
+John Williams
+01:04:54
+Yeah, thanks. April. Let me.
+I've lost my timer. Actually here, I'll I'll cut me off. Okay, at 2 min.
+Recommendations for further study. Certainly there's a lot of information. It depends, I think, what what you want to study.
+There's there's going to be developments, you know, in the
+transformers, for example. There's going to be
+updates in how fine tuning is. Gonna be done.
+It's possible that
+you can deploy these down and get fairly small models at the edge.
+So we're seeing already deployment to cell phones, for example.
+And so my sense is, you know.
+figure out what some area that you want to study and then find leaders in that area. Certainly in terms of general artificial intelligence. I'd say, Ilya subsiva Sam Altman. The whole, I mean that the the Openai people were some of the leaders. Meta are the other leaders.
+And you'll find a lot of videos out there, and if you happen to code, it's it, I'd say, go through open AI's cookbook on. Github has hundreds of examples. And then, if you're you know you're really like a data engineer. You'll look at what's being posted. And you'll see.
+you know, Openai, there's a lot of things that people suggesting that they don't have in their Apis that needed managing. The context window is a big one. Certainly. We're seeing mem. G, mem. Gpt, for example, that's adding
+the capability of
+basically infinite storage to these language models.
+And
+it's it won't take you long, I think, to discover the people to listen to.
+but it does depend on what what your background is, and and what your capabilities are.
+I'll stop. I'll stop there right.
+
+Abel Sanchez
+01:07:10
+Okay.
+If if you are a leader and executive my recommendation to you would be to try the applications.
+You know. John showed his music playing. He made an avatar himself, and so did I. You know what other ones? Oh, I use it to generate images for presentations. Try them, because soon your workflows, personal workflows will start to be composed
+of genitive AI applications, and that will impact your thinking which will connect you to more applications, and you'll go in through this cycle that will really ground you on what these applications can do and what the development of the market is without needing to code.
+Now, if you need to. If you want to code, you can leverage this ecosystem
+at a tier deeper. And what I mean by that is that you could start to build some applications that might support you. So, for example, I talked about being able to create a course in a few hours instead of a year right? And you could see that all of those agents could be brought together, and this could be put into a workflow right? And we could create it. It's not hard to do that today.
+It is a matter of being able to
+understand which products can do what and then set them in a pipeline one after the other, and a pipeline might be a fancy term. Really, what you need is some some tools like zapier or pipe dream that can
+support you in doing that. And it's low code, if any code at all. But at places here and there you might have to put in some glue, and for that glue you have a couple of choices. You can do Javascript, and the stack is not as rich as python when it comes to AI, or you could do python, which is richer, but it's a bit clunky.
+but lightly. And so, if you're new into this, that would be my recommendation for the technical and for the non-technical
+John.
+
+John Williams
+01:09:15
+Yeah, I mean, I'm what I found is that
+I've been, you know, asking co-pilot to write, and not unless they co-pilot, but also check Gpt. Which I kind of prefer to. I think it's a little bit better at coding, but
+to do low, level things like find all my MP. 4 files on my, you know disk.
+and it'll just it'll just rip through and get everything you want.
+so you can write
+your own low level tools.
+And, as you're saying, at some stage, you probably want to glue those together into a workflow.
+and there's, you know, plenty of plenty of options out there to do that.
+It's
+again I find that
+when it comes to strategy also, it's really good
+that
+it's it'll give you a great idea of how you should go about doing something.
+You know. I I had it writing children stories that that helped me understand exactly how to not exactly how to talk to, but the fact that you can talk in a very precise way to it. What I would say is
+it?
+But I think both and myself looking at code actually helps us understand things. I mean, once you look at the
+you know pie torch, which is well.
+one of the one of the libraries for writing machine learning models.
+Once you see the code, it's actually much simpler than you, you'd think
+and mathematically.
+basically, all these transformers are doing is making a transformation on some input vector
+and it comes down to, you know, a single line of mathematics.
+So to some extent it depends on what tools you've already mastered.
+The mathematics of it is extremely simple, in fact, but does give you insights.
+And I'd say, listening to say, Ilya, that is probably one of the best guys you know. He's he's convinced
+that the bigger these models are, the smarter they are, and it does seem that way. There's a lot of evidence for that.
+though. There's a race to build, you know, ever bigger models that will get us to general, to general
+artificial intelligence.
+I'll stop there, Abel.
+
+Abel Sanchez
+01:11:48
+So someone asked about workflow and I didn't. I didn't get a chance to comment on it.
+There are a number of applications, and I've just posted a slice of the slide that I had on my deck onto the chat, and you can see there that there are a number of industry verticals, right? And I'll comment here on the creative one.
+You can see there that mid journey, although it's a bit grayed out, is the number one. A diagram, for example, is one that I used all the time. You can see there as well. Runway and 11 labs, for example, where you can create voices would be another one. And I would put in, Hey, Jen? Or synthesia
+unless it's somewhere else in that as well. Right? I mean, all of this stuff has happened in the last year. So
+you know, some of them might be missing. And you can see there, depending on what you're interested. There's different ones that that could be used. For example, notion is trying to
+introduce itself
+to the market
+with generative AI as A, you know, deep component of it, and you know time will tell whether you know to what degree this is true or not. I tend to see it as still marginal as opposed to Central.
+The the other thing I wanted to mention is that Marco posed a question of techniques when it comes to Llms and vector. Databases and so on. It all depends. You know, I talked about the stack when I talked about Llm. Ops. It all depends what you're trying to build like you could build a great application just simply by using prompt engineering and
+baking it into a language such as Python. Right? Think of your traditional application that would have a front end, a back end, and then the having an additional component that would call the Llm. And come back. Typically.
+you would do this in Python or in Javascript, right? And so you can still think about it the same way. Now, some of the additional tools that you might have, and I'll run over just a bit. Here is, you know, fine-tuning that you may want to add. But as I mentioned, if you're doing context learning, you don't even need that
+vector databases depending on what you're doing. You can incorporate those. And the cloud providers like vertex with Google do a wonderful job at it. And and there's there's a few more that come to mind. But
+when it comes to
+getting off the ground and running, you can just keep it in memory, or you can use chroma, an open source database, and you can build something, you know, that could scale to millions, not tens of millions, but millions. Pretty well.
+so let me go ahead and stop there, John.
+
+John Williams
+01:14:30
+Yeah. Sorry I dropped off there. My my power went down.
+Okay.
+so let me. Which one should. I take the rag, one or.
+
+Abel Sanchez
+01:14:40
+Sure! Go ahead!
+
+John Williams
+01:14:42
+Let me do let me do the rag one when do we use rag as opposed to fine tuning, tuning?
+So
+fine-tuning is actually changing the weights
+in your transformer.
+Okay? So those have been trained typically on.
+you know, billions of
+documents from the web.
+So fine tuning. There's there's kind of
+little fine-tuning where you just add maybe 10 examples, and that kind of works pretty well.
+But if you, if you start to update all those weights. You're in danger of breaking things that you've already been trained on.
+So you know, large scale. Fine-tuning is something to be undertaken at some risk.
+Regs actually are very effective in the sense that what we're doing is just selecting
+the specific data that the Llm needs to answer the question.
+So it has the advantage
+that you can tell the model. Only answer this question from this data
+so it won't hallucinate. It won't make things up. It'll just take the actual
+data that you've inputed. And you know, as Abel is saying
+today, the context window is going up to from A, you know, at the moment, Gpd, 4 is a hundred 28,000 tokens.
+which is quite a number of
+words, is quite a lot of data.
+and
+Regs are pretty effective. I'd say I'd go to those before fine-tuning that
+fine tuning you're gonna have to re retest the model afterwards to make sure you haven't broken something.
+It it. I mean, it's not as if it's going to just magically work.
+So my, my, my sense would be, do Regs first.st Fine tuning, later
+table.
+
+Abel Sanchez
+01:16:52
+Sir.
+So you know, I think
+I mean go ahead and just making
+some notes here.
+One of the questions is, how can we design and implement frameworks
+to drive adoption of generative AI,
+and my recommendation would be, take a look at the literature for digital transformation. We've had good 10 years since somebody wrote. I think it was Etsy that wrote the paper of 10 deploys a day. How can we do this faster? It used to take years to be able to put out a new version of a digital good.
+and they've been captured in a number of books, and I'll put the books into the chat in a moment, and a lot of it had to do with being able to do smaller
+deliverables
+smaller teams given more autonomy to developers. So, for example, just like I, I criticize agile right? You can do all of these wonderful things, and if you are.
+if you are really rigid on the way you run your company, and you require approvals at every layer. It's not going to happen right? And so there are a number of characteristics that have been captured
+earlier. I was talking about Adrian, and somebody echoed it in the chat that had been echoed by a number of people, and that now have been captured in the literature. And if you want the classic book on this, it's the Phoenix project that sees a company that's old-fashioned, and it's trying to change even with the security roles embedded in it.
+And this is this would be my strongest recommendation. There's a tremendous amount to learn from that.
+Let me pass it over back to John.
+
+John Williams
+01:18:35
+Yeah could somebody from
+GA. Post my deck. I've given it. I thought it was posted at the beginning, but if you could post it again. That'd be great.
+yeah, I totally agree with the able about the frameworks. I think we've learned. I think software actually is
+is in the lead, and I'm surprised it hasn't been adopted by a lot of other areas for
+but design
+that
+my sense is that the cloud has brought a whole lot of stability that we didn't have before.
+You know, we're using docker containers now. So we can spin up multiple machines, multiple machines.
+I, just looking at the second question, why do most ja, general, if AI pilots die or slow to move to production?
+I don't have too many thoughts on that, I'd say, probably through testing. I think testing is is the one area that we have.
+It's it's it's not.
+It's not as if we
+can test for everything that
+I mean, there's just no way that you can be sure exactly what words are going to be input
+to an Llm. And so you you can't really trust how, how it's going to respond.
+I think that's 1 area that there's going to be a lot more work done on that
+like I say, with with Regs. We tell it, and we constrain it so we can align it if you like, and keep keep it so that it's, gonna you know, only answer certain documents.
+But I mean these large language models have, you know, a trillion weights
+that
+I mean, we we just don't know what happens. If you fine tune
+dirt
+you make, you know what weights are being adjusted.
+You have very little, very little. You have some control. Often you'll just fine tune the last layer
+of the transformer.
+But my sense is that testing it testing is one of those areas where we're we're still
+developing. Developing means to do that
+able.
+
+Abel Sanchez
+01:21:08
+So I have a a.
+I agree with John Overall on the testing. However, I think there's a lot that we can build today that is perfectly safe to use. And this has to do with those 3 levels that I mentioned before. You know the heavily scripted, humanly orchestrated use of Llms. And then, as we move towards the while, let AI figure it out. Then we run into risk. But there's a bunch that we can build at the moment, and I think.
+that
+has the potential to address many of the needs that companies had that simply were and viable prior to generative AI. It was simply too expensive, right?
+And so
+that would be my, my, my reaction to that. The other thing that I would say is that I was mentioning earlier. Perhaps it was in the hour before they're blurring together right now
+is is that when it comes to generative AI, the stack, the big building blocks. The 1st one is compute.
+and that has been Nvidia up until now.
+The second one is the algorithms, and I would point to Openai there, although again, it's an exploding marketplace. And the 3rd one would be the data. Oh, I remembered what I wanted to react to, somebody was saying, why is it. Taking so long to do this, my answer would be the data.
+If you remember my talk about democratization.
+the majority of all these projects fail, and when it comes to building a new Llm. And a new Llm product. A big part of that can be the data. And when it comes to organizations and moving through this. This is quite painful. And so that last, you know, I talked about Nvidia as the compute talked about AI. Openai's the algorithms. And I talked about
+solve solve AI, the the company, and I'll post it into the chat in a moment as being the data. That's that's the full.
+That's the full product there, right? And when it comes to building and companies.
+they might have the compute.
+But getting the data picture together takes longer and it has more risk, and many
+want to hold off and sort of think about it and analyze it more simply because of the perceived risk
+versus the real risk, right? And and again, you can see, even between John and me, that we we think differently about risk. Right?
+John.
+
+John Williams
+01:23:39
+Yeah.
+let me stop. Yeah.
+no, I mean, I agree with you, Abel. I think there's plenty of application areas where you know, life is not at risk.
+But so and I, you know the the example I give is that
+you know, one of the best companies at investing is only right 51% of the time.
+But that means that they make billions a year.
+that there's many areas where you just need to be better than your competitor.
+You know, either in response time, that you can do something faster.
+And I certainly think that's what we're seeing now with
+Llms is that we can handle documentation, you know, much faster. I reviewed a Phd. Thesis yesterday, you know, for typos, and just ran it through Chat Gpt. It came out with, I think it was 47 typos
+that would have taken me a long time to go through.
+Same with grammar that it ripped through the grammar.
+you know any task where you're you're trying to handle
+thousands of things
+you can. You can do with tools. And Llm is one of the best for anything to do with.
+You know, human generated things that so certainly emails, documents.
+And you can see with images and videos, it's getting. It's getting there, too, that this is going multimodal.
+And so
+My sense is that individually.
+I'd I'd guess we're at least 5 times as productive this year April as last year.
+Yeah, I mean in our capabilities.
+the
+now at home, and we we can achieve in a day what would have taken a week.
+It's
+you know. You just have to sit back and laugh when you have a good day that you just kind of. Wow!
+I took care of all those things. No, it's still bottlenecks. Openai have just changed their API again. April.
+yeah, I can't believe it. It's like.
+Okay, yeah, of course, right have to go back and re
+redo all those interfaces. But no, in general it. Yeah, you, you know I I think we use it every day. Now.
+like, you used to say, Gabel, you know, I don't use Google anymore. That just ask. Fg, 50. It'll do a pretty good job.
+yeah, it's it's a different world, and
+you know, use it yourself. And then I think your company that's the next thing. Move. Move it up in your company with some
+yellow
+projects that are low risk.
+I'll stop there able.
+
+Abel Sanchez
+01:26:42
+So I'll give myself less time because we're almost at the end here.
+Said it a minute, you know, responding to the question that that you asked regarding agents. I have a friend who who was quite wealthy, and I met him the other morning after he met with his financial advisor, and he was explaining the frustrations he had with him.
+and he was saying, Chatgpt is actually now doing better than my financial advisor, and you can see a future in where you have
+expert agents that advise you on a single domain, that someone has taken the trouble
+to make them better than the general
+reasoning that a chat Gpt and data has. I was listening to the founder of Solve AI. And he was saying that Chatgpt was trained with under one Petabyte. It's a lot of data, right? But he was saying that JP. Morgan has over 150 petabytes of internal data.
+so you can imagine that something that was trained with that data would be sick, you know, would be very, very good, right? Or potentially could be very good. And so that's that's what I hope
+you know happens in the future. You know that we can have these sort of agents maybe that's a good one to end on, you know, a great future of good financial advices.
+
+John Williams
+01:28:04
+I just I I just posted a link to crew AI one on stock analysis, it does a great job out of the box. So I I actually haven't invested on it on its basis. But
+it looked at things like how much you know ripped out from the web, how much the directors had sold.
+You know there's there's public documents that you can access. I mean, I didn't know where those documents were.
+It does a pretty good job of, you know, data sources as well. Anyway.
+Good luck it's it's it's a wild new world out there.
+MP
+MIT Professional Education
+01:28:44
+Well, I wanna congratulate our faculty. Thank you for a great for a great last session. Wanna congratulate the participants on on completing the course.
+and just wanted to and and congratulate everyone on a great level of engagement. Great questions, and of course, hope to see everybody at very soon at another one of our mit professional education
+courses very, very soon. Wanna wish you a great rest of your week. Everybody be well and thank you again. Dr. Los Angeles press John Williams. And be well, everybody take care.
+
+asiddiqui
+01:29:18
+Thank you.
+
+Raj Pathy
+01:29:18
+Like you so much.
+
+Abel Sanchez
+01:29:19
+Thank you.
+
+Pablo Bermudez
+01:29:19
+Great. Thank you, Joe. Bye.
+
+Abel Sanchez
+01:29:21
+Thank you all.
+
+Javier Amaya
+01:29:22
+Yeah, everyone.
+
+Vidhu
+01:29:23
+So Gracie.
+
+Piero Camera
+01:29:23
+Thank you. Thank you. So.
+
+Bernhard Riedl
+01:29:24
+Doing my best. Have a great day going.
+
+Manish Kumar
+01:29:27
+You bye. Thank you so much.
+
+adam
+01:29:28
+Thank you. Thank you. Very, very good. Thank you. Thank you.
+RQ
+Rizwan Qureshy
+Amazing. Thank you so much, gentlemen.

@@ -1,0 +1,655 @@
+Fred Quijada - MIT Professional Education
+Alright, everyone welcome as you are filing into the zoom room. Hello! My name is Freddie Guiha for mit professional education.
+And I wanna welcome you to data, data leadership, transforming the corporations, operations management and mindset to leverage data. AI and cloud computing. This is our wrap up. Webinar and I wanna give a very special welcome, and thank you for being with us to our faculty, Dr. Ozanches, Professor John Williams. Gentlemen, thank you for being with us to bring the learning journey to a conclusion. And I also wanna congratulate all of our participants for completing the course
+mit in classic mit fashion. You've been drinking from the fire hose for as many weeks.
+and and that is no easy task, especially when with the professional and personal
+demands on your time week to week
+also. So before we get started, a couple of things 1st of all, the session is being recorded.
+and the recording will be available on your canvas online platform with subtitles in your native language in the next 24 h. So look forward to that
+also. During the session. We wanna encourage you to keep your cameras on as much as possible. Logistics allowing also. If you wanna ask questions or provide comments and interact with our faculty you can. Put your questions and and comments in the chat. As you know, as many of you know, they are very keen on interacting with all of you directly through the chat, so they'll be monitoring that very actively during the session.
+So that that'll give you a a a a great, great way to to have a conversation with them during the presentation sort of steer help steer the conversation towards your your questions and interests especially now that you've been through the material and you have probably, even more insightful questions than you did at our welcome webinar. So I encourage everybody to make use of the chat. And so we have that. And towards last 5 min of the session we will have
+a a survey that we always provide for everybody just to just to get your feedback. Get your opinion 6 a few seconds you're familiar with it as well, and it'll be great for you to please give us your feedback on these sessions helps us do our jobs better.
+And with that I am going to introduce our faculty one more time.
+That's John Williams. His research focuses on the development and application of computational algorithms, super physical systems he was director of. It's audio id lab, where the unit of things was amended he was named alongside Bill Gates and Larrylson of Oracle as one of the 50 most powerful people in computer networks. He has been author or co-author of over 250 journal and conference papers.
+He teaches here at the Institute courses on the fundamentals of programming modern software development web system, architecture and cloud and blockchain. He holds an undergraduate degree in physics from Oxford, a graduate degree in physics from Ucla, and a doctor from Swansea University in the United Kingdom.
+Dr. Lassace. He's executive director of Mit's Geospatial Data Center. He's the architect of the Innovative things global Network architect of data, analytics, platforms for the likes of sap, for Johnson, to Johnson, etc, Michelle, exile, mobile, and altria.
+He is also architected. Cyber tech impact analyses for the United States Department of Defense and Firewall work for Irvo, which is also a member of the United States Intelligence Community. He holds a doctorate from Mit and teaches here at the Institute courses on cyber security, engineering, blockchain cloud and data science.
+And he has also developed educational software for Microsoft and helped to establish accentures, technology, Academy and produce this point, thousands of educational videos and worked for over a decade with learning management systems that have been deployed in the Americas, Asia, and Europe. Gentlemen.
+once again. Thank you so much.
+and the floor is yours.
+
+John Williams
+00:04:04
+That's great, Fred.
+
+Abel Sanchez
+00:04:06
+Thank you for that.
+
+John Williams
+00:04:07
+Table with.
+it seems like we're in the midst of another revolution, you know. We were thinking that worldwide web was a great step forward and then cloud computing.
+Now we've got generative. AI!
+What's what's your take.
+
+Abel Sanchez
+00:04:22
+So I think you know th there's so much to say about it, I'll I'll oh, let me go ahead and and start my timer. We're gonna try to keep our our balance by using the timers.
+it is.
+I think, one of those things that has caught the world by surprise.
+I think we all knew that such potential existed. However, the 1st time we we tried it.
+most of us had that Aha! Moment where we said.
+oh, this is different than everything else I have tried up until now.
+and I think in some ways we're still adjusting
+to what that means and how we can leverage.
+Think there's a level, a number of levels that this is taking place at. But you know, for relevance in in this course, in in our
+data leadership. Right?
+The very 1st step in going on this journey is being able to get your data practice in place.
+which means, you know, you can collect.
+you can store, you can process, and you can transform in order to provide those insights right to decision makers so you can increase
+your your hit rate, say right? And I think from that possibility to be able to
+leverage this
+comes a bunch of other opportunities, right? Like.
+you know, the question of being able to do predictive models at a lower cost, the ability to be able to integrate intelligence. And when I say, intelligence is a fancy name for reasoning about, you know, perhaps, is a, you know, couple of things that you have to reason over right, but in the past this has been tremendously expensive.
+And I think this
+developments
+are allowing us to
+to democratize that axis right? And I think in many ways, you know, this course is focused on the building block, which is data.
+And then.
+you know, the next part is generative. AI. You know, how do I leverage that
+John.
+
+John Williams
+00:06:27
+Right. Thanks. Table. Let me
+start my timer just to see if it works yeah, good.
+No, I was just thinking about legacy systems. And
+you know the difficulty that we have with data, you know. Somehow, we've made these great strides in a lot of ways.
+but it's still difficult.
+you know, whenever I try to get data about climate issues, you know, I I have to find out which agencies got it. And then they've decided usually on some, you know, strange format that they're gonna provide you the data in
+and it it you you download the data and it has, you know, 50 columns with various names. And you you really don't know what those features are.
+And
+I was thinking to myself, it's still really difficult that
+you know. We we'd looked at. You know, Chris Ricamini has these 6 stages of maturity that companies go through.
+and
+it takes a long time to become familiar with data
+that. And especially when you've got multiple data feeds. And today, most organizations are trying to integrate. You know, various data pipelines. And it's not at all easy.
+And
+to some extent we've got these legacy systems which we really can't get rid of the Erp systems. And most companies have.
+You know, other systems that they've written in house that
+you can't get rid of. I mean, our security is still done by the, you know Kerberos team, basically, that were there years ago.
+And so
+it does seem that it's it's a major issue how to
+change an organization.
+And the fact that it's got legacy systems sitting in there. And usually they're owned by somebody that's going to defend them.
+Let me. I'll pass it back to you, Abel.
+
+Abel Sanchez
+00:08:40
+So John brings up a a
+favorite topic of mine, which is change management. But I wanted to address
+briefly
+the
+quality of decision makings that we make with data.
+And what I mean by this is that you know, you often hear we're making now decisions based on data. However, there is there.
+and implication that it's important to highlight
+the data that you have is not necessarily good data.
+And what I mean by this is, you know, we're in a political season, and every single politician has data, and every politician has economists that say that his way or her way is the right way.
+Yet somebody else.
+And you know you can take any government system anywhere in the world and hear, you know, the different parties argue one after another, and one makes you feel like, Oh, my God! This is really the way it should be. Then you hear the next guy, and you go. Well, maybe not, and they go back and forth all the time. Right? And so when it comes to data in our organizations, there's an assumption there
+that we're picking the right data right? And I think this is one that
+you know. Only you can determine whether this
+will play out, and I think coming full circle when it comes to. How do we
+follow strategies in our world? There's a number of frameworks that have been used
+right, and one of the ones that I would advocate the most for is, you know, you test something out in the world. You get feedback, and then you go back again. This is a scientific method, and, you know, summarized way. But when you look at Eric Rice, when you look at the Uda loop, they're all doing this. And so this data
+that is supposed to improve our
+decision-making needs to be vetted against the market. And just as important as having data is the ability to go fast through that loop.
+and I can say more about genitive AI. But I'll I'll wait for my next turn.
+Done.
+
+John Williams
+00:10:42
+Yeah.
+hang on. I'm just going to post something.
+So
+it does seem. And then this is a quote. HD. Wells kind of said that
+you know there are 3 things that you need to master. There's reading, writing, and statistics.
+And you know, coming back to your point, the problem today is that
+a lot of the things that we're trying to predict
+aren't absolutely predictable. But you know that there you'll end up with a probability.
+And it's as humans. We don't handle statistics. Very well. I just put up this, these, this kind of statement, this 50% chance of rain on Saturday, 50% chance of rain on Sunday. And then the weatherman said, There's therefore there's a hundred percent chance of rain this weekend, which is obviously wrong. So I'll just leave you with that of, you know, okay, what is the what is the percentage chance of rain? This weekend?
+Those 2 1st statements are true, and there's a guy, a good Gigarenzer that
+actually has a whole career on
+the way that humans think.
+And it, we're not that good at handling
+percentages or probabilities of things. Abel, we were talking earlier about, you know you get into a car, and is that more dangerous than walking down the street? And
+you know, for most people a lot of these things are very unclear, and apparently the way the human brain works is, if it's easy to imagine it.
+you know, if you met, you can imagine a car crash. I suppose you can imagine getting hit by a car walking down the street, but it turns out that we think the thing that comes, you know, mostly easily to our mind. We think that's the most probable.
+And so it does seem to me that these days, what we're trying to do with data is which we'd love to get to. Just, you know.
+data based decision making where we're making decisions based on data.
+And it's not that easy in a lot of areas. Because, as you say.
+you don't know the accuracy of the data.
+Often there's a you know, there's a signal, but there's noise.
+and sometimes separating. The actual signal from the noise is very difficult.
+so I do think that we're we're in an area where there's tremendous possibilities. And you know we'll talk about generative AI.
+But I would say as well that we seem to be still struggling, and I'm trying to grasp you know what? What's the source of that difficulty, you know. Why? Is it still difficult to get
+a probability or to get the answer out of the data.
+I I forgot to run my time or able, so I'll stop there. But.
+
+Abel Sanchez
+00:13:44
+That's okay.
+So Simon brings up a great point. Right? Great storytelling
+is how we have transmitted information through human history.
+And so we're wired
+to accept information in this way, and whenever you have a great story
+it can change the world
+right? It literally can. If you want to see one of the biggest changes throughout human history. Look at the change in the number of
+kids people had within a generation. You know, we went from any number of kids to 2 or one right? And I forget what the exact number is.
+And it was an effective story
+that told people. Your life will be better. The opportunities for your kids will be better, and it went around the world, and it created a change that I think most of us
+cannot even fathom, you know, changing the world's attitudes about how many kids you should have right
+and that is, can be exploited negatively right
+again, regardless of which political position you have. You know that there's people out there that will move the camps or the population one way or another, and in many ways.
+you know elections are essential to this. You know I was written and listening to somebody recently said that the Us. Election is going to be determined on whether people believe.
+if it's an election about
+the elites taking advantage of them.
+or if it's an election about the protection of democracy.
+and that this tale that both of them, you know, both parties in the Us. Are trying to tell is sort of reinforcing or building a case for this.
+but you can see there that
+all of this reasoning, and all of this abstraction that we love, you know in the sciences does nothing at all
+for the mainstream population, and it's that's not to say that they're not smart, tremendously smart.
+Yet we have that vulnerability as humans.
+John.
+
+John Williams
+00:15:51
+Yeah, I mean, you bring up a great point, I think, able that
+you know, as humans, we're moved by our emotions a lot more than we're moved by.
+Scientific reason.
+And
+it's I think it's difficult. And obviously Carnamon comes up with this. You know the slow think fast, think, brain.
+and
+we've had huge strides in.
+You know the way that we live. You know we live today better than any king could have lived 150 years ago.
+But
+it's so difficult, I think, for people on for me as well, you know, to grasp exactly what's going on. I do think this is where history comes into play that I think you know, having the history of something. It's much easier to see changes than it is to kind of look at data and have it have an absolute value. You know, if you if I look at my blood pressure
+really, it's the changes that I'm interested in that. If I've got a history, if I've been taking it, and I'll say that I'll our data records. Now. The medical data records are quite good. They they plot little graphs, you know. Which is which is tremendous because it's much easier to detect changes than it is to look at absolute values.
+and I do think that in some sense the difficulty is often we don't know
+the right questions to ask of the data
+that
+a lot of the time. The features, the headings, if you like, that, are given to certain features. Are not exactly correct, and that we may not know them. So I do think it's tremendously important to keep track of what? What transformations have been done to the data.
+And there's companies that do that now. But it's it's still a challenge, I think, to to keep track of what's happened to that data. And you know, where did we get it? And what what's the what's the validity of it?
+Can we really rely on it or not?
+
+Abel Sanchez
+00:18:15
+So I think you know, coming back to where we started, I think one of the positions that people will often argue for, and this is Eric Rice and others is that you cannot know at the outset.
+and that the only way
+you can validate this is by going to market or doing running the experiment
+which
+follows, you know. And and if you agree with that, it's how fast you can go through. This loop is what matters a tremendous amount. So let's say you go out there. And you have data that says that you should sell Widget A, because people really hate B.
+And you go out there, and it just falls on his face. Right? If you can go around
+and quickly replace and message out with B, you know, product B.
+Then you know, you've saved yourself
+and one of the. And this is why why, I think that one of the most
+powerful use cases for generative AI is marketing.
+because if you get it wrong.
+you know the consequences are love.
+and you can iterate quickly.
+you know, being able to leverage data, being able to take a different position if you would A B test. You know of the past
+and go out there with your product. Go out there with a new message, you know, create video create campaigns, create images, and then iterate and go again quickly. But the
+the important part here is that you are making decisions, you know, based on intuition. But then you're seeking validating validation based on the experiment.
+And this is, you know.
+opposite of how what we have done in academia forever. Right in academia. We say, Okay, we're going to study something to death
+forever. You know. We will get it perfect, and it takes us 10 years, but we will get it right
+in this other way. It's the experimental way. Ok, we will take a cut, you know, software does this, and then we will try it.
+and if it works we know our intuition was right. If it doesn't, then we'll try again.
+and so shorter, shorter deployments as opposed to, you know the 3 years, like
+done.
+
+John Williams
+00:20:30
+Yeah, I mean, I think you bring up a great point able about, you know.
+do doing experiments. And you know, do that like like Eric Rice says, you know.
+check your assumptions, you know. Put your product out there, and and really test it against the market, because your view of what the market wants may not be what the market does want. So
+I I think this, what we're seeing is
+you know, the rise of minimum minimum viable products. You're seeing a lot of test products out there. This is certainly true. Now, in the art of genu generative AI, you're seeing lots of tests going on. Able. Maybe you want to play your little video of the of the dating. I thought that that's, you know, brings home.
+you know tremendously. You know. How are you gonna use this guarantee of AI? Is it? Gonna be a little is it? Gonna be your girlfriend or boyfriend? Certainly. I I think both of us now are using chat. Gpt, you know, every day. I I'll own up. And I I put that question about the rain, the percentages to chat Gpt, and it gets it right. You know, the answer is 75% but
+it's it's good at statistics. It it can reason pretty well. So you know, it can do base theorem. It it's got it all there, and I would say, that's 1 area where, whenever I'm stumped now on, you know, probabilities or base theorem, I just throw it at Chat Gpt, and it gets it right.
+But I'd
+like reflecting. It is amazing that politicians don't seem to run the tests, and even when the tests have been done they seem to get ignored that, you know, after a generation, if there's a generation gap, it's like now that we we don't even know that anymore. So I I'm appalled really at how little data is used, especially at the higher levels.
+Maybe maybe that's a mistake. I'm not sure.
+
+Abel Sanchez
+00:22:44
+So I'll I'll
+so I'll go ahead and run in. But before I do, let me preface that by saying that I was meeting with a group of mit alum on a tech hub here in the Boston area, and I was surprised by how much energy they put into trying to find a partner.
+and once you start to look at it. These are very busy people, you know, whose time is very valuable, and being able to go on the apps and going on a date, and, you know, spending 3, 4 months, and then figuring out that this person is not going to work out, and that they have to start over. It is crushing.
+Not only that. There's a lot of, you know, getting turned down, a lot of embarrassment and a lot of, you know, self-confidence conflicts right? And so into this context, this, this lady who is the founder of Bumble, which for those of you who are outside the Us. Is a dating app for women. It's talking about how genitive AI could make a contribution. So let me go ahead and
+share my
+my browser here.
+I'll go ahead and select and share my sound optimize for video.
+And how much is AI going to help or hurt that? Because you and I talked about last year. AI might be able to help teach you how to flirt. Help you write that opening message. On the other hand, you've got people falling in love with bots and
+like bots posing as real people. Yes, like this is getting really terrifying. Yes, it's a little freaky, but that's a fad, I mean. Listen, I'm sure there are people out there that might form friendships with with some form of AI, and that's fine. But our focus with AI is to
+help create more healthy and equitable relationships. And that also starts with yourself. How can we actually teach you how to date? How can we help you show up in a better way. Give me an example. Okay. So, for example, you could in the near future be talking to your AI dating concierge, and you could share your insecurities.
+I just came out of a breakup. I've commitment issues, and it could help you train yourself into a better way of thinking about yourself, and then it could give you productive tips for communicating with other people. If you want to get really out there, there is a world where your dating concierge could go and date for you with other dating concierge. No, no, truly. And then you don't have to talk to 600 people and all of San Francisco, for you say these are the 3 people you really ought to meet.
+So there you go. This is, but if you think about it, it's a tremendous amount of effort that people spend trying to find a partner. And this makes so much sense right? Or maybe it's just me, John.
+
+John Williams
+00:25:34
+No, no, no, I don't think it's just you I just have to love able, I mean, in some ways it's right, you know. Where was this app 30 years ago, when I needed it?
+
+Abel Sanchez
+00:25:43
+Yeah, that's right.
+
+John Williams
+00:25:46
+No, I mean it that
+I mean it is fascinating. I think. You know the impact that social media has had.
+and it has. It certainly hasn't been all good, you know. I'm thinking of the you know, the book, the the anxious generation. I think it's called
+Jonathan Height again.
+He! His books are really thought provoking, but you know he's saying the millennial generation haven't gone through a lot of the
+learnings that
+you know youth used to go through. And so the they're not as well prepared for adulthood. What are they? What's that phrase they use able adulting? Right. I'm not ready for adulting yet. You know, there's a lot of families with the 30 year old kids still living with them.
+so we'll we'll leave that because it's so somewhat out of the scope of
+data leadership. But
+I mean, you, do. You do have to kind of reflect that. Yeah, you can see that
+what that lady was talking about might make sense.
+you know. Maybe you should be sampling more people.
+it's I have. I I don't know if I totally buy into that, but maybe it depends.
+Let me get. So I haven't been keeping track of time able, but I I just wanted to say that I I think it's a great video, and it is thought provoking about
+because I I do feel I start chatting to G Gpt, and it's like a buddy.
+You know, I'm asking it questions about what should I do today? You know. Can you write? You write, write my annual report for me.
+It certainly does a pretty good job.
+Sorry! Let me.
+
+Abel Sanchez
+00:27:40
+And carrying your time.
+
+John Williams
+00:27:41
+Yeah. Sorry.
+
+Abel Sanchez
+00:27:42
+No, so I think there's a bunch of implications for it. One of them would be what is considered, you know. It said
+it would make you a better person.
+And what does that mean? Right? And I think some of that comes in the context of culture and tradition. Right? Some backgrounds really have great affinity with you. You know my wife and I often talk about my son is dating right, that how easy it is if they share, say, in Southern European tradition, which is a lot of our background, right and
+just, it's easy, right? But in other contexts some things really don't work well at all.
+And so you can see here the challenge of trying to match up with another person and trying to navigate this landscape.
+and how much effort it takes. Because, you know, you go out with a person. You develop a relationship over months and you spend a great deal of time. And then ultimately, it doesn't work out. This is from a investment perspective, right? An effort perspective. This is a tremendous amount of time.
+And you can see that there's a number of things that we do in our world
+that really burn up a lot of energy that
+that we could use in other ways right? And so when it comes to our organizations, I think there's counterparts to that
+right when you're thinking about marketing like I mentioned before. But it's not just marketing, you know, for example, if you start looking at nursing.
+really, how much of what they do is keeping track of data.
+and some hospitals are starting to respond to this, not with generative AI yet, but they are creating consoles where the nurses can monitor many different patients at the same time.
+and this is a very different approach than we have done things in the past, and so
+that combination of human capabilities, and what these models can do for us, I think it's a winning one.
+John.
+
+John Williams
+00:29:43
+Yeah. Thanks. Sable.
+Yeah. My sense is, you know, just again reflecting on.
+you know, an agent that she's talking about, or a concierge that might be able to save you time.
+I mean, I'm thinking of the trends now with
+organization of of
+groups in companies or organization of companies.
+It's it's pretty clear that
+the C-suite.
+you know, doesn't have the technological know-how anymore that a lot of these areas are beyond their capabilities.
+And
+you know, you could possibly see. I'm I'm thinking, here of devops, and, you know, scrums the way scrum works as a means of controlling a group
+that you have a scrum leader. I could imagine an agent, an AI agent as that scrum leader that
+it could make pretty decent decisions. I think about.
+You know how a group is performing. You could imagine, you know, reporting what you've done to it, and maybe 6 or 7 people do that. I can imagine that that might work. And you know, there's obviously there's thoughts of pushing that up the organization that able. You just sent me a a link. I think maybe you wanna mention quickly.
+that.
+
+Abel Sanchez
+00:31:11
+I'll I'll go ahead! I'll I'll I'll wait for my turn, and I'll paste the the.
+
+John Williams
+00:31:15
+Yeah.
+no, yeah.
+Apparently this able is sending me a link about a politician running in for Parliament in the Uk. And saying that all the decisions will be made by AI, that he will just feed the data into some AI agent that will make the decisions, and you can see that that's that's feasible.
+it'll be interesting. I my sense is you'd need to experiment with that
+pretty much.
+
+Abel Sanchez
+00:31:49
+Yeah, to say, to say the least, right. And there's another one. By the way, from Montana here in the Us. As well, that is doing something similar, right that they're they're saying they will be the human counterpart, you know, the placeholder to get votes in. But really it will be the AI that is running things.
+and and that's a pretty interesting scenario, you know. There was another article, and let me go ahead and and paste it here from the New York Times, talking about replacing the CEO with a AI model that could manage it right. And you know they are arguing for the case that
+they're one of the most highly paid individuals in the organization. They're arguing for the case that there might be bias there that could, you know, negatively impact the company. You know, I just, I've been following the the saga in the United States of Elon Musk
+requesting 46 billion dollars payment, you know for him to remain interested in doing his job right? So you know, if you can replace 46 billion, that's that's a lot right? And you know how much of this could we do? And I think
+certainly, for devops like John mentioned, this is a series of steps that you could determistically measure right whether this is within the tolerances that that that you expect and be able to apply genitive AI pretty easily right and meaning data, and be able to to predict here the outcome.
+However, when it comes to something more
+rich, and it's
+possibilities, you know.
+that that would be harder, but that's where everybody is pointing to. They're saying, agentic reasoning right where you hand over. And I think there is again, we struggle with our ability to integrate all the different inputs that we must consider in order to develop good strategy. You could see that this technology could do it quite well.
+John.
+
+John Williams
+00:33:53
+Get that.
+Yes.
+I mean, I'm just reflecting on what data would need to be
+fed to the
+the you know the agent?
+because that would be the difficult part I think, in.
+you know. Would we be spending all our time, you know, sucking up to the agent, sending him, I notice. I mean I hate it. Some people sending messages, and it's clear. But you know this message is not needed.
+I mean, this is what I worry about. I I think there's been some great trends in
+organization within corporations, and that's, you know, the 2 pizza teams. It's clear that
+certainly in the area of data that you know, we, we should be constructing these data pipelines where there's a clear ownership, and that that team is responsible for that pipeline, and we can make changes really quickly, you know, 10 deploys a day, etc.
+But I do worry about
+you know. How do we manage this? And
+How would this agent figure out? You know that that that people and I presume it knows that people can lie and cheat and be devious?
+I mean, I've even asked the agent to behave that way, and it certainly does
+it. It can be devious.
+It understands what the word means, and it can respond that way. So I I think there's gonna be challenges. But I I mean coming back to, where would we deploy this first.st It's pretty clear that there are tasks that
+you know generative AI is ready for.
+and they're surprisingly large that you know the music generation one.
+I'll maybe I'll I'll get do do that a demo of that one cause I I love the little tune I'll do it later. Able I'll give. I'll give this up. Now
+stop it right.
+
+Abel Sanchez
+00:36:05
+So I think John brings up a a great point, the point of data. And you know
+some people are starting to talk about Llms. You know, that was listening to, to. You know some investors talk about Llms, and they were saying, it's like vintages, you know. This one grew up in the hills of Tuscany, and we, you know, seeded it with data from you know the Sonoma Valley, and they're talking about these, you know.
+the these Llms as as unique products, right? That go out into the world. And you can imagine one of these being developed say, Oh! And, by the way, Mistral, even, you know, a minor model just raised 600 600 million in valuations already. So 3 or 6, I'm not sure exactly. But into the billions already. Right?
+So so these, these are coming everywhere. You can look. And and one of the issues, you know, I think when it comes to data and the provenance, and what you're feeding it is.
+you know, precisely this point. Even if you were to assume perfect logic. There's this great line from dune. You know the the book, and that has been made into a movie that I love. And the line goes, how do you control someone? How do you control someone who has perfect logic.
+And the answer is
+on the data that you give them.
+because you know, you could see here that when it comes to predict the models, they're only as good as the data that they have.
+And so you know whether it's a politician, a CEO, or anyone else. It only depends on that previous context and and in the intelligence community. I was listening to the CTO of the CIA. Again, this is a public podcast I'll put it into the chat in a moment.
+They were talking about. You know how this could be used, and they were saying, Well, think about it as the person who has been at the agency for 40 years. They know how to do things right, but if there's something new.
+then that won't be in the data of the Llm.
+And so this is a similar scenario, and I think, where we could
+get great guidance on a lot of the day-to-day. But every so often we would not. That would not work
+done.
+You're on mute, John.
+
+John Williams
+00:38:24
+Let me just share my screen a moment.
+Let's have a look here.
+share sound!
+Oh, these things just take too long. We should be, they should be automated.
+Let's have a look here. So if you go to suno.com, and you can sign up, and it's it's free for a certain number of time. But you can create songs, you know. So here create a song that's saving the future of the world.
+About data saving the future of the world and have a best brand playing so you can create it. I already did this one. And so I'll just play it.
+So it produced this song.
+la, la, la, la, la!
+In a world that's ever changing. We hold the key. Read us the light that guides us. It's plain to see from oceans deep to the stars above. Numbers tell the story a future we can love
+Taylor
+data, shiny, bright.
+leading us through the darkest night.
+Everybody.
+hey? No.
+okay, I'll I'll stop it. There! That's a fantastic.
+
+Abel Sanchez
+00:39:48
+Fantastic one. John, by the way.
+
+John Williams
+00:39:49
+Can, see.
+
+Abel Sanchez
+00:39:50
+The the lyrics are amazing.
+
+John Williams
+00:39:52
+Yeah, yeah, I mean, I I mean, I was thinking, you know, data leadership here, here's our song. I mean, it created a couple of them if you go to the library. Sorry if you go to the explore. I mean it has. You can choose from all these kinds of
+I mean, like some of them. I've never even heard of blues. Cumbria. Acoustic grime. I mean.
+it's amazing. I mean, this is going to change the whole music industry, it seems to me, because
+it's pretty good at
+getting rhymes good, pretty good at poetry, and the fact that you can do various styles is phenomenal, I think. Anyway, let me give up there, but it's take a look@sunosuno.com, I think. I think they're doing an amazing job.
+
+Abel Sanchez
+00:40:49
+So I no, I mean that that, by the way, that that
+the power of a demo that was so good, the lyrics they were just spot on. And and I think you know it's Simon that brings it up. You know the question of how organizations will change, and I think
+this is my perspective, right? Is that we don't know. I think we're at the outset of this, and we can. I, I think about it in 3 tiers. One is marginal, right? You basically don't change, but you add some extra functionality. You know this is the chat bot that many organizations are adding in order to do customer support. Oh, and I forgot to start my timer. I'll keep it at at.
+
+John Williams
+00:41:27
+That. Won't I worry? I want.
+
+Abel Sanchez
+00:41:29
+And and at the Second level you're adding it to a new product or a new business model. One of the transformations has been that you can do things
+for a fraction of what it used to cost you, and when I say a fraction I'm saying a hundred 1,000 times cheaper.
+you know, thousands upon thousands of times faster. And so that's certainly going to transform. And the other one is this self directed idea right? Where it just sort of let it run on its own, say on a product or or some you know, side business that you have as well.
+And so how that is going to transform are things that we don't know yet, and I think
+the trend that I'm seeing is that most organizations are starting with things where they can gain some marginal improvement, and with that then they can go to the board, and the board can see that and give them more license. And this is typically the way organizations change. Right? You do a bunch of experiments, the ones that are successful sort of propagate all the way up. And then you get some change over time. That becomes the new status quo. So that's
+that's where I see it right now, John
+Pat, you're on mute, John.
+
+John Williams
+00:42:47
+Yeah, sorry I was just looking at. There's a link to the song. I think it. I I must have been I I quite like it. It's pretty good.
+no, I I mean, it's clear that
+this AI is is pretty good for a lot of things already. The fact that
+it can produce and create. You know, the images that it's producing Dolly are pretty amazing.
+the ability to create video is going to change. Certainly going to change social media. It's already changing it.
+and
+a lot of a lot of the content that we're going to be dealing with in the future
+is going to be generated on the fly.
+I mean, I think we're gonna get an explosion of data that you can see that these machines can produce huge numbers. You imagine an Lm. Sitting there writing songs all day.
+You know, all you have to do is pick the best. Now I'm sure there'll have to be an agent that does that. You know. You've got a million songs. What's the best? So it's it's gonna be interesting, I think, in
+how these specialized agents are going to be developed. I think our advice is, you can develop agents already on Openai without code.
+So you know, generate some agents.
+My take is that they're exceptionally good at strategy.
+which surprised me. I thought they'd be good at the details, you know, because they've seen all this detailed information, but they do seem to be very good at synthesizing, synthesizing all of that into a strategy.
+So you can ask. You know, you can create a strategy agent
+that, for example, would create a marketing campaign for
+a product we looked at. We looked at one, you know, creating courses online.
+you know, develop a marketing strategy for us. What would it be?
+It's it's very good at at flagging the things that you need to think about
+able. I forgot to start my timer, so I'll give it up here.
+
+Abel Sanchez
+00:45:06
+Okay, that's fine.
+Yeah. So I think you know, in in in a way, coming back to you know, how do we react to these changes I think the the recommendation would be, and it's what we do. And and it's what corporations have done is to run a number of experiments. However, I would think in this scenario you would try at more than one
+one, say vertical. I've seen it done a lot in it departments, because, you know there's great support and tools for this, but marketing is another one that is
+perfect for this, because the tooling and the
+products that you get. In fact, some of the models today in New York fashion are selling their likeness
+to AI companies and those those likeness, or or you know, their likeness is being used to create new marketing campaigns and new photoshoots for fashion houses. And so you can see here
+how this is this. This is taking off in a big way, right? And so obviously, it depends what industry you're in. But even in the field of research, when it comes to understanding biology and making it more accessible. And I think this more accessible is something that is worth emphasizing.
+because
+when you use this, you do not need to understand the internals
+and the internals, you know, foregoing the internals makes it more generally available. For example, a generation of Wall Street traders used excel. They didn't know how it was working internally, or, for that matter, the operating system on the machine.
+Yet this was a tool that really fit
+how they work
+right. And when it comes to this, you know, if you're in marketing and you're generating images, if you are generating songs, you know this jingle like John just played. If you're generating videos. Right? You can do all of this without having to know the internals. And now it becomes a productivity tool. And so you can see that depending on which department you're in. This is going to be more readily accessible for experimenting, and and to run many of these in many different domains, not just the obvious ones. John.
+
+John Williams
+00:47:25
+Yeah, I I mean, just I. I'm sure you've all been experimenting, but it does seem to me that you know the 1st cut is just to go with prompting, prompting. We tend to start off by writing, you know, fairly short prompts. But
+as we go on, we Re, you know, we realize. Okay, I I wanted to respond a certain way, and I think, you often make a great point able that you can tell it to, you know, respond to somebody as a a late person, you know. Tell me the basics where I have no expertise, assume I have no expertise or
+respond to me as somebody that you know is advanced in this area, and it'll do. It'll do all of those things that it can take. You know that it can integrate with you at your level.
+which I'd say is pretty amazing if you think of our problem in education is that
+we're having to produce content. And we're guessing. You know your background.
+And we're we're trying to obviously hit the middle somewhere. But it but clearly, you know, if if you already know this.
+Maybe you're you know you're wasting time and money on this course if you you have no background at all, maybe the course is too advanced that you know you just can't grasp these things, and my sense is that
+you know these jet Gpt can adjust to your level. You can tell it exactly. This is my background. This is what I know. Now I'm going to ask you this question.
+you know. Explain to me so I can understand it, and it will do that.
+Interesting enough. I like. I mean, I hadn't really thought down that line much, but it's clear that this is what we should be doing is leveraging this, you know, to make it customized customized education.
+Instead of being mass produced.
+we can customize.
+I'll stop there.
+
+Abel Sanchez
+00:49:33
+No, undoubtedly, when it comes to the potential for what it can do for education. I think this is huge.
+I have, you know, asked, that there's a lot of terminology. And when it comes to AI when it comes to generative AI technical jargon, and I have asked it to create an explanation, say, of embeddings, or create an explanation of a neural network.
+and the explanations are far superior than anything I would have come up with. In fact, one
+such experience was in one deck that I had that I've been using for a year, and that had worked pretty well with audiences. I asked it to critique it to see if it could be presented easier.
+or if there were any shortcomings.
+and it did beautifully. As soon as that feedback started coming back I saw all of the holes that I had, you know, prompted me to write an email saying, Hey, Chad Gbt is better than me at being able to explain concepts. And this
+this, this aspect that John mentioned.
+of being able to scale education and do it in a way we've always known that one on 1 1 on one tutor is the best way, but we can't scale it. We can't find enough people, and we can't find enough quality. People.
+however, in this case, imagine having somebody that
+it's not going to judge you
+that is going to be infinitely patient, that it's never going to get tired, and and that you can do this at scale globally
+on pretty much any topic.
+This is this is transformation, right? And we're already starting to get some of it, you know, with Khan Academy. They have something called Canigo, but you can see that these are barely the 1st steps. The opportunities, John says, you know, of being able to adjust as you're moving through the content. That I hadn't considered either
+is fantastic because we have to make decisions because of the tremendous cost
+of production. But if we can adjust
+the content as we go along, based on what your needs are, this makes so much more sense
+done.
+
+John Williams
+00:51:43
+Yeah, I mean, I was just reflecting. You know, we we send each other
+Pdfs, often on different areas and able. You sent me one, you know, on the Gdp of the Us. And
+I wanted to check it, and so I asked, Chat gpt draw me a graph of the Gdp. For of the Us. For the last 80 years?
+I mean, went out to the web.
+searched it, found it, found a government source for that data, which was a pretty good source, and drew the graph. And then I asked, You know, okay, we want to figure out, you know, the Democrats better, or the Republicans. And so it could it? It could program that. And literally, it took, you know, 3 or 4 min.
+And so my sense is that
+you know, we can now operate in a way that we couldn't operate before that just just that would have probably taken me an hour. If you know.
+3 years ago that I've had to figure out. Go on to Google
+and search. And I mean, that brings up another point.
+I mean, I'm I'm hardly Googling anything anymore.
+I don't know if you've found that able but.
+
+Abel Sanchez
+00:53:00
+No. Same, yeah, same.
+
+John Williams
+00:53:02
+It's I'll just. I'll just let the machine do the Googling.
+You know, Chat will go and go and get the data.
+And so I
+think we're in, you know, in the midst of these changes, and it's clear that this is not a mature area yet.
+but it's maturing very fast. I I liked your analogy of the wine makers. You know that. Okay, yeah. My ll, M. Has been, you know, grown in old vines on the eastern slope gets better than yours. You were kind of at that stage, and
+it's but it's moving so quickly that I you know the advice would be
+experiment quickly now. It's not that painful, you know. It takes time, but
+you'll rapidly get a sense of how how to make it work, and I do think. Ultimately, you know, we need to get testing sorted out so we can. We've got guard rails on it, etc. That we know what it can do, and when it's likely to fail. So you know, the co-pilot model is a great one at the moment you just using it as a buddy
+as a human, you're checking its results. My sense is that's the way to go immediately. A lot of companies are giving access to, you know, all, all their employees giving chat, gpt access, and
+even even that now.
+I'm not sure I like its speed now. Able that the the 4 0, version is so fast that I.
+
+Abel Sanchez
+00:54:39
+Yeah.
+
+John Williams
+00:54:39
+Hold back. You know it used to be just a nice pace that it would do line by line.
+it's so. It's something to think I'm thinking about.
+
+Abel Sanchez
+00:54:50
+No, no, I see what you mean. I wanted to comment on the announcement by Apple that they were partnering with Openai.
+and the reason I wanted to comment on it is because up until now it's been something on the side.
+And yes, Google, Gemini and others have tried to integrate it. But it's pretty lousy, you know. I've I've tested it with high hopes, you know, of integrating it into my email. And so up until now, I sort of have to cut and paste to be able to integrate it. But you can see with Apple's design sensibility right? And their track record at understanding user needs
+that this this has pretty high potential. So for the 1st time in a while, because you know, I use my phone, but don't push it very hard. I mostly do my work on my desktop environment.
+And for the 1st time I've thought, okay, now, this
+different right? Integrating it because they're saying that it will only run on the latest chips, because, you know, it's they're going to push the processing.
+And you can see there that that potentially could
+make
+a lot of what we have up until now
+more tractable and going back. Oh, I forgot to start my time going back to
+to what John mentioned about the copilot definitely. That's the way to go. The other one, I would say, is the one where it produces so co-pilot is what it advises you right on something new, I would say that the other one would be where it creates something new, like a marketing campaign, but you have to approve it right? And so there are variations of the same thing, because they have human in the loop. But both of those strike me as
+very.
+very sensible from a risk perspective. At the moment John.
+
+John Williams
+00:56:39
+Yeah, I mean, I'm struck by the speed at which things are moving. And I was watching.
+a podcast by Jenson, Wang, CEO of Nvidia.
+And I was struck by the fact that I mean, they're just picking out a very small piece of this AI environment. Basically, it's doing matrix multiplication on a vector.
+That's what. That's what a Gpu does.
+And they've built a 3 trillion dollar company on that.
+I mean, it's just my sense is, there's, you know, companies need to figure out what's your niche? What what can you excel at? But if you can excel at it?
+You know you messed that whole environment.
+Now, obviously, there's a lot involved in making chips that can do this matrix multiplication. But turns out
+that'll get you a 3 trillion dollar company
+and
+he was pointing out the last 10 years. The speed of these calculations has increased a millionfold.
+So my sense is, these technologies are not about 10% increase. These are about increases of orders of magnitude.
+you know.
+is the human going to be replaced?
+Ilya sat. Skivva thinks so. He thinks that
+pretty much.
+You know, these are going to become super human, that they're going to be much better than us at most things.
+and you can feel not where. You know, we're dabbling around the edges in software. You know the software it writes, the code is
+it's not the greatest.
+but it certainly saves a huge amount of time, because it will give you the structure that you need. You know it may. It may not get everything quite right. But
+it it takes you
+from, you know, 0 to a hundred miles an hour
+very quickly in any particular area. So that's my sense is that you know, the way to go is human plus this machine for a while. Eventually, this machine itself, I think, is gonna become the focus.
+
+Abel Sanchez
+00:59:00
+So we're getting here close to the end. And I just wanted to share with you. Scale AI. This is a company that raised a billion dollars at a $13 valuation. And they're actually providing the data for Openai Anthropic Aws and others.
+And you know, I provided you their link to the story and the announcement.
+But this is a big deal, you know. I was listening to the founder speak, and they were saying that the data that was used to train Openai, the biggest and best model out there was under a pet under one petabyte.
+They were saying that
+Jp. Morgan has proprietary data that's over a hundred 50 petabytes. Just JP. Morgan.
+meaning that the need for data in the world is just beginning, and their goal is to specialize on simply providing
+data for companies. And so this is this is at the outset, and they see a huge runway. And they've had specialized like John was saying. You know you're starting to see all these different verticals, all they're going to do. You know, this is more complicated, obviously, than the scenario that John mentioned. But they're just going to focus on being able to collect and produce data meaning in the synthetic side
+for this coming world. Right? And so in in general, you know, data leadership, tremendous opportunities. And we're just at the outset. So this is a great field to be in.
+
+John Williams
+01:00:30
+Absolutely. I'll just post a link to alias at Skeva.
+who believes that
+we're going to be taken over by machines.
+Oh, did that link? Not? Yeah. Yeah.
+Sorry.
+
+Abel Sanchez
+01:00:49
+So there's 1 there from you, by from Youtube.
+
+John Williams
+01:00:53
+Oh, there is okay. Okay. I couldn't. I can't see it for some reason.
+Okay.
+
+Abel Sanchez
+01:01:00
+So, Fred, I say, you're back. Hmm.
+FQ
+Fred Quijada - MIT Professional Education
+01:01:02
+Yeah, absolutely. No. I just wanted to thank you both. We are just about a minute over time. But it's been a great session. And I wanna thank
+also all of our participants for being here with us today. Great questions and engagement.
+And with that I wanna once again. Congratulate everyone on completing on completing the course. And thank you to our faculty. And we will hopefully see each other again very soon, and another mit professional education course very soon. So have a great rest of your week, everybody thanks, and be well, thank you.
+
+John Williams
+01:01:33
+Thanks everyone. Thanks. Ivan.
+
+Abel Sanchez
+01:01:35
+Yeah, online.
+
+John Williams
+01:01:36
+Since we are.
+
+Abel Sanchez
+01:01:36
+Done. Thank you, Fred.
+
+John Williams
+01:01:37
+Yup yes, right.
+
+Alicia Pita Bucher
+01:01:40
+Thanks! Everyone take care!

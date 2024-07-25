@@ -1,0 +1,658 @@
+FQ
+Fred Quijada
+All right, everyone welcome! Welcome as you are filing into the zoom room. Hello! My name is Freddie Cookie for mit professional education.
+I don't want to
+to the digital transformation technologies. And there are practical applications. This is our welcome webinar. And of course, I wanna give a very special welcome and thank you for being with us to our faculty. Professor John Williams. Dr. Sanchez, gentleman, thank you so much for being here to usher everyone into the learning journey of the next several weeks.
+And before we get started everybody
+couple of things 1st of all, the session is being recorded, and the recording will be available on your canvas online platform with subtitles in your native language in the next 24 h. So look forward to that
+also. during the session. We we wanna encourage you to keep your cameras on and just make it all more present if you have questions for our faculty or comments feel free to put them in the chat. professor Williams and Dr. Sanchez are very keen on interacting with everybody on the chat. So it'll be great for you to
+put your questions comes there, they'll they'll be monitoring them and interacting with you and answering questions suggesting readings and and and other sources, etc.
+and
+And so it's a great, a great source of conversation enhances the enhances the experience of the next hour.
+and also, in the last 5 min of the session, we're gonna have a survey that's gonna come up on your screens, everybody, and we wanna encourage you and ask you to fill it out. It's it just takes a few seconds to fill out. It's very important information, though, for our faculty and for our support team to get your feedback on these sessions. So it when it comes up on your screen. Just takes a few moments. Please fill it out before the sessions over.
+And with that I want to go on to introduce our faculty.
+So Professor John Williams, his research focuses on the development and application of computational algorithms to distribute it several physical systems. He was director of Mit's Audio Id Lab, where the Internet of things was invented, and he was named alongside Bill Gates and Larry Alison of Oracle, as one of the 50 most powerful people in computer networks. He has been author or co-author of over 250 journal and conference papers. He teaches here at the institute courses on the fundamentals of programming modern software development web system, architecture and cloud blockchain.
+He holds an undergraduate degree in physics from Oxford graduate degree in physics from Ucla, and a doctor from Swansea University in the United Kingdom.
+and Doctor Al Sanchez. He is executive director of Mit's Geospatial Data Center. He is the architect of the Internet of things, goal network, architect of data, analytics, platforms for the likes of sap for Johnson and Johnson, accenture shell, Exxonmobil and altria. He has also done cyber attack, impact analysis work for the United States Department of Defense
+and Firewall work for Iarpa, which is also a member of the United States Intelligence Community. He holds a doctor from Mit and teaches here at the Institute of Courses on Cybersecurity, engineering, blockchain cloud and data science. And he's developed educational software for Microsoft and helped to establish Accenture's Technology Academy
+and has produced over at this point thousands of educational videos and worked for over a decade with learning management systems that have been deployed in the Americas, Asia and Europe. Gentlemen, thank you once again for being with us. I want to turn it over to you. The floor is yours.
+
+John Williams
+00:03:26
+That's great. Thank you, Fred.
+So well, I just I just realized reading back on you know where we've been. It seems like it's prehistoric, almost looking back, you know, to the early 2 thousands and
+the world wide Web, and things are moving so much faster. Now.
+what's
+what what, what events are you thinking about, able.
+
+Abel Sanchez
+00:03:50
+So. I think you know, when it comes to the world of AI 3 years, it's already, you know, the Stone Age. Right? So if we think about
+the evolution of technologies throughout the last
+20 or so, let's say the web forward right? Because I think there's a generation that we can capture within those technologies.
+It's even more dramatic. And and I think in many ways
+part of the challenge as it was. By the way, in the days of the web is, how do we think about this thing?
+You know it's it's I remember the early days in university, and people used to go take a course
+to learn how to send email right or or a course to learn how to
+create a web page. And in some ways, you know. I remember hearing Tim Berners Lee, which now nobody needs to know, seems to know but he is the creator of the world. Wide Web. Talking about? What was
+what was it that was unique and different? And what was it that made it transform the world? You know the repercussions? I would argue that we're still living through today.
+And you know, somebody told me recently. You know, the the bad thing about life is that it can only be understood backwards, but it needs to be lived forward right? And so I feel like that about genitive AI. In a sense that I think a lot of it.
+We will come to understand in time.
+And
+there's a number of things that we're, you know, hooking on to at the moment. Right? But that
+we're digesting that thing. How do you think about it, John?
+I think you you're muted, John. There.
+
+John Williams
+00:05:35
+Sorry about that.
+Yeah, I think one, you know, we called out the technologies here. But I,
+my sense is the the problem has always been understanding. You know the world.
+And
+what's changed is that, you know, in the days
+of the invention of the telescope and the microscope.
+we could, we could see the world and make measurements in a way that we could never before. And what's happened more recently with IoT is that we've got.
+you know all of this data being gathered. And
+today.
+understanding what that data means, I think, is one of the key challenges for
+companies. And part of it is the.
+you know, the world is changing. So
+it used to be that whatever knowledge you'd acquired would be relevant, for, you know, 20 years, or something like that, whereas now.
+even going back 5 years.
+it was very different. You know, we didn't have any of this generative. AI
+AI in 2,015 or so was
+just getting going. And
+it's it's very different today. And my sense is that the problem that the AI is solving is understanding data
+that giving, giving meaning to it. If you like that. Now, we can handle data in a way that we couldn't
+before generative AI.
+So I'm taking a, you know, a data, a data perspective view on it in that it's opening up handling unstructured data.
+It can understand text in a way that we couldn't, you know, or the machines couldn't be for.
+and even can understand
+images and video in a way that we couldn't before.
+And so, you know that's playing out. And and my sense is that it's solving this problem of understanding the world understanding what data means
+able.
+
+Abel Sanchez
+00:07:42
+Yeah. So so it's interesting, you know, as John reacts here to my opening statements, because in many ways this is a little bit like the elephant. Right? We're all touching the legs and the trunk. And we're all trying to understand
+and make use right of of some of these technologies.
+the things that came to mind when John mentioned. You know, data is that in some ways
+we've always used information to make decisions right? And a lot of the premise of the last, you know, 20 years has been
+making better decisions with data.
+right? And you know the data driven corporation. But the issue
+is that we've never actually gotten there.
+And as you'll hear me talk about in the course.
+there's a number of technical barriers to this, and there's a number of organizational.
+you know.
+challenges that and must be overcome even with all the technology right? And so I would make the comparison here of Google search again, Google search comes out of the 1990 s.
+Right? They sort of broke through. There were others, if you're old enough to remember
+and provided you this amazing capability to be able to search for anything for the 1st time in the world in human history, right, and be able to find that information about it. This was.
+you know, unbelievable, we take it for granted, right unbelievable.
+however, compare that to doing a search.
+And Chad Gbt.
+and if you've had the experience of using both. You know how poor Google is now.
+And this is taking into account, by the way, that Google, the invention of the core technology that Chatgpt has came from Google. And all of those guys went to Google and said, Hey, you have to redo this. And Google said, no, as usually happens with established companies, and then they all left right. But you know, disregarding that Chatgpt
+doesn't provide you a bunch of sources that you can go look for in the hope that in one of them you'll find the solution
+of what you're looking for. It tells you what the answer is.
+and like chat like Google itself, it could make a mistake right?
+But it is pretty impressive in general.
+and that to me is a fundamental change, and John talks about, you know, being able to use data. And I think
+I think that's a big part of it right
+at times. Talk about you know how it used to be.
+say, 200 years ago, if you lived in a small town.
+how did you get an answer? You know your parents usually told you, you know. Go talk to your uncle. He went to university. He probably knows, and your uncle probably sent you to somebody else, and what you were doing is you were navigating data
+right? And so let me go ahead and leave it there. John.
+
+John Williams
+00:10:41
+Yeah, no, I I was just flicking back to, you know, in the old films you'd see the teletype, or you'd have
+the the stock ticker.
+you know, and it was the fact, the information. If you had up-to-date information, it gave you a phenomenal advantage
+that you know, and it's even today, you know, companies move to New York because they get microsecond advantage if their machines are close to the Stock Exchange.
+and
+it does seem that in. Almost every area you can think of
+having
+the information that you need. Usually it's up to date information. Sometimes it's not, but usually it means that you're you're aiming for getting, you know, faster decisions that based on the data. Now.
+the problem, I think, why we failed is that data is not that
+easy to understand.
+you know, if I if I talk about the Gdp of this country
+and say that it's you know it's increased by it's doubled in the last 10 years. The question is, what do I mean by Gdp?
+And if you look it up, Gdp has several definitions. It's not as if
+that number is well understood.
+and Abel and I were involved for many years in supply chains.
+and there you have numbers attached to products that are supposed to identify the product, you know, by the product type, and also even down to the individual. You know this bottle of ketchup
+these epc codes.
+But when you get one of these codes
+you have to go somewhere else to figure out what it means.
+So a lot of the time, if if you've handled large data.
+you're looking at columns of data, and they have a heading on the column.
+But it's unclear. What that heading means.
+That one of one of the cases we had was, we had shipping date.
+and for some companies the shipping date was when it was sitting on their dock ready to be shipped.
+and that.
+you know, it might actually be shipped 3 weeks later
+for other companies. It was actually once it was gone off their premises.
+And so
+I think data. It's not at all easy to understand it.
+you know, the part of what we're seeing today is it's it's it's getting much easier to make queries and get some data.
+but actually understanding what that data means. I think, is still quite a challenge. Now, it does seem that generative AI chat gpt
+pretty good at understanding. You know what these columns of data mean. And
+the data that we're handling today is often quite large. And it means we have to look at it with machines, you know, if you have a million rows of data, you can't really scroll through it. And just look at it as a human. You have to have the machines do it.
+And so I think we're in this state where
+we've got so many advantages. We've got the cloud now that can handle big data. However, we still haven't totally cracked it, and I think that's the hope for AI is that maybe that last piece. We're getting a glimmer of hope that generative AI will fit the bill and allow us to understand data in a way that we haven't been able to
+eagle.
+
+Abel Sanchez
+00:14:21
+So I think at the core, for those of you who are thinking strategically as leaders, data is something you have to pay attention to something that you need to invest in. And if you are thinking about it more from a career perspective, this is one that
+that will be here for a long time.
+and perhaps not the nuts and bolts. You know not the data science, because this will be continuously automated, but the way we incorporate it into our corporations, our organizations, the way we replace many of our workflows. For example, one of my big
+focus
+or fossil, I think it is the plural has been, how do I make my workflows better using AI right? And if you think about, you know, say, my son.
+who is very young right, and my wife, who is my same age. The reason he can move at like at light speed is because his workflow is very different.
+And so we've been working recently in trying to leverage
+the AI he uses and the AI I use. And I've seen sort of this different side of the world right? Because he has very different risk concerns. He has very different tools that he uses, and he's sort of learning the ones I use, you know, sort of the ones that are more organizational, more for grown-ups say, right?
+But ultimately, is this transformation using data in impacting our workflows? And I mentioned that I was going to address ethics and ethics is one of those monster topics that we can talk about at many different levels.
+I'll talk about it here from a governmental regulation, and I'll sort of leave the philosophy alone.
+But there is regulation coming.
+The new government in the UK. That was just elected has changed its position from the previous. And they're looking at the ethics question now, whereas the previous one was saying they were pro innovation, meaning
+they're not going to look at it right now, and the EU put out regulation that is going to hit at the end of the month, and I suspect that it'll be something like Gdpr.
+And in the Us. Given a recent Supreme Court decision.
+a lot of the regulation that was coming down the pipeline has also been pushed off so you would put the Us. In the pro innovation camp.
+I'm not making judgments here. I'm simply saying, this is a little bit of what's going on in the world. And I think about it as Gdpr, because us has different laws. Yet a lot of the global companies need to deal with it right? And so
+that's that's all I'll say for ethics right now, John.
+You're on mute, John.
+
+John Williams
+00:17:16
+Yeah, there's a good question here. Jose, I think, has asked
+about you know, who is it going to displace?
+We're talking about AI here.
+and it's it's it's
+pretty unclear
+in education. We we've already seen that, you know. A student now with Chat Gpt can write a Phd. Thesis in.
+you know, 2 days.
+and so
+it is going to have an impact. That's for sure. My sense is that we're going to move much more towards customization of education.
+that now, you know, with an agent.
+we could deploy that agent. So it would be customized to your background
+that already, with Czech Gpt. They're asking you to record.
+or let them record your questions, because then they can build up a profile of you.
+and you know, respond much, much better to your needs.
+I think we're going to see
+speed of learning increased quite a lot.
+The danger is that if you hand everything over to Chatgpt, you know. It can certainly write things pretty well, but it's not you writing them. So it's not as if you understand necessarily what you've written.
+You know it's kind of okay. It says, Yeah, generally that I'm going to do this, this and this. And I'm going to. I've done it this way, whatever. But I think there is a danger that if we hand over too much to
+the AI that our brains are not going to develop
+in the way that they should.
+To some extent, you know, words are the tools of thought. We can come back to that able. And I can have a big discussion about it. Cause it. It borders on philosophy. But if you think about your structure of knowledge.
+it's a hierarchy that's built out of abstractions.
+and to some extent the the accuracy of those abstractions
+determines the clarity of your thought.
+And so here we are handing over to this machine. You know something that is critical to our own thinking.
+And so I to me. That's 1 of the dangers
+that we're going to lose the ability to think critically.
+the, you know, and with precision. We've already seen language being debased
+in that. Words are becoming now fuzzy.
+in that their meaning is being diluted, that you know, the same word is being used for for this, and also for something that's totally opposite to it.
+Now, maybe it's always been like that. The words are fuzzy, but
+my sense is we're entering a a you know, a dangerous era, if you like, of lack of precision in thought.
+able.
+
+Abel Sanchez
+00:20:14
+So so John and I will have different points of view here, I'll say at the this at the outset and I was reading recently. Thomas Jefferson, you know, founder of us type of person.
+and he was writing a letter to his grandson, and he within it, was talking about the devaluation and the loss of rigor and thinking when it came to education back
+then, right? And I think this is something that we've done through time and earlier this week.
+While I was speaking, somebody asked me precisely this question, right? And and because I mentioned I could conceive of a time when we no longer do mathematics and engineering right the provocative
+to say where you know everybody sort of goes. No math, right?
+And you know. The. The. The analogy that I said is, if you were to drop me today in the middle of a jungle
+I would
+starve and die
+because I don't have these skills
+to be able to detect
+track an animal. I don't have the skills to be able to build a fire. I don't have the skills to be able to detect
+from the environment what type of food I can eat
+or not. I don't have the pattern recognition.
+you know, to be able to detect from all those plants. You know that something that it would have
+learned over, you know, many years with parents or members of the community and have would have developed that that rigor and that careful pattern recognition that I would have needed to be able to survive in that environment.
+and none of that required any mathematics in the explicit way that we think about it today. And so I think there's a tremendous amount of rigor
+and
+skill set that we develop
+in other aspects of life that are still tremendously important. And and I'll make an a comparison here to modern day life.
+I've been working on trying to generate content
+that is completely autonomous and generated fully by AI. Right. And I've been surprised
+by the amount of processes that I had to redefine
+and and left and right, I can see things that are jobs that didn't exist before. So, for example, just simply being able to create
+images for marketing that are of high quality and really fit in a.
+you know, search engine optimization way.
+a good type of promotion that on its own is a skill being able to create copy, and the, you know, prompts that you require to be able to do it in an effective way that captures your voice and can leverage, you know.
+not just your experience and your knowledge, but you know, commenting on current situation and so on and on. There's a number of jobs that we haven't even started to address right. And so
+there's, you know, just a reaction of of, you know, the displacement and the new opportunities that are surging, and some comments on on on learning. John. I'm sure you'll have opinions on this.
+You're on mute, John.
+
+John Williams
+00:23:41
+Thanks. Able.
+yeah. My sense, though, is that
+you know, talking about mathematics, I think I look upon it as just an abstraction.
+and my sense is that
+you know, we're usually striving to to operate at more and more abstract levels
+that
+you know, we don't want to be down in the weeds, because then we can't actually solve the problem, you know, for our, you know, for our company, we can't make money or whatever it is.
+So I just view
+mathematics is just a very nice abstraction that actually simplifies the world.
+you know. If you look at neural nets, if you look at it in terms of mathematics. It's just a transformation that the that's going on.
+And
+you know there's a simplicity to it that
+the actual equations are just so simple.
+You know, it's like basically 3 letters. You know that y equals a x, and that's it.
+And so it gives you a
+My sense operating at high level abstractions, if those abstractions are well grounded, does give you an advantage
+that you know you can see things in the world that maybe other people can't see. Now, I'm not saying, you know I can do it. But I I think that's the goal is that
+you'd like to make sure that you, the abstractions that you're using actually do correspond to reality. And I think that's the problem we're facing today is that the underlying society is changing.
+And so you know, when we put out an app
+today, we'll put out a minimum viable product because we need to learn actually, what what do this does this young generation want
+that? It's, you know, it's unclear to us that that we're solving a problem that is actually needed by
+the people of the world today
+and like you're saying, you know your son is operating differently. You know he didn't want a car. You offered him a car, and he said, No, you know. Just give me a new. Give me a give me a credit card, and I'll do Uber.
+And
+that certainly is a problem. I think, in the sense that knowledge is becoming stale
+at a rate
+that it previously it wasn't, you know.
+I'd say 50 years ago.
+you know, you'd have to update your knowledge, maybe every 10 years. And it would be fine
+today. It's it's, you know, we're
+both able. And I read books revenously, just trying to, because other people have great views on these things.
+and one of the books that we'd highly recommend is the coming wave by Mustafa Suleiman.
+He was one of the founders of deep mind.
+And it's a great book about, you know. The big picture.
+you know, is a guy going to be good for us? Or is a I going to be this evil thing that's going to destroy the world? And he does a very good job, I think, of laying out
+you know, different different opinions, and my sense is, it's very unclear at the moment, you know, this is a little bit like the atomic bomb that.
+you know, atomic energy can be good, but it can also be highly destructive.
+Same with this. AI.
+So I
+I don't think things from the human perspective. I think, as you say, there's going to be jobs that we haven't even thought about, that are going to be needed.
+I do think.
+you know, it's going to be one of those tools that everyone isn't going to need to learn.
+My sense is, you know, today, everyone uses a computer. You know whether it's a smartphone or a laptop, or whatever that it's part of our lives.
+And I think
+AI is going to be one of those tools that we need to understand it. It's not as if
+it's like a human.
+You know, it has very different properties to us humans.
+And so you know, we need to examine those and understand, okay, what is this artificial intelligence? It's certainly not human intelligence. It's it's very different, I think.
+able. I think we probably agree a lot as well.
+
+Abel Sanchez
+00:28:10
+Yeah, yeah, we do. We do so so when it comes to the skills. And and I'll get a bit philosophical here, not philosophical sort of more abstract and and for a moment, and this is responding to, Joan said. By the way, sorry if we don't get to everybody's questions. Thank you for participating heavily. But you know we'll pick those up that we think fit where we're going.
+I wanted to talk about 4 skills that I see that
+if I were raising a kid today I would want to emphasize and they are decomposition. How do you take a problem and break it down within those smaller pieces. You know, you need to break it down to smaller pieces that you can work on within those smaller pieces pattern recognition of solutions that you already know right, and from that being able to create
+a recipe in a company being able to create a process, and then at the very end of it, the process of abstraction being able to come up a higher level. So we can think about it. Now, this process that I just described to you is actually computational thinking. And this is the way I think about it. It's not the only way, but it's the way that
+again, if I were to teach a child, because this is something that I hear over and over we're gonna lose their ability to think and so on. This is the way I think about it now, when it comes to
+applying it to the world. And what actual experiences do you give a child to be able to do. It can come from all domains. You know a lot of people teach their kids music because they feel ultimately this will develop this, you know, how do you take a piece of music and learn how to play it? How do you identify the patterns? You know? How do you develop techniques, you know meaning recipes. And how do you
+do the opposite abstraction to be able to think about it all? But the reason I mentioned music is just because typically people think about this as being very far from something like mathematics or writing right? But ultimately, if you look for this, I think you can find it in more place, Mo. Most places, you know. I talked about survival.
+I could imagine, you know. In fact.
+
+John Williams
+00:30:17
+And you.
+
+Abel Sanchez
+00:30:17
+This example a couple of times, and I've started to look
+for books that try to teach you some of the skills of the past, just because I think it'd be fun to be able to walk into. You know, I live by heavily wooded areas that I can walk into it and see if I can spot.
+You know things that you see like in the movies, right? Like somebody said, yes, there was a bear here 2 days ago, and he drank water right? And you know, just sort of fun things. But all of those things that I mentioned about decomposition patterns, abstraction, recipes. They're all in there, right? And so I mentioned just that broadly. When it comes to education. I don't know if you want to go that route, John, or pick up another question. John.
+
+John Williams
+00:30:56
+No, no, no, I'm i i
+I like your road. I just. I just posted the HD, well, said statistical, thinking one day is necessary. Why, I'm saying that is because
+for me my world view has changed pretty radically that I was brought up in on physics.
+You know, physics has become
+in some ways a lot of the world is really well understood.
+you know, cutting out quantum mechanics and things that are a little bit more difficult. But
+you know, this Newtonian clockwork world that we thought we could predict
+turns out to have been a dream. But, in fact, the world is much more complex than that
+that we've got.
+And I. And I think this is part of the
+one of the issues I see with building
+AI systems. I'm saying systems. I want to separate it from, you know, large language models. The Llm itself is different to this, to the AI system that you build around it.
+And my sense is that a lot of the systems we're worried about today are either complex adaptive systems. So these are systems that are never in the same state ever again.
+and to some extent planet Earth is is exactly that.
+you know. It's never going to be in the same state again.
+chaotic systems. A lot of systems
+or parts of systems are chaotic, you know, flow of fluids, you know. A waterfall is chaotic in the sense that
+we can't really predict all the details of it.
+And I think we're in a world now where
+you know Black Swan, events are much more
+They're much more common than we thought
+that a lot of our statistics, you know, was based on the bell curve that the normal curve, you know. So you have a mean and you standard deviation. And it's kind of done.
+But today, I think a lot of the systems we're building are actually
+very complex, that
+even when we move to do distributed computing in the sense that you know the world, Wide Web had machines talking to machines. Once you're in a distributed world. It's very difficult to predict how that's going to behave, you know, because there's different timings of messages
+and all of the systems that we're building today, based on.
+You know.
+Llms are basically distributed systems.
+the with sending messages to Openai, or we're sending them to Gemini. And the message is coming back. And then we're taking some action. Send out another message.
+These these are very difficult systems to understand.
+And I think that's 1 of the dangers that we're facing today
+is that we are capable of building systems that we can't test
+and that we can't predict.
+And my sense to, you know, I spent most of my life doing simulation.
+And the idea that you can simulate planet Earth
+and predict you know what the temperature is going to be in 20 years.
+I find kind of.
+I I think it's a kind of a joke that I don't think the models can do that.
+and so I think there's a danger out there that
+we we've been in a world where we thought things were predictable. You know we have 3 year plans for companies. We used to have 5 year plans. Now it's pretty clear that you know. You're lucky if you can predict things a year out, let alone.
+you know, 3 years.
+So I think we're in a very different world to
+what I grew up in that. This is a complex
+adaptive system type, world, or even chaotic, and not this predictable where things are repeatable. That, you can stop learning in some sense
+able.
+I'm sure. I'm sure you can have something to disagree with. There.
+
+Abel Sanchez
+00:35:13
+No, no, actually, I I agree fully with John there. But I I wanted to just bring this back to our own organizations, because, although we talk about this future world that's already here.
+you know, as as it's often said, it's here, it's just not evenly distributed right?
+Our own organizations are not changing
+right? And, in fact, most organizations that are successful
+not all, but many, are resistant to change in a very strong way. And so, if you think about the university, you know now poking fun at ourselves, this is even more so in our environment.
+You know. What sense does it make
+to have a person lecture
+to 500 lecture Hall audience.
+where they can't be interrupted, because obviously you can't answer questions at that scale of of an audience, and to go on and deliver a lecture in the same way as has been done for 100 years.
+Imagine an alternative
+where that person is delivering a lecture that can be paused at any point
+to explain any question any of the audience members have.
+and can then adapt, based on that response.
+and that it can adjust to make it more challenging
+or make it more accessible.
+This possibility is here today.
+yet no project at scale anywhere. It's being done. In fact, the startups out in the field.
+you know.
+much like you know what this company is doing. The one that operates the the course for Mit is miles ahead of everybody else and miles ahead of what the university can do.
+Yet their ability and I'm not criticizing them.
+Pick pick your company out there Educational Technology Company to be able to leverage. All of this
+is very small. And I could have said this 10 years back about the cloud, you know, even Amazon itself. If Amazon could use everything that they have on the cloud they'd be, you know there'd be.
+you know, 5 years ahead of themselves right, but the ability to be able to pick this up and integrate it to provide us value.
+And here I'll address Omar's question. You know he's asking, you know what about defi and Banks? Banks are institutions that were created over time to resist change?
+Right? And if you look at the challenger banks.
+you see, a completely different pattern, and I think perhaps one of the most obvious cases here is that of Brazil, you know. You take the established bank. It'sawu Banco, right? And you compare that to New bank.
+And you can see there the market share
+of the stock
+over the time that it has existed. It has basically eaten 50% of new banks market. Right?
+Here is an approach that is responsive, that is, in integrating, you know, from the ground up, it was a technology first, st they don't have the typical bricks and mortar. And so this is a different world, right? And sometimes
+and I know John makes this point too many of these companies will not survive. They will not be able to adjust John. I don't know if I set you up there, but go ahead.
+
+John Williams
+00:38:31
+Yeah, no, I think I mean, you're absolutely right. I was looking at the you know, top 500 in companies.
+The lifetime. Now, the average lifetime of the company in
+the top 500 is 15 years.
+I mean, it used to be that
+Ibm, you know, used to be the solid company, and I mean it lasted been in business 70 years, 80 years. Something like that.
+so I I definitely think we're in a very different world in the sense that it's moving
+very quickly.
+The tooling and the technologies. You know, we've called out these technologies blockchain.
+You know, it's bringing something totally new. It's solving a problem that I mentioned there. Of how do you coordinate machines across the world so that they can agree
+basically on a ledger, you know.
+Has this money been spent or not?
+So you know, blockchain bolds
+definitely solves the problem, and it's to do with distributed computing. I mean, from the business perspective. It allows you to move money, you know, more quickly and to get agreement, etc.
+Cloud computing, I think, brings stability in the sense that
+you know both able and I now operate.
+I'll operate totally in the cloud that I don't run things on my own machine, because it's just much easier to have a stable environment. And you know, provided by
+in this case, you know, it's codespaces and azure.
+and it allows them.
+I can.
+writes Code, and I can give it to somebody else, and they can run it in the cloud just as easily as I can.
+So it means that we, you know, we can develop things in a much faster way than if somebody is running on a Mac and somebody's running on a PC.
+I think the you know, we talked about the Internet of things. I I see that, as you know, machines talking to machines. So it's very much like
+cloud computing, except that often these are very, very small devices. You know, these are RFID codes, or whatever that are broadcasting a number, and it allows us to track things. But Internet of things
+generates huge amount of data.
+Cyber security is critical in that. It's.
+you know, the the attackers are getting so much more sophisticated.
+Their tooling is improving, you know. They test their codes to make sure that they will be undetectable, etc. So
+these are the technologies. But I do think that
+it's always been a people problem.
+Okay, we've got these technologies. How do we? How do we put them together? And as able is saying, you know, you'd like to automate processes.
+and automating is good in some ways. The problem is that if the world changes and your process now doesn't match. You know the world as it used to be. So the statistics of your the data that your AI has been changed on might change.
+This happened with Zillow. They were buying houses based on an AI prediction.
+and it turned out that the market changed and they started losing money. You know, they lost nearly a billion dollars.
+And so I think we're we're facing
+a world in which we've got these tremendous tools at our disposal. There are various stages of maturity, you know, and the latest one is generative. AI. That is just out of the box, if you like. Only been going a few years. And we're with still trying to figure out, okay, how can we best use it? There's some obvious uses that you can deploy immediately.
+But the enterprise scale uses are a little more tricky, I'd say
+able.
+
+Abel Sanchez
+00:42:43
+So I I wanted to call out here the technologies of the course, you know, which are blockchain, cloud, cyber security, and so on, and I wanted to make the case here or not make the case or sort of highlight. That generative AI is new, and it's sort of coming to all domains, as we've been saying, and that you should expect to see a steady adoption into these fields. For example, cyber security is really
+at its core, being able to analyze data to understand what's taking place.
+This can be supported in a very positive way by genitive AI right? And early on last spring, you know, Microsoft introduced copilot for cyber security. Right? But this is just the beginning. There's a bunch of more applications that can be done. If you think, for example, just as one of the most intractable
+problems which is data integration. Right? You have the problem that John mentioned. You know, different interpretations of the names of the fields, and you have some really expensive people doing a lot of manual labor if you would, and trying to address these scenarios.
+And there's a number of startup companies coming into the space. They're trying to address that at a much higher accuracy. And, in fact, some of them are narrowing the domain significantly to financial services, to a few things that people do all the time, and that has has only been possible to do with humans right? And so
+th, there's a bunch of assumptions there, I think, all over the place that you know again going back to John and what he mentioned about working on the cloud, that local is better, that local is faster, that local is more secure.
+These are many of the assumptions you saw back at the beginning, in the beginning days of the cloud, and many of them are replaying when it comes to AI. Most leaders say, Hey, my IP is going to go out the window. They're going to take all my data. This is a problem, right? And so I'll leave it there.
+John.
+
+John Williams
+00:44:47
+Yeah.
+there's a question here asking about success cases, I I think, in terms of blockchain and you know this this set.
+They certainly are. And they're they're growing. And you can see just from the companies that are invested
+in blockchain. But it's it's becoming a you know, a fairly mature technology. Now it's been around.
+you know, 14 years. Something like that.
+So it it's it's for real. And it solves a tough problem, the cryptography
+associated with it.
+Being able to prove things, for example, without giving away the secret that I can prove to you that I have the key to something without actually, you know, showing you the key or giving you my password. I think some of those things that you know are definitely gonna play. Keep playing out.
+I I do think the the generative AI one is obviously
+one that
+is so close to what we need in the sense that as humans, you know, we, we use speech or we write. And these machines can understand that.
+Not only understand it, they could. You know you can have a very good conversation with the machine.
+I mean the latest one now is up to date. I said. October 23.rd sorry 2,023
+you know Gpt-four is is framed up to to have knowledge at that level. So I mean, what we're seeing is that that field is maturing very, very quickly.
+And at the moment.
+you know, Openai and Microsoft are probably in the lead there. But as Abel was saying, the basic transformer technology and
+the attention mechanism was invented by Google.
+And so you can't count them out of the picture.
+What i. 1 of the problems I do see, though, is. And I think this is going to play out that
+Not many people understand these technologies, not just artificial intelligence. But you know any of these that we've got listed here.
+and it's not until you play with them that you begin to understand.
+you know. Yes, they're really good, that some they'll solve something so easily. But there's also problems with them.
+And you know, each of these areas, you can point to that where
+it's like, as Aba was saying with data.
+For some reason we can't actually quite get there. We've been trying now, for you know.
+40 years
+since sequel came along, and we still haven't mastered it. And I I think
+it's because it's 1 of these complex systems
+that
+you know. You cannot predict some of these things.
+And
+I mean blockchain, I'd say, Okay, it solves that problem of getting agreement across the world. So it solves some of those things. But I think AI is gonna add a wrinkle into our systems
+that we're gonna have to be careful. I don't get the glass half full hour, half empty again, able. But I do think I do think there's some issues out there that we're gonna have to be careful of before we hand over control to the AI machines.
+What's your sales table?
+
+Abel Sanchez
+00:48:30
+So, commenting on John's half empty half full.
+I tend to be more optimistic about technologies than John. But the reason I'm emphasizing this is that you'll see that in your organizations as well, it turns out that we're just wired differently. A lot of people are pushing for change and are less concerned about the issues that might come come up. And then there's the flip side as well.
+And so this, you know, and I've run this type of poll on audiences before large ones throughout the last couple of years, and I'm always surprised to see that it's around 50 - 50. And so I think in general, if it's balanced, it's very healthy, because you get, you know, sort of that, hey?
+There are good things here. Don't throw it all away right and in university without getting into the politics. It used to be that it was more balanced. And now we have the the opposite. We have, you know some crazy numbers as to those pushing forward and trying to you know, change everything without that. Really, you know.
+taking in into account some of the valuable things that we have as well. So so I just wanted to to mention that because I think when he.
+when it comes to talking about change, especially within your leadership. You'll get these voices right. You, for example, people in security historically have been terrible at accepting any kind of change. You know, if you read the book, the Great Book, the Phoenix Project, there's a person there whose name is John, nothing to do with John Williams here but his name. He's the Security person. His name is John, and he is the
+ultimate cyber security person that everybody wants to avoid in companies right? Because he will say no, and you're gonna burn the company down if you do this right. And and that has to change right? Meaning that posture. And now, you see, you know, security as a feature, you know Apple's been playing it up, and others. But these voices success. And I think we're seeing in companies where this works well, a transition from
+using it as sort of a blocker to something that can be used strategically. And I think we're starting to see that change. And and this comes on everything, not just on security itself, right? But
+Anyway, I just I just wanted to flag that. But
+I ran. I forgot my next point, John, so let me just pass it back to you.
+
+John Williams
+00:50:58
+No, I I mean, I think I
+I've been talking to a cyber security company, and in in general, the Simon, the new cyber security companies are doing really well, because
+you know, there's certainly a challenge at that that. We're seeing
+breaches that happen, you know, very regularly, and these often large breaches.
+able and I used to run a cybersecurity course in the summer, and
+we had some lawyers in.
+And the interesting thing about a breach is that if you're a decent sized company.
+you're going to be spending between 10 and 20 million just on defending that breach.
+they have to be really careful what you say
+these days.
+You have to report
+if your data has been stolen.
+Now, if you can prove that it's still encrypted, and the key hasn't been used.
+You're kind of let off the hook.
+So
+it's it's quite a a tricky area that able. And I've been talking about data governance. And I think, it depends how you view it. That's for sure. But certainly the cyber security area is an area that is very tricky indeed.
+that the attackers are getting exceptionally good.
+if you keep track, and and
+I normally don't keep track every day of the breaches.
+I mean, there's quite a number, and some of them are just very good. Now.
+I mean, the latest is that you know, you can produce digital humans that look like somebody else, you know there's a famous one with Biden
+speaking and saying, Yeah, you know,
+don't turn up to the polls like you shouldn't vote, and you won't be easily able to tell that it's not biden.
+So I think I think we're we're going to be confronted by a lot of very different problems that
+we haven't had in the past. We're beginning to see them in
+fake news.
+And
+you know it's reported that the Russians are already attacking our election system.
+And then I read another article saying, it's ridiculous. The number of attacks was tiny, and you know people are saying that just to
+muddy the waters, if you like, but I do think
+it's it's in. These areas are very tough areas to find solutions in.
+I'm finding that
+I have to really struggle now to figure out if something is true or not.
+you know. Given given the news feeds.
+and I think that's going to be one of the the problems, able as as we as we move to automating, you know, sifting through the news. I heard that Gemini, you know, with the
+Oh, no! Was it Germany, or was it Grok had trouble?
+I think it was great.
+
+Abel Sanchez
+00:54:06
+It was 8. Yeah. Ellen's.
+
+John Williams
+00:54:09
+You know? New. Yeah.
+
+Abel Sanchez
+00:54:10
+Yeah. OA,
+new news reporter. Yeah.
+yeah.
+
+John Williams
+00:54:16
+That it got it got it wrong and said that I think it was Kamala Harris had been. You know, the assassination attempt had been on Kamala Harris.
+I think it was. I think it was Elon Musk's X system.
+
+Abel Sanchez
+00:54:29
+Yeah, yeah. Yeah. I saw the headline on the Wall Street Journal.
+
+John Williams
+00:54:31
+Yeah, yeah.
+
+Abel Sanchez
+00:54:32
+So for people who are asking about book recommendations. I have. I posted a link there for for my long list. You'll find there many different things, I think, when it comes to change managing change, regardless of where you are. There's some good books there that I would point to the ones towards the top are the ones that that are more relevant
+when it comes to misinformation that John was flagging. This is one that we're going to have to recalibrate on, you know, when the printing press came around for the 1st times there were books available at a much lower cost.
+and you started to get the phenomena of getting books that were lies. We're told right. I'm sure you come across some someone somewhere, sometime in your life that said, hey? This is true because I read it in a book meaning we're still trying to get over that right now, when it comes to newspaper. I think we've we've sort of come to that point where we said, Okay, we need to fact, check and dig deeper to see if this is true. Now, when it comes to seeing and hearing.
+This is something that again, we're going to have to recalibrate on right, because it used to be that seeing was believing. And so, if you see a really good, if we had more time, I could play you some of myself, not being myself meaning AI generated. But we're going to have to recalibrate and meaning that we listen to something. And we're going to have to fact check if it's important enough.
+right? Because the
+time for being able to create really
+authentic looking
+clones in both appearance, meaning video and voice
+here now, you know, and it can, and it is cheap to to do. It costs cents, you know, if you're
+doing a big campaign. And so this is something that
+I think initially, perhaps we'll have to have some campaigns of education on.
+but we've already seen it in the India election. This was there John mentioned here in the Us. And so this has now been democratized in the sense that most anyone can do it. In fact, real time is getting there. Which means that there's all sorts of scams where people are pretending, impersonating somebody else, and they pretend they're in some faraway part of the world, and that the weather is bad and their connection is not so great.
+and many of them are not even that great of a clone. But they're getting away with this. And you know Facebook and many other places are are filled with these sorts of things, and so just a heads up, you know, to to up your game once again, when it comes to verifying the the information that you see, John.
+
+John Williams
+00:57:14
+Yeah, I mean, just I, I think we're running out of time. So we should sum up. But
+I I do think you know, a lot of this is to do with mindset.
+And you know my mindset has changed over the last several years, and mainly in the sense that the problems we're solving now.
+you know, may not be predictable type problems.
+These are problems that I'd say where we can't do the experiments. You know, we're writing software today. That's never been written before.
+And testing these systems is not so easy.
+And so that would be my flag is that we're in a very
+in a world that's changing rapidly. And so the things that we've relied on our past knowledge, you know, question your assumptions
+that
+certainly in the computing world. Things are changing very fast. You know. What used to be really large now is not so large.
+You know, people are handling data
+with bigquery, which is Google's query engine you can handle.
+I think that I did a query on 2.2 5 petabytes of data, and it took 3 seconds.
+You know, a petabyte of data is a lot of data.
+It was something like 55 billion rows of data.
+So the challenge is that
+you know we're facing a tougher. But the tooling that we have is also improved.
+But I'd say, testing these systems.
+that's that's the challenge. Now. It's not so easy to test these AI systems and find out where they're going to fail.
+Able.
+
+Abel Sanchez
+00:59:04
+So we're pretty much out of time here. I just wanted to emphasize that the technologies that you will be seeing are fundamental, the underlying building blocks. It's important to know how they work.
+and then we'll come back for the closing webinar, and we'll make comments about how AI is impacting all of them. This is still the bread and butter. You know the cloud databases. AI,
+that we are applying on our everyday businesses and organizations. Right? So you'll get a walkthrough through our collection of of this technologies, and then we'll come back. And and once again, you know, talk to you about genitive AI impact on them.
+Fred or Sophia, I'm not sure who's coming, but.
+
+John Williams
+00:59:47
+That's up!
+
+Abel Sanchez
+00:59:48
+Close. Yes, thank you.
+
+Sofia - MIT Professional Education
+00:59:49
+Thank you so much, Professor Williams. Dr. Sanchez. For such a wonderful welcome, webinar. I just wanted to remind everyone that there will be a survey that'll pop up when you close your screen. Just to remember to fill it in. It helps the faculty. It helps the university. But aside from that, the recording of this webinar will be posted on the canvas in the next 24 to 48 h. If you want to watch it back, or for anybody who missed it.
+And aside from that, I wish you all well. I hope you and the enjoy the course, and thank you again to Professor Williams and Dr. Sanchez.
+
+John Williams
+01:00:27
+Thanks for the questions. Everyone. They were really good.
+
+Abel Sanchez
+01:00:29
+Thank you. Thank you, John.
+
+Felix Rivera MD
+01:00:31
+Yes!
+
+John Williams
+01:00:31
+Yeah. Fantastic.
+
+Abel Sanchez
+01:00:32
+Questions everyone enjoy the.
+
+John Williams
+01:00:34
+Like the savannah.
+
+Ezequiel Astrada - MIT Professional Education
+01:00:36
+Thank you.
+
+Demetrio Martin Novoa
+01:00:38
+Thank you very much.
+
+Jonny Herrera
+01:00:39
+Thank you.
+
+Tomás
+01:00:40
+Thank you. Everyone.
+
+Ali Al-Mulla
+Thank you so much. Bye, bye.

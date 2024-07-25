@@ -1,0 +1,795 @@
+Hugo - MIT Professional Education
+Good morning. Good afternoon, or good evening, depending on where in the world you are joining us from
+a very warm welcome as you are filling in. Hello! My name is Hugo, and I like to welcome you on behalf of Mit, professional education and digital post programs and to welcome our faculties. Professor John Williams and Dr. Hamil. Senses will be leading the data leadership webinar.
+And you can see.
+let's also talk about transforming the Corporations operation management mindset to leverage data AI and cloud confusing
+before we get started with the presentation. I would like first to go over a couple of our skipping rules today's webinar will be unaware, is currently being recorded and will be available on the virtual campus over the next couple of days. So you can rewatch the content if you wish, and whenever you want, please remember that we have real time subtitles on Zoom. You can activate this feature whenever you like. If you have issues with this matter, please contact us via chat, and we would help us as soon as possible.
+Well, encourage all of you. Turn your camera on to make this section the more agent, if possible. And please don't forget to watch your full name and company as well. Feel free also to submit your question in that chat, so we can address them during the QA. Section, and please remember to use and raise feature in zoom.
+And lastly, the survey will pop on your screen at the end of the session, so you can let us know your biggest takeaway any feedback you would like to share.
+that's all for deal skipping rules for now. And I'm going now to introduce our faculties.
+Start with Professor John Williams is a professor of information, engineering, civil and and
+civil and environmental engineering and director of Mit Joe, special Data Center is riches. She's focuses on development and application of computer algorithm of distributed cyber physical system. He was directors of Mit's Auto Id Laboratory, where the Internet of things was invented. He was named alongside Bill Gates and Larry listen as one of the 50 most powerful people in computer networks. He's the author of quarter of 2
+150 journal and conference papers. Professor Williams teaches courses over the fundamental of programming modern software development web system, architecting cloud and blockchain. He also be in physics from Oxford University and Ms. In physics from Ucla and the Phg. From Swansea University.
+and Dr. Abel Sanchez is the executive director of Mit, Special Data Center.
+Doctor Princess, the architect of the Internet of things. Global network is architect of data. And it's platform for asap for Johnson and Johnson, Accenture shell, Exxon Mobil and elsewhere. He's also architected cyber attack impact analysis for the Us Department.
+
+John Williams
+00:02:42
+Of the.
+
+Hugo - MIT Professional Education
+00:02:43
+Password file from Ei. I. Rpa
+Dr. Sanchez, all the Phd. From Mit, and teaches mit Courcy on cyber security engineering blockchain, the cloud and data science. He also had developed educational software for Microsoft help to establish accenture Technology Academy produced over 150 educational videos and worked for 10 years with learning management system
+which has a deeper in America, Asian Europe
+and I will go ahead and get started to use the webinar professor. Dr. The floor is yours.
+
+John Williams
+00:03:13
+Great.
+
+Abel Sanchez
+00:03:13
+Thank you.
+
+John Williams
+00:03:13
+Thank you, Hugo.
+Able data is still at the center of almost everything in business.
+Is that true?
+
+Abel Sanchez
+00:03:23
+Yes, very much so. And I think one of the the challenges of the world and the one that people don't talk that much about is, how do we organize it? How do we think about it? How do we go through that cycle in a
+continuous way? Because I think it's not that hard. I'm trying right now. I'm trying
+gather my photographs going back all the way to 90 99,
+and it's unbelievable how difficult of a project. This is
+even with all of the tooling that we have, because
+all their cameras they didn't have Xf, which is the metadata for photographs.
+and we tend to take pictures haphazardly, and I like photography. So I have several cameras, and I take with my phone and ultimately bringing all of this together in a searchable, accessible way. It is
+dauntingly difficult meaning. You have to be across a multitude of platforms. Then, when you finally get all the pictures you have to add metadata to them, and we're talking about.
+you know, tens of thousands of pictures. I don't know how many they are. I haven't counted yet, but I suspect there's well over a hundred 1,000. And so.
+you know, when you think about an organization.
+they're not taking pictures with a camera. They have.
+you know, thousands of
+organizations and and devices and and products and customers. How do you bring all of this together
+in a sensible way? It's what everybody is facing. How do you think about it, John?
+
+John Williams
+00:04:57
+Yeah, I mean, I think you bring up, you know, one of the key points, one of the the things we trip over all the time. And that's legacy systems.
+you know. If you have a clean slate and you're sitting in a small company, a startup
+life is good, you know, the tooling today is pretty good.
+You know, you go to the cloud. Almost every scale isn't a problem.
+I mean, it's still a problem. But
+but legacy systems. They're horrible. And
+you know, we
+we've seen it in mit the er P systems. You know, this is the SAP. And the oracle systems.
+You really can't tear those down. You know you're gonna die. If you take those out.
+it's not so easy that you know, as you're saying.
+it's it sounds like it should be easy. But
+you go back to SQL tables and you go. This is complicated. And today, you know, we've got
+column-based databases, all kinds of data, stores
+and warehouses, etc. And data lakes.
+But still it's a challenge.
+and my sense is the tooling, though, is is is one of the keys that I'd say.
+You know, if the last
+20 years the tooling has changed quite dramatically that we saw it with devops
+that now you could. You can set up pipelines and you have some chance of stabilizing them.
+What's your comment on that April.
+
+Abel Sanchez
+00:06:38
+So I think you know A as we've gone through, and you know I could make a case study of of the photography. But I'll move off of it.
+One of the things that
+jumps out at me is is the question of micro services right? Because there was this sense in the past
+that we could
+all get agreement.
+and I think that's
+that's a flaw that we operated under for a long time
+right? That everybody in the corporation
+or the organization would follow the rules. And we would all
+follow this model right?
+And I think the web meaning the Internet broke this assumption right? Because it said.
+No, I don't care how you want me to model things. I'm gonna do it. However, way I want right. And every industry has a different vision of how data should be organized and different data formats, and and you know
+volumes and groupings, and and so on. Right? And
+to me. Part of that represents
+microservices. And I'm talking here about micro services in a loose way, because
+many of these words, including generative AI, lose meaning soon after they're introduced.
+But the ability to be able to create smaller
+building blocks or or modules and then group them together to build new things, but that you could still
+evolve this piece. And I think when it comes to data.
+this idea that we're all going to be under the same umbrella, and we're going to have this neat agreement that that we're all going to ask questions from.
+I think it's unrealistic, because, you know, I've seen companies where
+they have.
+you know, drastically different divisions, and they're, you know, they can barely get them to produce some kind of data. They're not gonna really listen to them. If they ask them for too much. And so if we do, some sort of.
+you know, decoupling my like micro services tried to do, maybe I think we have a better chance. And without being religious, you know, like the data mash and all these things right?
+what's your sense, John?
+
+John Williams
+00:08:52
+Yeah, I mean, obviously, things like micro services.
+You know, they're one abstraction that solves a problem.
+But I'm I'm thinking here of spaghetti kind of networks
+that you know the ability today is we, you know, Apis for another, you know, Jeff Bezos demanded. Everyone uses that should use an Api.
+It's a great way to package up
+some lump of functionality.
+The problem is that it turns out.
+you know, developing Apis, there's still some challenges that if we go with rest, typically, we hit an Api and we get too much back.
+You know, we don't want all of that.
+You know. Graph. Ql comes along and solves that and says, Okay, now, you can be more specific, and that I only want this data, you know. And
+then one of the nice things is, we can change the the headings of the data. Them. You know the metadata that often whoever's decided on what some column of data is called.
+you know, it fitted for their application. But now you're repurposing that data. It doesn't fit for your application.
+So
+you know, we talk about. You know the steps of mastering the data, and we've got the raw data. And you know we we do either Etl or El T. You know, extract, transform load or extract load transform.
+You know, th, those are just getting the data into
+a place
+where we've got some chance of manipulating it.
+And I'd say we've learned that we better keep track of what manipulations we do to data
+that
+you know. Often we can transform the data. And we think we're doing a good thing to it, but it turns out that
+no, we may not have been smart enough.
+and we'd like to go back. And so we've got a lot of other tooling now that keeps track of what we've done to data.
+And we're seeing the kind of Devops pipelines now augmented with the Ml. Ops in the machine learning Ops, and we've got security has been in the data. Sec, security. Data. Sec. Ops, rather.
+And you know, now we've got AI coming in with a a whole load of problems of its own. You know the difficulty of testing, of the difficulty of standardizing. You know that component.
+But my sense is we did learn something about setting up pipelines.
+And you know, Netflix is one of the poster kind of children that did it really well, and they have something like a hundred pipes, separate pipelines that have some interaction. But basically loosely coupled.
+Yeah. And I'm thinking here of Roger Sessions, you know, and his snowman model
+Dot.
+It's critical, we understand. Where do we couple these things together?
+Do we couple them at a very low level? Or do we couple them at a higher level?
+And
+the things that we do initially to get something standing up, you know, in a month or 2 may not be the right thing where we want to scale and stabilize it.
+So my sense is that
+we've learned a lot a lot of lessons, you know, we went through trying to get all the data in one place, the data lakes.
+and, as you were saying, able the other day, you know they were started to be referred to as data swamps. That okay, the all the data is there. But you know, can you find and re extract the data that you need.
+I mean my sense in specific areas. Certainly.
+they tracking our web servers.
+Okay, you know, Google analytics is pretty good that we can see how much time people spend on a page, etc. And we can optimize things.
+it does seem that
+building in observability.
+critical, you know, along with security, that these are tough things to build in later.
+And if you can't really monitor what's going on
+that today, these pipelines can get out of control in the.
+you know, typically they're event driven.
+So they're not human driven
+most of them, you know. You buy something on Amazon.
+It triggers an event to. You're gonna do the billing, so it'll trigger to the financial side.
+If you're buying whatever it is.
+A printer, it'll trigger a query to the warehouse to see if they've got that printer in stock, etc. And the and these events, you know, cascade through the system.
+So finding out where you've got problems, I'd say in these distributed systems.
+That's the major problem in in building them is how the heck we debug them and stabilize them.
+I'll go on to talking about libraries, because I think that's you know, a major issue these days.
+The libraries are are changing, you know. Certainly in the Gen. AI world
+able. What's what's your the view of where? Where the problems lie.
+
+Abel Sanchez
+00:14:16
+So one of the things that that strikes me, John, is that we're headed towards
+heavy regulation on use of data.
+And the reason I flag. That is that
+data governance.
+Master, data metadata on data is going to become increasingly important.
+right that organizations are going to have to prove.
+not just to themselves, but to
+organizations are working with to the government
+that they're using data
+in accordance to regulation. That is coming right.
+For example, if you use Pii personal, identifiable information.
+you're gonna have to prove that you kept it secure.
+If you are using
+data, for example, to
+make approvals of of. And and I'm even hesitant to bring these things up, because I know I know where they're headed right. But
+you can imagine that
+if you have medical. You're making decisions based on medical data. You know how well represented is that data, you know, to different demographics that might be in your region.
+And
+medical.
+you know, banking
+government. I don't think they're prepared
+meaning this is coming, but I don't think they have it yet.
+For for instance, in medical I know that's that's not the case, right? And it's not that.
+you know they're trying to be irresponsible. I've been on some of these meetings as as have you, John? And you have, for example, some predictive model that was developed in Scotland, that all of a sudden needs to be extended for a representative group
+for a different group of people in London. And then that model wants to be shared with Mexico City, and these are completely, drastically different populations. So in a world where I, you know, hospitals do not operate to do research, they operate to
+treat people right. And so you take some
+scenario
+that's well intended to try to address. And I happen to know about this cancer model that was developed in Scotland, and
+you know it is being effective there. But as other demographics try to pick it up. And nationalities, not just nationalities. Nations.
+How do they address all of these issues when it comes to updating that model and taking into account the new data. And you know the new biology, etc, you could see that this is going to be. And some of this happened during the pandemic, which meant that there was a lot more tolerance and flexibility to be able to do that. But once you get outside of that. And you start to get not just nation regulation, but global regulation coming in. You can imagine that the
+chain of prominence and approvals that you have to go through is going to be
+painful, to say the least. John.
+
+John Williams
+00:17:20
+Sorry I I'm I'm chuckling about the regulation that's coming out of
+the Us. System where they're saying the cyber security reasons. You have to publish your architecture, and how you're defending it, and what your weaknesses are.
+and that's like a roadmap for attack.
+I mean, it just makes no sense at all.
+I really think you know the.
+it's a growing problem in that. The people that are making the rules for these things
+typically and don't have much expertise in them.
+And you know, we're seeing this in generative AI. But my sense is, these are fairly early days and
+people already making global rules about how we're going to test these things and how we're going to constrain them.
+I don't think it's that easy.
+Maybe we should leave the generative. AI, because it's.
+you know, it's fairly new. But just there's there's enough issues, I think, with data.
+and especially data governance
+that are really difficult issues to solve.
+What? What are your thoughts able.
+
+Abel Sanchez
+00:18:32
+So. So let me let me touch on one last one, just to simply try to. And, by the way, thank you for your comments to all of you who are chiming in.
+
+John Williams
+00:18:41
+Yeah, yeah.
+
+Abel Sanchez
+00:18:42
+I'll give you one more example, right? This is an Mit Harvard example.
+Harvard has a prestigious medical school and a system of hospitals under it.
+and on a project to be able to share some information between one of the hospitals in mit the approvals that were needed to 2 years. These are peer institutions that collaborate on a great number of things.
+including in this case a research center that is
+composed of both institutions. And even in that scenario. You know the number of approvals for data
+that needed to be done. And so when it comes down to it, part of the challenge is that
+there's not processes in place that are global.
+When it comes to this.
+for example, to give you another example. When it comes to cancer data at one of the hospitals here. I know the person who is in charge of the cancer database. It is one person leading an effort across
+the world
+in the way that that research group sees fit to create this cancer database. And so, you know, somebody brought the issue is, it's always been there, right these limitations when it comes to medical data, but being able to move it across institutions to be able to include it in research, to be able to create a more diverse population. Because, you know, when you're capturing cancer data.
+you're trying to get data, you're not trying to create
+a government to prove
+demographically representative data set right. This is not the initial goal.
+And so these are some of the challenges that we're gonna run into. And and you know, I think the
+because it's related. I'll address it. Somebody else asked. You know, when it comes to
+being able to make predictions based on this model.
+How do you know when you're done?
+Well, this is part of
+artificial intelligence cycle. Right? If you think about the classic one is, you have a set of images that are handwritten numbers, and you're trying to see how close you can get to it. Right? You can look at it as a human.
+and you know what the number should be, and you try to use your predictive model to try to see how close you you can get to it. Now there is a level at which this is
+the easiest possible thing to do right. But there is a level at which
+human
+can't even tell what the number is right, the number is. So you you've all seen handwriting.
+It can be so bad that you can't tell. And, interestingly enough.
+on accuracy. Machines can now do better than humans when it comes to numbers right? But this is
+an incredibly simple scenario, right? If you're trying to say
+you know, detect the impact of a crash.
+John was showing a picture the other day of a car running into something, and
+the the scene was trying to be analyzed by AI, and it was saying, Okay, you know
+it. It looks like it impacted this. And this parts were damaged.
+But to what degree can you get it?
+I think a better question may be, is
+that satisfy the business requirement that you need in certain scenarios for insurance? I could see that being able to tell that
+a great part of the car was
+destroyed is enough.
+But and now there's no John.
+
+John Williams
+00:22:12
+Yeah, I mean, it's I think there are 2 points I'd raise. One is obviously you know, you can develop correlation matrix. And and you can see how correlated
+any of your features are with the thing you're trying to predict.
+you know, when we have training data, we can see the error, and we can, you know, take derivatives of the error and trace it back to what caused the error, and how. So? I'm thinking here of neural nets which you know today you can throw a neural net. Probably any predictive problem.
+It may not be the best, but
+it it'll do. It'll do the job. And there we're dealing with exactly the error function.
+And so
+I'd say that you can.
+Now, from the business perspective, it's not clear how accurate you need to be.
+for example, there's there's a great book called The Man Who's Solved the Markets.
+and they were making 40% profit over like 30 years from a stock market.
+and they only got 51% of their predictions right?
+The other 49 were wrong.
+but it was enough to make money. So in that case.
+and I think in a lot of business cases.
+it's not necessarily accuracy
+that the other consideration is time, you know. Do I have the data now? Can I make the decision? Now?
+You know, if I have to wait another day to get this much more accuracy?
+It's not worth it. Maybe
+so.
+I I do think the problems that you will encounter with projects are that you'll either need to show that they're profitable.
+or that they get rid of some pain point in your business or have some.
+you know, value, and there's some great great books on.
+You know what is business value and
+able. I'm sure that you can talk to that.
+But I I do think that
+we can answer that. You know as to
+how accurate should something be, the people will say, That's good enough. Regression is good enough.
+You know, in the banking and on the banking world in in the investment world time. Time is a critical factor.
+If I if I can get my answer a fraction of the second before you, I'm gonna I'm gonna win.
+you know, again in in in war.
+That's a critical factor being able to act quickly. So unfortunately, I think I'm sure there's, you know difficulties in that I but I would say.
+you know, we've got a lot of metrics. Now that
+for a specific problem, we can probably answer, okay, how many features do we need?
+At some stage? We certainly can stop
+able.
+
+Abel Sanchez
+00:25:07
+So I think you know, coming back to to
+you know the question of value. One of the things that is taking place in the world of AI and software engineering in general is that we're moving
+from traditional
+building to low code to no code.
+Which means that
+a lot of this technology is being democratized.
+and the example that I'll give here has to do with generative AI.
+And the case, for example, of
+trying to moderate
+a
+a set of customer, say reviews
+or or just opinion, say on a database, you know, for example, we are in
+political, troubling times, right? Nations around the world are struggling, and there's a great deal of disagreement, and oftentimes you'd want to know how population feels about something or what they're upset about right? And many times. This takes a written form.
+You can write now
+prompts, as they're called. You can think of them as programs
+right? That can analyze this in a pretty effective way.
+and you can do that
+in minutes.
+and you can do it in plain text.
+And this type of
+accessibility to me, it's the big revolution.
+Because, yes, you could always do AI.
+John's talking about a correlation matrix. Most people will not know what that is. Most people would not know what python is most people would not know. You know what a random forest algorithm is. Most people would not know what a neural net is. However, they can upload a file
+to an Llm.
+And ask it for an interpretation, and if they can write a prompt.
+then they can analyze some of this, and I think that's drastically different
+than the model of consuming technology that we've had in the past. And there's a tremendous number of
+of places and processes that we have in organizations
+that
+can be aided by additional intelligence.
+and that is, for example, again, something as simple as moderation. And if you're looking from a retailer perspective. And you're looking at
+thousands of comments. You can mine from that intelligence, and you can get in
+feedback to try to update your the design or your product.
+You can get feedback on trying to understand the logistics problems that might be occurring.
+You can understand some feature that is failing, or some feature that you didn't even
+understand. And that turns out to be really important.
+You can understand frustrations that people have
+all sorts of things that you can gather right. And again, it's not that you couldn't do it before you could.
+However, it's much cheaper now.
+and yes, it misses.
+For example, John and I use generative AI every single day we use Chat Gbt.
+and it is part of my workflow, right? I use it. And John was mentioning earlier. Then he stopped using Google.
+I haven't stopped completely, but I go days without using it, which that wasn't the case in the past.
+and this makes my
+tasks that I have to do during the day much easier.
+and, in fact, some some I can do in a tenth of the time when it comes to writing software.
+I get a tremendous amount of support.
+And and I've been reluctant and resistant in some case in the software sense, because I enjoy writing code on a clean page, with really nothing surrounding it. But you can see how this is all creeping in, and it is making us more productive, and let me leave it there. Have a lot more to say. But John.
+
+John Williams
+00:28:58
+Yeah, there's a question here. Ravi is asking, what what is context in terms of
+this is genitive. AI. But the context is is, basically.
+I've I've got a
+an amount of prompt words that I can send to the large language model.
+And you know it's
+that long. It happens to be 168 or 128
+1,000 tokens. That's about through 200 pages.
+But
+when I prompt the Llm. It takes that
+calculates the next word, and the next word next word, etc. And sends the answer back, and then forgets me totally
+so. Now, if I re-prompt.
+what what chat Gpt does. It puts your original prompt in as part of the context and your new prompt. So now.
+basically, you're putting more and more as you talk to the chat. Gpt, you're filling up this context window. And eventually, after I chatted back and forth enough times, I'll exceed its length. And what that means is, I've got to do something smart like I've got to somehow compress all of that conversation.
+but you know the main takeaway is the Llm. Has no state. It doesn't remember you.
+So you interact with it.
+You're done, and it goes on to something else. So imagine every time you write a prompt.
+you've got a new model language model sitting there.
+It's totally clean, knows nothing about you. That's the importance of the context window. It's finite length.
+We can stuff a lot into it. You know, we stuff as much data into it and tell it to answer the question based on this data that I've put into the context window.
+But it's it's, you know, in terms of data sizes. It's severely limited and dial. And I have a course online exactly on this.
+you know
+it. We we can't go into that much depth here because we're covering other things. But certainly
+language models allow us to deal with unstructured data.
+So we can now deal with images. We can deal with text.
+you know, it can do a lot.
+and especially with images. It's pretty amazing that it can understand what's in the image.
+And I've
+got an example of taking a photograph of the blackboard that's got some mathematical equations. It'll tell you what they are.
+But it's pretty good.
+anyway. Let's leave that able. I I think maybe we should
+pick out some other data data focused ones.
+
+Abel Sanchez
+00:31:32
+So th, there's a question here by faud, about how do you go from the traditional world of analytics to that of AI, and it's it's a good question. Tha thanks for that part of it. Is the
+the resources meaning. Who are you going to hire right? And a lot of the mistakes organizations make is that they go out and they hire peer
+statisticians. You know the the data scientists of the past. They didn't write any code.
+And you know, that's changing a bit. But
+traditionally, they they have been frustrated because organizations, as we talk about in this course first have to get through data engineering before they can get to being able to derive the insights. And if you think about you know this cycle, you have the collection. You have the storage you have, Etl, as John mentioned. Then you have transformations, cleanup, and so on. And then you can actually serve it right
+now, as you go through this
+right part of it is those data engineers, right, that you need to have in place.
+And then it come, you know, and they need to have cloud skills as as we talk about in the course as well. But then you have to decide on the platform that you're going to be working on, and the programming model that you're going to use to be able to derive.
+Let's say, AI products.
+you know, some sort of predictive model that is going to
+support your decision-making right?
+And when it comes to this you have to decide what platform you're going to be working in, and there's 3
+models at the moment that people are building. The very first one is the one we have described. Well, let me first say, when it comes to AI traditional AI, you know, that is the programming model that typically takes 6 to 18 months to be able to create a predictive model.
+If you can do something within that ballpark. You're doing pretty well right. And the typical components of this is, you know, obtaining the data labeling the data, cleaning up the data, then creating some sort of predictive model, and then it moves to deployment production,
+and and monitoring, and so on. Right now, if you're going to move towards the generative AI part of the market. Then you have to decide what platform you're going to build in and which programming model are you going to use the recommended one for most organizations to start on? And and I think
+time will tell. But I think that there's a very strong possibility that this one will continue to be
+the preferred one, regardless of where the market goes.
+is to use
+in context. Learning. That means you consume genitive AI
+through an Api, and that means that you're building things the exact same way you did before, except that the part, the component of
+your product that is going to do reasoning, and I use reasoning here lightly. Right?
+AI. That would be a call to this Api. And so you consume it, and it's pretty much about the same price
+as consuming cloud services. It's pretty cheap on Openai anthropic has now another Api as well.
+and from there you're pretty much built the app. Now there's a number of additional things that you have to take a look at, and that has to do with security. Going in and out
+the scrubbing and and safety that you want to build into it. And I'm not talking about ethics here. I'm talking simply about people trying to compromise your system as they would with any type of data application. Right? But this has to be part of that cycle as well.
+John.
+
+John Williams
+00:35:13
+Yeah, I just posted a little diagram of typical prompting.
+let me get to another question. Sorry. I just was
+figuring out.
+
+Abel Sanchez
+00:35:28
+So one of the questions, I can bring another question, John, for.
+
+John Williams
+00:35:30
+Yeah. Go ahead.
+
+Abel Sanchez
+00:35:31
+We're sent in is banks are not Fintech. How do they modernize?
+So this, this, this sort of hits on everything.
+
+John Williams
+00:35:40
+Yeah. I mean, in some ways the the you know, the
+the regulations that you have to jump through in a bank are also protections. You know. You've got a big moat around Banks.
+but it's difficult for startups to.
+you know. Jump into that area now. It's not impossible. We've seen it with new bank in Brazil. They've done a pretty good job of
+getting into that. And
+there's a joke about
+what what is it called the profession formally known as banking.
+Obviously, the startup companies are are taking the easy pieces.
+People like Robin Hood.
+But
+it's in some ways. Yes, the regulations are needed, and that's going to slow down innovation.
+but
+you know you do the best you can within those regulations.
+I think you know what one of the ways is that you actually take the regulations and talk to the regulators and banks. Typically do that?
+They usually have pretty good conversations with them.
+I I as I say, I do worry about government departments that weighed in and
+you know. Say, okay, now, you've gotta track. For example, you know your Co 2 output. I mean, that's that's gonna be crazy for cut corporations to do that.
+You know. And there's different levels of Co 2 as well. It could be your suppliers. You need to, somehow.
+you know, monitor them.
+It's I mean, it's gonna be a great area for data. It's gonna be critical. But I I do worry about that that there can be too much regulation. Hopefully now and again. You know, something comes along and goes around most of the regulations.
+But you know blockchain is a good example of that, and that forces the regulators to
+to take note
+able. What's what's your take on? I don't wanna get into blockchain too deeply, but.
+
+Abel Sanchez
+00:37:44
+So I'll I'll I'll tell the story of Mark Schwartz, and I'll share his book in a moment of him being at the Federal government in the Us. And for those of you who are Americans. You know what that is like when it comes to regulations for those of you who are outside of of the Us.
+Every government everywhere is heavily bureaucratic, and it's a bear you have to wrestle with right. And he he
+tells the tale
+of the President making an announcement on public television about some new service
+was going to be provided in a month's time.
+and at that time
+he mentions that making any change to any system in the government took 18 months, even if it was a paragraph of tax that needed to be changed in a web page right?
+And so then he goes on to tell, to share that he broke every possible rule that existed in the government to meet.
+and they delivered on this one month
+promise that the President had made.
+and afterwards it was an opportunity for the Government to try to understand what it really needed.
+and how a lot of this could be done differently.
+And, for example, another story he tells is that many Regulators are talented people that want to do good.
+However.
+time has gone on, and what we end up with in organizations is a collection of rules of wars past right that may no longer be relevant meaning. Some of these are coming through decades upon decades right? And when you do something like this and you have conversations with them. For example, they wanted
+everything reviewed at every single level of code, and they wanted reviews almost daily of what they were daily, of what they were doing
+and and what they did is they did the typical thing that we talk about in the course, about devops shifting left. So they included the Regulators way early in the design and took in their concerns and addressed many issues. And we've done that successfully in software. Imagine.
+you know, that we went from years when it came to deploying a software product
+to being able to do it multiple times a day.
+Right? Think about the security in this scenario. How are we addressing security? If we couldn't secure things, you know, 30 years ago, how come we can secure things now?
+10, if we're deploying 10 times a day.
+And there are these lessons are built in to the devops
+methodology when it comes to building products. And so when it comes to banks.
+this is no different than government.
+and there are many lessons here to be to be harnessed from these experiences.
+I've been reading a book that's called Switch. It's a classic one on change management. And they talk about the elephant, the writer, and the environmental context that you're in. And this has to do with, you know, being able to address the momentum that the organization has, you know, sort of this elephant that is moving along in the
+state of mind of a lot of the employees in the organization
+and then trying to bring in some of the reasoning as well, and develop some of the context. And I'll put the the name there in a moment as well.
+But there are. There are good examples. If you look at the last 10 years of devops, it is precisely this organizations that took forever to build something, and being able to transform
+Ted Lawson is another one, you know.
+So I'll go ahead and provide those references, John, while you speak.
+
+John Williams
+00:41:26
+Yeah, there's a question about, you know, system prompting, and why some companies think that it's a job. I don't necessarily think that it's a job that anyone can learn system prompting.
+But it does take some practice to get the best out of your system. Microsoft. Think that? Well, they they give an example where they get 30% in
+improved him
+performance
+from a language model just by prompting.
+So
+I mean, we can dive into this, but I I just fear it to take a little long. I put up an example of a prompt here, and if you cut and paste
+this from system message onwards.
+missing out the very last cut and paste from system onwards, that it'll set up a chat. Bot! That'll answer questions, and you're forcing the Llm. To go through stages of reasoning.
+So here I just set up
+2 stages, but you can set up, you know, 5 or 10
+and force it to think logically about the problem.
+One observation I'd make is, don't think of the Llm as being a low end tool. It's amazing at strategy.
+you know, it's not gonna displace the secretaries so much. It's gonna displace mid-level managers. This thing can can develop strategies. For example, if you want to develop a marketing plan.
+it'll come out with a really good marketing plan
+that if you if you ask it the right way.
+so
+take up. Take a look at prompting. Don't just dismiss it as being obvious. There's some depth to it.
+They've trained the Openai have specifically trained
+the Llm. To understand
+messages that are tagged with a system message
+is very different to.
+for example, an assistant message or a user message.
+And so
+it's been trained that these are special messages that are setting up telling the system something.
+We can go into that. But
+aligning the system, you know, you've got this.
+I think of it as a superhuman system. It's pretty good.
+and now you need to align it and tell it what to be exactly. You know you are an expert in reading X-rays. Da da, da.
+and it'll behave pretty well now it's got. There are issues of hallucination, undoubtedly. But
+it's amazing at strategy.
+you know. You can get it to write neural nets, for example, you know
+architectural nets
+ask it. It'll do a pretty good job
+able. I don't know if you want to step back in.
+
+Abel Sanchez
+00:44:25
+Yeah, sure. So I think when it comes to thinking about
+security, there's a lot to say, by the way, when it comes to this topic, and and John was sort of flagging before. But I'll try to touch on subjects that overlap with what we talk about in this course.
+Let me try to give you a cybersecurity scenario.
+and where you can do things with generative AI that you couldn't possibly do with humans.
+You cannot ask a human. If you take your typical hospital, if you take your typical organization, they have over a million lines of code.
+You cannot ask a person
+to read through this.
+They also incorporate libraries, and here modern frameworks like Npm. Are responsible for this, that even
+writing one line of code might bring in over a hundred and over a hundred 1,000 new lines of code onto the environment. You cannot have humans read this.
+And however, you can have generative AI scan this meaning, read it and be able to flag you for possible security
+compromises. Now, you're still going to do everything that you did before. Right? You're gonna look for vulnerabilities you're gonna use, buy tools from the market. You're gonna try to verify that your signatures for your code packages are all have been done. But in addition, now, you have an additional
+capability, right? And it doesn't mean it's going to find them all. It doesn't mean it's not going to make mistakes. However, you're now dealing with a much smaller subset of problems.
+and that is tremendously helpful when it comes to being able to address problems when it comes to security.
+People tend to think about this sophisticated state sponsored threat. A lot of it is some minor addition that somebody made somewhere, and a lot of it has to do with supply chain attacks, which means along all of the different parts that have to do with producing one library that the world picks up.
+There's somewhere someplace where it can be compromised, and that is a tremendously challenging thing to do.
+And so when it comes to being able to address this. Yes, you know I take the scenario and the example that that you mentioned, that somebody picked up a piece of code and deployed it. I would not blame the AI. I would blame the person
+when I pick up something on Chad Gpt, I have to do the vetting myself.
+and there is this notion that we deal with truth in the world. However, the world is constantly lying to us. For example, what software engineers used to do in the past is they used to go on Google. Let's say you're doing the exact same example that you know, the engineer uploaded onto their environment.
+10 years ago they could have done the exact same thing by doing a Google search, finding an example and then uploading that onto the client. So it's the same practice. However, the engineer has to have the maturity to be able to tell whether this makes sense or not, and this is part of what our responsibility is. We can work without it. However, if you see the data and I'll share share with you in a second some of the
+uptake from the software engineering community, and the the success and sophistication not just on producing, but on on the security area as well. Anyway, I should probably stop there. John.
+
+John Williams
+00:47:45
+Yeah, I mean, one of the things to realize is that we can put the Llm kind of in charge that
+weeks. Here I'm I put a diagram up there showing an agent.
+and the agent can tell the Llm.
+Here's a tool for you to use.
+Now that tool now can go out and hit other Llms. Could do anything you want.
+But now we can have the Llm. Tell the agent to write tools.
+It can say I want you to write me a new tool. Here's the code.
+Wrap it up into an Api, and then I can call it.
+But the Llm. Now is capable of extending its own capabilities.
+And that is that's why people are both scared.
+And you know why we're excited
+that the Llm. Knows how to write code. It's pretty good.
+So
+you can. You can set up
+basically
+a tool that writes tools.
+it's fairly easy to do so. You can put the Llm. In charge. You don't need the human anymore
+for a lot of things. Now, that's the scary one. We tend to think at the moment that this is.
+or technology which isn't understood totally. So we'll probably have humans in the loop.
+But a human with this kind of tooling can develop things really quickly. And so
+that's just one way to look at it. Don't think of the Llm. As being where you're going to put all your effort. It's going to be in this thing that I'm calling an agent that you're gonna write that's going to extend the Llm's capabilities.
+Yep, that's a good
+a good a good table able.
+
+Abel Sanchez
+00:49:40
+Yeah. So I just up, go ahead, John.
+
+John Williams
+00:49:42
+Go ahead. Well, no, I was just gonna say the thing that I think mustafa Suleiman in the in the book. The coming wave.
+you know, points out we haven't seen anything move quite this fast.
+I mean, we're seeing new announcements, almost.
+you know, every certainly every month.
+and.
+you know. Take a look at why they sacked Sam Altman.
+It's because they they were worried that we're creating something here that can improve itself.
+that it can reflect on its own performance and say, Why don't you allow me to do this and extend its own capabilities?
+Now, once once a machine can do that.
+that becomes a little scary. It's not like.
+okay, we can still pull the plug, maybe, but
+you know we can't stop it getting smarter.
+And so already these things are getting pretty smart, you know we're talking about. Oh, it's not. It doesn't have general intelligence.
+I mean, I find you can ask
+chat pretty much anything
+quantum computing to, you know. Climate control? It. It knows an awful lot of things.
+and if you, if you prompt it the right way.
+it does a good job reasoning it. It's a very good strategist. I'll use that word that
+you know. Abel and I go there now, where, if we want to develop a course. The first thing we do is say, what would you put in this course?
+And now we can. We'll alter it, Babe, maybe able.
+
+Abel Sanchez
+00:51:21
+I'll put it in a different way.
+You will not be replaced by an AI, but you but you will be replaced by a human using an AI.
+
+John Williams
+00:51:31
+Yeah. Great.
+
+Abel Sanchez
+00:51:32
+Meaning that it gives.
+
+John Williams
+00:51:35
+This.
+
+Abel Sanchez
+00:51:36
+Abilities. It does things that for us are very painful.
+and for the platform are very easy.
+For example, being able to reason over a million lines of code
+and trying to find some vulnerability. This is something that is very easy for a machine to do.
+really painful for a human, if if at all possible.
+Imagine telling somebody. Go read all of Wikipedia and come back, and I'll ask you questions about it right? You can't do that. No human can right?
+And
+the same thing for a code base. For example, I was doing styles a while back. This is one something I do in my website every Blue Moon, because I enjoy it
+by going to going and reading the styles of the largest open source project on Github
+it's called Bootstrap. It's really, really painful, and they change their rules all the time. Right? And so I I use this tool. And I said, Hey, can you recommend me how to change
+this to multicolumn.
+I wanted to list my books in multiple columns.
+and yes, and I know, because I've tried it in the past, you know, every year or 2 I go back to it, and every time I tried it takes me half a day to try to figure again. I enjoy it right, but it takes me half a day to figure out how to do it. Here. It took 10 min and I tried it, and it worked right. But again, I'm sort of the filter I'm checking on it. And so I'm talking still about human augmentation. But there's a tremendous number of things that are really painful for us
+and for the platform. It's easy to do.
+John.
+
+John Williams
+00:53:10
+Yeah, I I just add to that. I I wanted to write a plugin for chrome they have. They call them chrome extensions. I've never written one.
+so I asked it to write one.
+I mean it laid out the structure. I had no idea that there was special name files that I needed, etc. It just wrote it all out. Now. It needed to be, you know, it had. It was slightly out of date, so I needed to update one of the libraries, but
+you know it was something that would have taken me at least half a day, maybe maybe longer, that
+I pretty much got it in half an hour, and
+that's a huge deal that
+I mean we. I don't think we care now about which language we're using able. And I
+love Javascript. And we, you know we write Tyson, but
+I don't like some of it, but
+it doesn't matter now which language that we can just write in any language. Now it it just relieves you of a lot of as able, said. You know the grunt work, the stuff that you. Your brain doesn't want to do
+It's a pleasure. It's it's a real pleasure.
+
+Abel Sanchez
+00:54:17
+No.
+
+John Williams
+00:54:17
+Like with.
+
+Abel Sanchez
+00:54:18
+No, that that's true. One of the first things I said to John, this is way back a year ago. I think it was February or so is that things have become enjoyable again. For example, if you're gonna do a proposal, you have some core ideas that you can probably get into a page, but flushing them out.
+you know, may take 30. It can do a lot of that for you, and you know what it's like. The reviewers. Nobody actually ends up reading any of this right. I still read it all the way through, because I need to make sure that it actually is capturing the ideas as I mentioned, but it cuts down that process from perhaps a week to a day. Right? And that is significant. And you can imagine how this could be helpful, say, in the field of law and the field of medicine, and I know all of the you know. I think it was
+somebody mentioned. You know, some of the requirements in medicine.
+but it depends on how you use it. For example, if I was a doctor, and this had been populated with medical
+data, I'd be interested in consulting it again. You have to vet anything you find, but if it increases your productivity, and my experience has been undeniable right? And I worked across a number of domains, meaning not just writing code all day, and it still has, like John, said.
+a number of leaders, for example, I know from a CEO and the fashion industry in New York.
+and she was telling me her experience of hiring a consulting company to be able to create the title for her new documentary.
+and how it took them about 6 weeks, and what they produced. She was able to find something better
+in about 20 min in Chat Gpt. Than what the consulting company had created in 6 weeks, and she showed me both. And I said, Oh, yes, undeniably. Years is better in in. You know the this. A number of leaders throughout the world have, you know, mentioned that they spend, you know, maybe half an hour a day, just bouncing ideas off of this. And, by the way, it is also really tolerant. This is something I appreciate. So if you ask it stupid questions.
+It's perfectly fine, and you can go up and down in complexity so you can get very abstract, or you can get very detailed, or you can get very technical, or you can get very strategic. And it's happy to move up and down with you. And the other thing is, as you probably know is that there's a domain
+focus that is coming to this, you know. Everywhere you look, somebody's creating a new one specialized on some segment or some specialty. Right, John, maybe I I'm being too positive.
+
+John Williams
+00:56:51
+No, no, no, there was just a comment about you know it, knowing not knowing culture. So I asked it to write to sonnet
+about data leaders and a pack of programmers. So I just posted that upon the towers to the leader bright, a sigh, a sage of data, charting paths, profound in endless streams of code through day and night is pack of programmers. Swift gathered round. I mean, it's pretty amazing. So yeah, I I'd say it does understand culture. It swallowed so much
+of, you know our knowledge that
+I I don't want to say it understands there are obviously some things it's not human. It doesn't have feelings, but
+it actually performs like a human in many ways. I mean, I think this is why there's a story about the author of Go to the Escher back.
+and he's a musician
+and a program. Wrote, you know, I think it was
+a tune in the in the style of Bach.
+and they mixed up
+one of Burke's and some of these programs. He couldn't tell the difference between you know what was real, really, Burke, and what wasn't so my my sense is, it doesn't. It's it's got a kind of world model in there.
+If you ask it, for example to stack.
+You know, a computer on top of a suitcase on top of an egg. Or and you know, in any order, it doesn't do a bad job of stacking them. So it's got a it's got a a mental model, I think of the world.
+Obviously, it's different to ours.
+But
+I'm I'm amazed by its capabilities, you know. Certainly. You want you wanna write something clever to your wife. Get chat, gpt to do it. It'll do a great job.
+
+Abel Sanchez
+00:58:48
+And 1 one that I will raise just to. So we don't end up
+totally positive is that there's negative
+issues when it comes to the applications of this by bad actors.
+So, for example, one of the exploding areas of this is AI girlfriends, right and and and girlfriends. Here's a generic term right? But
+try it if if you have it, or if you want to try it just once, it's worth doing getting the plus version
+and put it onto your phone and use the voice feature and tell it as I have done. You know, as an experiment I've had a long day has been a bad day.
+What can you say to to make me feel a little bit better? And it's remarkably soothing and supportive, and it suggests activities that you know you find interesting.
+And this is sort of opening up a world of or a vector, of threats, right? That were in there before. And you can imagine you can use them for good or bad.
+And so there are additional issues there that that we didn't highlight. But just
+note that the effectiveness that
+we use it with can also be flipped around to try to
+to do bad things right. And so like other things, you know everything that we mentioned. The course can be done that way to all of analytics and all of data analysis, and so on. So that's just a just a cafet there.
+Yeah.
+
+John Williams
+01:00:14
+I don't want to say.
+Yeah, I I just say some of the questions that we didn't get around to asking.
+ask them to chat gpt. It won't give you a bad answer. You know what? What are the real sticking points in data leadership? I I haven't done that yet, but I certainly will do it. My guess is, it gives a pretty good answer.
+
+Abel Sanchez
+01:00:37
+That's exactly right. And the other thing, as I mentioned before, you can go higher or lower, like some of you have very specific questions right about.
+I'm in healthcare. I'm in this section brainstorm with it. And, by the way, don't
+again, even as an experiment fit pay for one month. You don't have to keep it after that, and because 4 is much more complete than 3.5, it's a big difference, especially when it comes to that context. And so it's well worth an experiment.
+I think it's only $20. So
+yeah, worth.
+
+John Williams
+01:01:10
+Yeah, absolutely. It's, you know.
+Cap Gpt Plus is
+is much is much better. And and you and you get you can load date. You can load files onto it so you can load data.
+If you construct something called my Gpts.
+you can load up
+120 GB of data which you know is not a bad bad amount of data. You can get quite a lot in that.
+I mean, that doesn't go into the context window that. But that's another story.
+anyway. Weird. Yeah, I'm chatting about it. Able? Yeah, yeah, I'm still positive. Today, I'm positive. No, no, I'm.
+
+Abel Sanchez
+01:01:48
+I am. I am, too. I am, too. I just wanted to to raise something to, to, to ground it.
+
+John Williams
+01:01:55
+Yeah, no, no, absolutely absolutely.
+Hallucination does does exist.
+
+Abel Sanchez
+01:01:59
+Oh, and perplexity is okay. But same comment. About 3.5 versus 4 4 is much better.
+So I think we're. We're a time.
+
+John Williams
+01:02:10
+Yeah. You go
+usually jump in and.
+
+Hugo - MIT Professional Education
+01:02:14
+Yeah.
+
+John Williams
+01:02:15
+Go ahead!
+
+Hugo - MIT Professional Education
+01:02:16
+Yeah, thank you so much. Professor Joel, Dr. Albert Sanchez, for such an engaging session. Thank you. Everyone was being able to join the session today. And this who will be seeing the recording next few days, too. Please remember to fill out the satisfaction poll that will pop up on your screen right now. We already appreciate your feedback. Feel free to let us know, or you can improve and your biggest takeaway to from this session and on behalf of mit professional education and stop us program. We hope you, having great learning experience with us
+and wish to see you again in the factory. Webinar. Have a nice day. Take care, thank you again, John. Enable. Have a great day. In the meantime, please take time to fill out the survey, and we'll be waiting for you a couple of minutes to do that.
+
+Franco Gollo
+01:02:58
+Thank you. John. Thank you. Well.
+
+Abel Sanchez
+01:03:00
+Yeah? Great question.
+
+Jose RP
+01:03:01
+Guys.
+
+Abel Sanchez
+01:03:01
+Oh, thank you!
+
+John Williams
+01:03:02
+Yeah, thank you. Guys, cheers, able.
+
+Abel Sanchez
+Take care. Yeah. Bye, bye.
