@@ -123,7 +123,7 @@ app.post('/create_assistant', async (req, res) => {
         let assistant = await create_or_get_assistant(name, instruction);
         let assistant_id = assistant.id;
 
-        message = "Assistant created with id: " + assistant_id;
+        let message = "Assistant created with id: " + assistant_id;
         res.status(200).json({ message: message, focus: focus });
     }
     catch (error) {
@@ -145,8 +145,8 @@ app.post('/get_assistant', async (req, res) => {
         }
     }
     console.log('Modify request received:', req.body);
-    let message = `got Assistant ${name} :` + JSON.stringify(assistant);
-    res.status(200).json({ message: message, focus: focus });
+    let message = `got Assistant ${name} : ${JSON.stringify(assistant)}`;
+    res.status(200).json({ "message": message, "focus": focus });
 });
 
 // this lists out all the assistants and extracts the latest assistant id and stores it in focus
@@ -563,7 +563,7 @@ app.post('/get_messages', async (req, res) => {
         // now retrieve the messages
         let response = await openai.beta.threads.messages.list(thread_id)
         let all_messages = await get_all_messages(response);
-        let content = JSON.stringify(response.data);
+        let content = response.data;
         console.log(`content from LLM : ${content}`);
         res.status(200).json({ message: all_messages, focus: focus });
     }
@@ -603,7 +603,8 @@ async function runAssistant(assistant_id, thread_id, user_instructions) {
         await get_run_status(thread_id, run_id); // blocks until run is completed
         // now retrieve the messages
         let response = await openai.beta.threads.messages.list(thread_id)
-        return await get_all_messages(response);
+        let messages = await get_all_messages(response);
+        return messages;
 
     }
     catch (error) {
@@ -615,19 +616,25 @@ async function get_run_status(thread_id, run_id) {
     try {
         let response = await openai.beta.threads.runs.retrieve(thread_id, run_id)
         let message = response;
-        focus.status = response.status;
+        focus.run_status = response.status;
         let tries = 0;
         while (response.status == 'in_progress' || response.status == "queued" && tries < 10) {
             await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for 1 second
             response = await openai.beta.threads.runs.retrieve(thread_id, run_id);
             tries += 1;
+            focus.run_status = response.status;
+            console.log(`response status: ${response.status}`);
         }
         if (response.status === "requires_action") {
+            console.log(`response status: ${response.status}`);
+            focus.run_status = response.status;
             get_and_run_tool(response);
+            
         }
 
         if (response.status == "completed" || response.status == "failed") {
-
+            focus.run_status = response.status;
+            console.log(`response status: ${response.status}`);
         }
         // await openai.beta.threads.del(thread_id)
         return

@@ -33,63 +33,23 @@
         news_path: "",
         thread_id: "",
         message: "",
-        func_name: "",
         run_id: "",
-        status: "",
+        run_status: "",
         vector_store_id: "",
       };
 
-      function update_data(key, value) {
-        data[key] = value;
-        // render all inputs
-        updateInputs();
+      async function get_data_from_elements() {
+        for (let key in data) {
+          data[key] = document.getElementById(key).value;
+        }
+        console.log(`getting data from elements: ${JSON.stringify(data)}`);
       }
 
-      // Function to update the input elements based on the data object
-      function updateInputs() {
+      function write_data_to_elements(data) {
         for (let key in data) {
           document.getElementById(key).value = data[key];
         }
-      }
-
-      // Function to handle input changes and refresh all inputs
-      function handleInputChange(event) {
-        const id = event.target.id;
-        data[id] = event.target.value;
-        updateInputs();
-      }
-
-      // Add event listeners to all input elements
-      window.onload = function () {
-        for (let key in data) {
-          document
-            .getElementById(key)
-            .addEventListener("input", handleInputChange);
-        }
-      };
-
-      function get_data_from_elements() {
-        data.assistant_id = document.getElementById("assistant_id").value;
-        data.assistant_name = document.getElementById("assistant_name").value;
-        data.dir_path = document.getElementById("dir_path").value;
-        data.news_path = document.getElementById("news_path").value;
-        data.thread_id = document.getElementById("thread_id").value;
-        data.message = document.getElementById("message").value;
-        data.run_id = document.getElementById("run_id").value;
-        data.status = document.getElementById("run_status").value;
-        data.vector_store_id = document.getElementById("vector_store_id").value;
-      }
-      function write_data_to_elements(data) {
         console.log(`writing data to elements: ${JSON.stringify(data)}`);
-        document.getElementById("assistant_id").value = data.assistant_id;
-        document.getElementById("assistant_name").value = data.assistant_name;
-        document.getElementById("dir_path").value = data.dir_path;
-        document.getElementById("news_path").value = data.news_path;
-        document.getElementById("thread_id").value = data.thread_id;
-        document.getElementById("message").value = data.message;
-        document.getElementById("run_id").value = data.run_id;
-        document.getElementById("run_status").value = data.status;
-        document.getElementById("vector_store_id").value = data.vector_store_id;
       }
 
       function write_to_div(route, message) {
@@ -161,12 +121,16 @@
         let res = await response.json();
         console.log(`In UI response: ${JSON.stringify(res)}`);
         await parse_response(route, res);
+
         return;
       }
       async function parse_response(route, response) {
         data = response.focus;
+        console.log(`In UI parse_response data=: ${JSON.stringify(data)}`);
         write_data_to_elements(data);
-        write_to_div(route, response.message);
+        console.log(`Updated data:: ${response.status}`);
+        console.log(`write to div: ${JSON.stringify(response.message)}`);
+        write_to_div(route, JSON.stringify(response.message));
       }
     </script>
   </head>

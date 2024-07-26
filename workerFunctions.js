@@ -17,7 +17,7 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });
 // Define global variables focus to keep track of the assistant, file, thread and run
-let focus = { assistant_id: "", assistant_name: "", dir_path: "",news_path:"", file_id: "", thread_id: "", message: "", func_name: "", run_id: "", status: "", vector_store_id:"" } ;
+let focus = { assistant_id: "", assistant_name: "", dir_path: "",news_path:"", thread_id: "", message: "", run_id: "", run_status: "", vector_store_id:"" } ;
 
 // requires action is a special case where we need to call a function
 async function get_and_run_tool(response) {
