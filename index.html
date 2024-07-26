@@ -36,6 +36,36 @@
         func_name: "",
         run_id: "",
         status: "",
+        vector_store_id: "",
+      };
+
+      function update_data(key, value) {
+        data[key] = value;
+        // render all inputs
+        updateInputs();
+      }
+
+      // Function to update the input elements based on the data object
+      function updateInputs() {
+        for (let key in data) {
+          document.getElementById(key).value = data[key];
+        }
+      }
+
+      // Function to handle input changes and refresh all inputs
+      function handleInputChange(event) {
+        const id = event.target.id;
+        data[id] = event.target.value;
+        updateInputs();
+      }
+
+      // Add event listeners to all input elements
+      window.onload = function () {
+        for (let key in data) {
+          document
+            .getElementById(key)
+            .addEventListener("input", handleInputChange);
+        }
       };
 
       function get_data_from_elements() {
@@ -47,6 +77,7 @@
         data.message = document.getElementById("message").value;
         data.run_id = document.getElementById("run_id").value;
         data.status = document.getElementById("run_status").value;
+        data.vector_store_id = document.getElementById("vector_store_id").value;
       }
       function write_data_to_elements(data) {
         console.log(`writing data to elements: ${JSON.stringify(data)}`);
@@ -58,6 +89,7 @@
         document.getElementById("message").value = data.message;
         document.getElementById("run_id").value = data.run_id;
         document.getElementById("run_status").value = data.status;
+        document.getElementById("vector_store_id").value = data.vector_store_id;
       }
 
       function write_to_div(route, message) {
@@ -176,7 +208,12 @@
         >
           Get Assistant by Name
         </button>
-        <input type="text" id="assistant_name" name="assistant_name" />
+        <input
+          type="text"
+          id="assistant_name"
+          name="assistant_name"
+          value="Agent Name"
+        />
         <button
           class="btn btn-primary mr-1"
           type="submit"
@@ -191,18 +228,117 @@
         >
           Delete
         </button>
-        <input type="text" id="assistant_id" name="assistant_id" />
+        <input
+          type="text"
+          id="assistant_id"
+          name="assistant_id"
+          value="Agent_id"
+        />
 
-        <label for="dir_path" class="label-container"
-          >File Load from Directory:</label
+        <label for="thread_id" class="label-container">Thread ID:</label>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('create_thread')"
         >
+          Create
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('delete_thread')"
+        >
+          Delete
+        </button>
+        <input type="text" id="thread_id" name="thread_id" value="thread_id" />
+
+        <label for="run_id" class="label-container">Run ID:</label>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('create_run')"
+        >
+          Create
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('delete_run')"
+        >
+          Cancel Run
+        </button>
+        <input type="text" id="run_id" name="run_id" value="run_id" />
+        <input
+          type="text"
+          id="run_status"
+          name="run_status"
+          value="no status yet"
+        />
+
+        <label for="message" class="label-container">Messages:</label>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('create_message')"
+        >
+          Create Message
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('get_messages')"
+        >
+          Get Messages
+        </button>
+        <input type="text" id="message" name="message" value="Input Message" />
+
+        <label for="func_name" class="label-container"
+          >Add Tools: News Feed requires an output path and a topic</label
+        >
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('list_tools')"
+        >
+          Add Tools:
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('run_whisper')"
+        >
+          Run Whisper
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('news_path')"
+        >
+          Get News Feed
+        </button>
+        <input
+          type="text"
+          id="news_path"
+          name="news_path"
+          value="Input News Topic"
+        />
+        <label for="dir_path" class="label-container"
+          >File Load from Directory to Vector DB:</label
+        >
+
         <button
           class="btn btn-primary mr-1"
           type="submit"
           onclick="sendRequest('upload_files')"
         >
-          Upload Files
+          Upload Files to VectorDB
         </button>
+        <input
+          type="text"
+          id="vector_store_id"
+          name="vector_store_id"
+          value="vector_store_id"
+        />
         <button
           class="btn btn-primary mr-1"
           type="submit"
@@ -224,93 +360,14 @@
         >
           Delete
         </button>
-        <button
-          class="btn btn-primary mr-1"
-          type="submit"
-          onclick="sendRequest('run_whisper')"
-        >
-          Run Whisper
-        </button>
+
         <input
           type="text"
           id="dir_path"
           name="dir_path"
           value="Input Directory Path"
         />
-        <button
-          class="btn btn-primary mr-1"
-          type="submit"
-          onclick="sendRequest('news_path')"
-        >
-          Get News Feed
-        </button>
-        <input
-          type="text"
-          id="news_path"
-          name="news_path"
-          value="Input News Topic"
-        />
 
-        <label for="thread_id" class="label-container">Thread ID:</label>
-        <button
-          class="btn btn-primary mr-1"
-          type="submit"
-          onclick="sendRequest('create_thread')"
-        >
-          Create
-        </button>
-        <button
-          class="btn btn-primary mr-1"
-          type="submit"
-          onclick="sendRequest('delete_thread')"
-        >
-          Delete
-        </button>
-        <input type="text" id="thread_id" name="thread_id" />
-
-        <label for="run_id" class="label-container">Run ID:</label>
-        <button
-          class="btn btn-primary mr-1"
-          type="submit"
-          onclick="sendRequest('create_run')"
-        >
-          Create
-        </button>
-        <button
-          class="btn btn-primary mr-1"
-          type="submit"
-          onclick="sendRequest('delete_run')"
-        >
-          Cancel Run
-        </button>
-        <input type="text" id="run_id" name="run_id" />
-        <input type="text" id="run_status" name="run_status" />
-
-        <label for="message" class="label-container">Messages:</label>
-        <button
-          class="btn btn-primary mr-1"
-          type="submit"
-          onclick="sendRequest('create_message')"
-        >
-          Create Message
-        </button>
-        <button
-          class="btn btn-primary mr-1"
-          type="submit"
-          onclick="sendRequest('get_messages')"
-        >
-          Get Messages
-        </button>
-        <input type="text" id="message" name="message" />
-
-        <label for="func_name" class="label-container">Add Tools:</label>
-        <button
-          class="btn btn-primary mr-1"
-          type="submit"
-          onclick="sendRequest('list_tools')"
-        >
-          Add Tools
-        </button>
         <button
           class="btn btn-primary mr-1"
           type="submit"

@@ -9,13 +9,16 @@ These documents could be attached to OpenAI Assistant's VectorDB or ChromaDB loc
 The advantage of OpenAI VectorDB is that it is integrated into our Assistant and has been tuned by them
 The advantage of ChromaDB is it gives us more flexibility in interaction with other LLMS or Agents
 
-Problem: store_in_memory does not have access to web-server data structure eg MEMORY. 
+Problem: store_in_memory does not have access to web-server data structure eg MEMORY.
 Can we pass pointer in when store_in_memory is called eg execute(memory, document, question)
-At presen store_in_memory "regains" its state by reading in file. 
+At presen store_in_memory "regains" its state by reading in file.
 
-Install ChromaDB
-npm install --save chromadb chromadb-default-embed 
+## VectorDB and File Upload from Directory
 
+We use the OpenAI inbuilt VectorDB that allows us 10,000 files with total storage 100GB
+A number VectorDBs can be attached but we will assume only one attached at a time.
+To upload files we check if the Assistant has a VectorDB already and if not we create one with random name
+We require a director path and take all files in it and attach them to Assistant and to the VectorDB
 
 jrw@mit.edu (email me if you find issues)
 Thanks to following for their tools

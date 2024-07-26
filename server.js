@@ -140,6 +140,9 @@ app.post('/get_assistant', async (req, res) => {
     if (assistant != null) {
         focus.assistant_id = assistant.id;
         focus.assistant_name = assistant.name;
+        if (assistant.tool_resources.file_search != null) {
+            focus.vector_store_id = assistant.tool_resources.file_search.vector_store_ids[0]
+        }
     }
     console.log('Modify request received:', req.body);
     let message = `got Assistant ${name} :` + JSON.stringify(assistant);
@@ -187,6 +190,9 @@ app.post('/delete_assistant', async (req, res) => {
 app.post('/upload_files', async (req, res) => {
 
     let dirname = req.body.dir_path
+    if(dirname == "") {
+        res.status(200).json({ message: "Specify a directory path for the files to be uploaded from", focus: focus });
+    }
     let files = [];
         // get list of files from directory
     fs.readdirSync(dirname).forEach(file => {
@@ -202,17 +208,28 @@ app.post('/upload_files', async (req, res) => {
         );
         // get all files in the assistant
  
-        //let vectordb_id = "vs_2IALcdUrUzzG8gMCXUdSHLqh";
-        // Create a vector store including our two files.
+        
+        // Create a vector store including our files.
         let fileIds = [];
         let vectorStore = await openai.beta.vectorStores.create({
-         name: "CrewAI Docs01",
+         name: "JohnVectorStore01",
         });
-        // get the vector store by its id
-        //vectorStore = await openai.beta.vectorStores.retrieve(vectordb_id);
+        focus.vector_store_id = vectorStore.id;
+    
+
+        // get the vector store by its id - no need to retrieve it as we have it
+        //vectorStore = await openai.beta.vectorStores.retrieve(vectorStore.id);
         let response = await openai.beta.vectorStores.fileBatches.uploadAndPoll(
          vectorStore.id, {files:fileStreams});
-          
+
+        // Update the assistant to use the vector store.
+        let assistant = openai.beta.assistants.update(
+            focus.assistant_id,
+            {
+                tool_resources: { file_search: { vector_store_ids: [vectorStore.id] } },
+            }
+          )
+        
         let message = "Files uploaded: " + JSON.stringify(response);
         res.status(200).json({ message: message, focus: focus });
     }
