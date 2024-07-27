@@ -474,7 +474,7 @@ app.post('/create_run', async (req, res) => {
         if (messages.length > 0) {
             let role = messages[0].role;
             content = messages[0].content[0].text.value;
-            focus.message = content;
+            //focus.message = content;  // don't write to the message box
         }
         res.status(200).json({message:content, focus:focus});
     }

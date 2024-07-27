@@ -130,7 +130,7 @@
         write_data_to_elements(data);
         console.log(`Updated data:: ${response.status}`);
         console.log(`write to div: ${JSON.stringify(response.message)}`);
-        write_to_div(route, JSON.stringify(response.message));
+        write_to_div(route, response.message);
       }
     </script>
   </head>
