@@ -2,6 +2,7 @@
 
 import express from 'express';
 import path from 'path';
+import Dayjs from 'dayjs';
 const app = express();
 const port = 4000;
 import fs, { read } from 'fs';
@@ -35,13 +36,19 @@ app.use(express.json());
 app.get('/', (req, res) => {
     // check if table memory exists if not create table called memory with unique url as primary key
     // table consists of url, document (TEXT), embeddings (float array)
+    // using dayjs for dates console.log(now.isBefore(futureDate)); // true if now is before futureDate
+    // console.log(now.isAfter(futureDate)); // true if now is after futureDate
+    // console.log(now.isSame(futureDate)); // true if now is the same as futureDate
     const create_table = `
     CREATE TABLE IF NOT EXISTS agent_memory (
         url INTEGER PRIMARY KEY AUTOINCREMENT,
+        date DEFAULT CURRENT_TIMESTAMP,
+        entity TEXT NOT NULL,
         tokens TEXT NOT NULL,
-        embeddings BLOB NOT NULL
+        embeddings BLOB 
     )`;
-    let facts = [{url: 0, tokens: "This is a test document", embeddings: [0.1, 0.2, 0.3]}]
+    let isoString = Dayjs().format();
+    let facts = [{url: 0, date : isoString, entity:"test", tokens: "This is a test document", embeddings: [0.1, 0.2, 0.3]}]
     // write into 
     memory_db.run(create_table, (err) => {
         if (err) {
@@ -71,10 +78,11 @@ async function readFromTable(db) {
 
 async function insertIntoTable0(db, data) {
     const sql = `
-        INSERT INTO agent_memory (url, tokens, embeddings) 
-        VALUES (?, ?, ?)
+        INSERT INTO agent_memory (url, date, entity, tokens, embeddings) 
+        VALUES (?, ?, ?, ?, ?)
     `;
-    db.run(sql, [data.url, data.tokens, data.embeddings], function (err) {
+    let isoString = Dayjs().format();
+    db.run(sql, [data.url, isoString, data.entity, data.tokens, data.embeddings], function (err) {
         if (err) {
             return console.error("Error inserting data:", err.message);
         }
@@ -564,7 +572,7 @@ app.post('/get_messages', async (req, res) => {
         let response = await openai.beta.threads.messages.list(thread_id)
         let all_messages = await get_all_messages(response);
         let content = response.data;
-        console.log(`content from LLM : ${content}`);
+        console.log(`context from LLM : ${JSON.stringify(content)}`);
         res.status(200).json({ message: all_messages, focus: focus });
     }
     catch (error) {

@@ -1,5 +1,6 @@
 import axios from "axios";
 import csvParser from "csv-parser";
+import Dayjs from "dayjs";
 import createCsvWriter from "csv-writer";
 import dotenv from "dotenv";
 import fs from "fs";
@@ -70,7 +71,9 @@ const execute = async ( memory_db, document, question) => {
         if (document != null){
             documentEmbedding = await getEmbeddings(document);
         }
-        let fact ={url: nextUrl, tokens: document, embeddings: documentEmbedding };
+        let isoString = Dayjs().format();
+        if (question == "") question = "The Universe and Everything";
+        let fact ={url: nextUrl, date: isoString, entity: question, tokens: document, embeddings: documentEmbedding };
         await insertDB(memory_db, fact);
         
         contents = await readDB(memory_db);
@@ -95,11 +98,11 @@ const execute = async ( memory_db, document, question) => {
     }
     async function insertDB(db, data) {
         const sql = `
-            INSERT INTO agent_memory (url, tokens, embeddings) 
-            VALUES (?, ?, ?)
+            INSERT INTO agent_memory (url, date, entity, tokens, embeddings) 
+            VALUES (?, ?, ?, ?, ?)
         `;
-       
-        db.run(sql, [data.url, data.tokens, data.embeddings], function (err) {
+        let isoString = Dayjs().format();
+        db.run(sql, [data.url, isoString, data.entity, data.tokens, data.embeddings], function (err) {
             if (err) {
                 return console.error("Error inserting data:", err.message);
             }
@@ -327,6 +330,7 @@ const execute = async ( memory_db, document, question) => {
 
         // Get the most relevant URL
         const mostRelevantUrl = similarityScores[0].url;
+    
         console.log("mostRelevant Fact", crawledData.contents[mostRelevantUrl]);
 
         // Fetch the content of the most relevant URL

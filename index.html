@@ -22,6 +22,45 @@
       .card-body {
         padding: 30px;
       }
+      .llm-output {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        background-color: #b2e8a7;
+        border: 1px solid #e1e4e8;
+        border-radius: 6px;
+        padding: 16px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        color: #040404;
+        height: 300px;
+        width: 70%;
+      }
+      .json-output {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        background-color: #345b83;
+        border: 1px solid #e1e4e8;
+        border-radius: 6px;
+        padding: 16px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        color: #ecedd9;
+        height: 200px;
+        width: 70%;
+      }
+      .function-output {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        background-color: #63aad6;
+        border: 1px solid #e1e4e8;
+        border-radius: 6px;
+        padding: 16px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        color: #edf466;
+        height: 300px;
+        width: 70%;
+      }
     </style>
     <!-- jQuery library -->
 
@@ -74,10 +113,32 @@
         message.forEach((item) => {
           // Create a new span element for each item
           var span = document.createElement("span");
-
+          span.style.color = "black"; // Default color
           // check if item.content or item.function
-          if ("content" in item) span.textContent = item.content;
+          let matches = [];
+          if ("content" in item) {
+            span.textContent = item.content;
+            // check for ``` that indicates code block
+            if (item.content.includes("```")) {
+              const regex = /```([^```]+)```/g;
+
+              // Find matches
+
+              let match;
+              while ((match = regex.exec(span.textContent)) !== null) {
+                matches.push(match[1].trim());
+              }
+
+              // Insert extracted text into the div
+              const outputDiv = document.getElementById("json_output");
+              outputDiv.textContent = matches.join("\n\n");
+            }
+            // remove text between ``` from the content
+            span.textContent = span.textContent.replace(matches, "");
+            span.textContent = span.textContent.replace("\n", "");
+          }
           // check if item.function exists
+
           if ("function" in item) {
             span.textContent = JSON.stringify(item.function);
           } else {
@@ -340,13 +401,13 @@
           Close DB
         </button>
         <div>
-          <label for="response">Response from GPT:</label>
+          <label for="response">Response from Agent:</label>
         </div>
-        <div
-          id="response"
-          style="width: 80%; height: 700px; background: rgb(196, 238, 175)"
-        ></div>
-        <div id="functions"></div>
+        <div id="response" class="llm-output"></div>
+        <label for="response">JSON Output:</label>
+        <div id="json_output" class="json-output"></div>
+        <label for="response">Functions:</label>
+        <div id="functions" class="function-output"></div>
       </div>
     </div>
   </body>
