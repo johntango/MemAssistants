@@ -11,6 +11,7 @@ import { parse } from "node-html-parser";
 import natural from "natural";
 //import WordTokenizer from "natural.WordTokenizer";
 import { OpenAI } from "openai";
+import { memory_db } from "../server.js";
 
 const MAXCOUNT = 10;
 // given an optional document to store and/or a question to answer 
@@ -22,7 +23,7 @@ const MAXCOUNT = 10;
 
 // the function has access to SQLITE3 database to store the embeddings and tokens via global variable db
 
-const execute = async ( memory_db, document, question) => {
+const execute = async ( document, question) => {
     dotenv.config();
     const inputText = question;
     // get OPENAI_API_KEY from GitHub secrets

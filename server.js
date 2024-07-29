@@ -16,6 +16,7 @@ import sqlite3 from 'sqlite3';
 
 const memory_db = new sqlite3.Database('my_memory.db');
  //const db = new sqlite3.Database(':memory:');
+let scratchdb = {};   // this is a scratchpad for the server to store data in memory
 
 
 app.use(express.static(__dirname +'/images'));
@@ -469,22 +470,24 @@ app.post('/create_run', async (req, res) => {
     console.log("create_run thread_id: " + thread_id + " assistant_id: " + assistant_id);
     try {
           // run and poll thread V2 API feature
-        let run = await openai.beta.threads.runs.createAndPoll(thread_id, {
+        /*let run = await openai.beta.threads.runs.createAndPoll(thread_id, {
             assistant_id: focus.assistant_id
+        })
+            */
+        let run = await openai.beta.threads.runs.create(thread_id, {
+            assistant_id: assistant_id
         })
         let run_id = run.id;
         focus.run_id = run_id;
-     
+        // this checks to see if any tool needs to be called and blocks until the run is completed
+        await get_run_status(thread_id, run_id);
         // now retrieve the messages
-        let messages = await openai.beta.threads.messages.list(thread_id);
-        messages = messages.data;
-        let content = ""
-        if (messages.length > 0) {
-            let role = messages[0].role;
-            content = messages[0].content[0].text.value;
-            //focus.message = content;  // don't write to the message box
-        }
-        res.status(200).json({message:content, focus:focus});
+        let response = await openai.beta.threads.messages.list(thread_id)
+        let all_messages = await get_all_messages(response);
+        let content = response.data;
+        console.log(`context from LLM : ${JSON.stringify(content)}`);
+        res.status(200).json({ message: all_messages, focus: focus });
+        
     }
     catch (error) {
         console.log(error);
@@ -492,40 +495,7 @@ app.post('/create_run', async (req, res) => {
     }
 });
 //
-// this is the main loop in handling messages calling functions etc
-//
-/*
-app.post('/run_status', async (req, res) => {
-    let thread_id = req.body.thread_id;
-    let run_id = req.body.run_id;
-    try {
 
-        
-        let response = await openai.beta.threads.runs.retrieve(thread_id, run_id)
-        let message = response;
-        focus.status = response.status;
-        let tries = 0;
-        while (response.status == 'in_progress' && tries < 10) {
-            await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for 1 second
-            response = await openai.beta.threads.runs.retrieve(thread_id, run_id);
-            tries += 1;
-        }
-        if (response.status === "requires_action") {
-            get_and_run_tool(response);
-        }
-
-        if (response.status == "completed" || response.status == "failed") {
-            let message = "Completed run with status: " + response.status;
-            res.status(200).json({ message: message, focus: focus });
-        }
-
-    }
-    catch (error) {
-        console.log(error);
-        res.status(500).json({ message: 'Run Status failed' }, focus);
-    }
-})
-*/
 app.post('/delete_run', async (req, res) => {
     let thread_id = req.body.thread_id;
     let assistant_id = req.body.assistant_id;
@@ -645,7 +615,7 @@ async function get_run_status(thread_id, run_id) {
             console.log(`response status: ${response.status}`);
         }
         // await openai.beta.threads.del(thread_id)
-        return
+        return response.status;
     }
     catch (error) {
         console.log(error);
@@ -851,4 +821,4 @@ app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
 
-export {memory_db }
+export {memory_db, scratchdb }

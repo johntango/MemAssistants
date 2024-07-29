@@ -6,6 +6,7 @@ import path from 'path';
 import { URL } from 'url';
 import {memory_db} from './server.js';
 
+
 const __dirname = new URL('.', import.meta.url).pathname;
 
 let assistants = {}
@@ -37,11 +38,7 @@ async function get_and_run_tool(response) {
             let args = JSON.parse(toolCall.function.arguments);
             let argsArray = Object.keys(args).map((key) => args[key]);
             // insert as first argument pointer to memoryDB
-            // check if functionToExecute contains match to  store_in_memory
-              if (functionName == "store_in_memory") {
-                argsArray.unshift(memory_db);
-            }
-                
+            // check if functionToExecute contains match to  store_in_memory   
             
             let functionResponse = await functionToExecute.execute(...argsArray);
             toolOutputs.push({
@@ -56,6 +53,7 @@ async function get_and_run_tool(response) {
                     tool_outputs: toolOutputs
                 }
             );
+            console.log(`FunctionResponse from ${functionName }:  ${JSON.stringify(functionResponse)}`);
         }
         continue;
     }
