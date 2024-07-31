@@ -597,7 +597,7 @@ async function get_run_status(thread_id, run_id) {
         focus.run_status = response.status;
         let tries = 0;
         while (response.status == 'in_progress' || response.status == "queued" && tries < 10) {
-            await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for 1 second
+            await new Promise(resolve => setTimeout(resolve, 2000)); // Wait for 2 second
             response = await openai.beta.threads.runs.retrieve(thread_id, run_id);
             tries += 1;
             focus.run_status = response.status;
@@ -606,8 +606,8 @@ async function get_run_status(thread_id, run_id) {
         if (response.status === "requires_action") {
             console.log(`response status: ${response.status}`);
             focus.run_status = response.status;
-            get_and_run_tool(response);
-            
+            await get_and_run_tool(response); // its possible we will run tool after tool after tool 
+            await get_run_status(thread_id, run_id);
         }
 
         if (response.status == "completed" || response.status == "failed") {
