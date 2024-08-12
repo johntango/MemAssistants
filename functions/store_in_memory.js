@@ -16,7 +16,7 @@ import { memory_db } from "../server.js";
 const MAXCOUNT = 10;
 // given an optional document to store and/or a question to answer 
 // URL is the document_id  in csv table with URL     CONTENT
-// The embeddings will be stored in csv woth URL     EMBEDDING or as Dictionary in memory [{url: embedding}, {...}]
+// The embeddings will be stored in csv with URL     EMBEDDING or as Dictionary in memory [{url: embedding}, {...}]
 // tokens are just words 
 // DocIds/Fact_Ids will be integers 0,1,2 etc
 // Facts will be created based on solely on LLM (store_in_memory function call xxxx)
@@ -37,10 +37,10 @@ const execute = async ( document, question) => {
     // retrieve stored documents and push into contents {url, tokens, embedding}
     let contents = [];
     let nextUrl = 0;
-    let crawledData = { contents: {} };
+    let crawledData = { contents: [] };
     try{
 
-        /* This is if we want to read from a csv file
+        // This is if we want to read from a csv file
 
         await new Promise((resolve) => {
             fs.createReadStream(contentsOutputPath)
@@ -55,17 +55,18 @@ const execute = async ( document, question) => {
                         embedding: data.Embedding,
                     });
                   
-                    lastUrl = contents.length;
+                    nextUrl = contents.length;
                 })
                 .on("end", () => {
+                    crawledData.contents = contents;
                     console.log("Loaded contents from file.");
                     resolve();
                 });
         });
-        */
+    
         // get sqlite3 data and push into contents
-
-        contents = await readDB(memory_db);
+        
+        //contents = await readDB(memory_db);
         // get last url
         nextUrl = contents.length; // should be zero based id
         let documentEmbedding = [];
@@ -74,19 +75,24 @@ const execute = async ( document, question) => {
         }
         let isoString = Dayjs().format();
         if (question == "") question = "The Universe and Everything";
-        let fact ={url: nextUrl, date: isoString, entity: question, tokens: document, embeddings: documentEmbedding };
-        await insertDB(memory_db, fact);
+        let fact = {url: nextUrl, date: isoString, entity: question, tokens: document, embeddings: documentEmbedding };
+        //await insertDB(memory_db, fact);
+
+        // add fact to memory 
+        addDocumentToMemory(fact);
         
-        contents = await readDB(memory_db);
+        //contents = await readDB(memory_db);
         // need to make sure that the contents are in the correct format for crawledData [{ url, tokens, embedding }]
 
         crawledData.contents = contents;
+        
         console.log("finished add document to memory ...");
     } catch (error) {
         // if no csv file found create it 
             console.log("CSV files not found. Crawling domain...", error);
     }
     
+    /*  This is the code for a database
     async function readDB(db) {
         const sql = 'SELECT * FROM agent_memory';
         let contents = [];
@@ -111,11 +117,11 @@ const execute = async ( document, question) => {
         });
         
     }
-
+    */
     
-    async function addDocumentToMemory(document) {
+    async function addDocumentToMemory(newFact) {
     
-            /* crawledData.contents.push(newFact);
+            crawledData.contents.push(newFact);
 
             // Save crawled contents to CSV file
             
@@ -134,7 +140,6 @@ const execute = async ( document, question) => {
             }));
             await csvWriter.writeRecords(records);
             console.log(`New contents saved to ${contentsOutputPath}`);
-            */
     
     }
 

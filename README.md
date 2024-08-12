@@ -1,6 +1,7 @@
 # Assistant Manager Builder Mark 0.0.4
 
 ## Simulate Data Storage called MemAssistant that mimics MemGPT
+Initially for testing we will store data in JSON structure and write out to JSON
 
 We tell the LLM to store relevant facts by calling function store_in_memory
 Presently it can also ask and answer a question but only from single document

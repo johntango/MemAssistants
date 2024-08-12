@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
   <head>
     <title>Managing Assistants MIT Mark 1</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
     <style>
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+
       .label-container {
         display: flex;
         flex-direction: row;
@@ -259,7 +269,13 @@
           name="assistant_id"
           value="Agent_id"
         />
-
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('delete_assistant')"
+        >
+          Delete
+        </button>
         <label for="thread_id" class="label-container">Thread ID:</label>
         <button
           class="btn btn-primary mr-1"
@@ -396,9 +412,9 @@
         <button
           class="btn btn-primary mr-1"
           type="submit"
-          onclick="sendRequest('close_db')"
+          onclick="sendRequest('switch_db')"
         >
-          Close DB
+          Switch to Sqlite
         </button>
         <div>
           <label for="response">Response from Agent:</label>

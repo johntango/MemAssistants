@@ -35,34 +35,6 @@ app.use(express.json());
 //get the root directory
 
 app.get('/', (req, res) => {
-    // check if table memory exists if not create table called memory with unique url as primary key
-    // table consists of url, document (TEXT), embeddings (float array)
-    // using dayjs for dates console.log(now.isBefore(futureDate)); // true if now is before futureDate
-    // console.log(now.isAfter(futureDate)); // true if now is after futureDate
-    // console.log(now.isSame(futureDate)); // true if now is the same as futureDate
-    const create_table = `
-    CREATE TABLE IF NOT EXISTS agent_memory (
-        url INTEGER PRIMARY KEY AUTOINCREMENT,
-        date DEFAULT CURRENT_TIMESTAMP,
-        entity TEXT NOT NULL,
-        tokens TEXT NOT NULL,
-        embeddings BLOB 
-    )`;
-    let isoString = Dayjs().format();
-    let facts = [{url: 0, date : isoString, entity:"test", tokens: "This is a test document", embeddings: [0.1, 0.2, 0.3]}]
-    // write into 
-    memory_db.run(create_table, (err) => {
-        if (err) {
-            return console.error('Error creating table:', err.message);
-        }});
-    //inssert into agent_memory table data
-    
-// test data inserted
-    insertIntoTable0(memory_db, facts[0]);
-    // add a row to the table
-    // close database and write all to file
-    readFromTable(memory_db);
-    
     res.sendFile(path.join(__dirname, '/index.html')); 
 });
 async function readFromTable(db) {
@@ -363,7 +335,7 @@ app.post('/news_path', async (req, res) => {
         res.status(400).json({ message: "No news found", focus: focus });
     }   
     let date = new Date();
-    let filename = `${dirname}/news_${date}.txt`;
+    let filename = `${dirname}/${topic}-news_${date}.txt`;
     // write or create file and write 
     fs.writeFileSync(filename, news);
 
@@ -807,14 +779,42 @@ function getConnection(dbPath) {
         }
     });
 }
-app.post('/close_db', (req, res) => {
+app.post('/switch_db', (req, res) => {
+        // check if table memory exists if not create table called memory with unique url as primary key
+    // table consists of url, document (TEXT), embeddings (float array)
+    // using dayjs for dates console.log(now.isBefore(futureDate)); // true if now is before futureDate
+    // console.log(now.isAfter(futureDate)); // true if now is after futureDate
+    // console.log(now.isSame(futureDate)); // true if now is the same as futureDate
+    const create_table = `
+    CREATE TABLE IF NOT EXISTS agent_memory (
+        url INTEGER PRIMARY KEY AUTOINCREMENT,
+        date DEFAULT CURRENT_TIMESTAMP,
+        entity TEXT NOT NULL,
+        tokens TEXT NOT NULL,
+        embeddings BLOB 
+    )`;
+    let isoString = Dayjs().format();
+    let facts = [{url: 0, date : isoString, entity:"test", tokens: "This is a test document", embeddings: [0.1, 0.2, 0.3]}]
+    // write into 
+    memory_db.run(create_table, (err) => {
+        if (err) {
+            return console.error('Error creating table:', err.message);
+        }});
+    //inssert into agent_memory table data
     
+// test data inserted
+    insertIntoTable0(memory_db, facts[0]);
+    // add a row to the table
+    // close database and write all to file
+    readFromTable(memory_db);
+    /*
     memory_db.close((err) => {
         if (err) {
             return console.error(err.message);
         }
         console.log("Database connection closed.");
     });
+    */
     res.status(200).json({ message: "Database connection closed." , focus: focus});
 });
 app.listen(port, () => {
