@@ -1,4 +1,4 @@
-# Assistant Manager Builder Mark 0.0.4
+# Assistant Manager Builder Mark 0.0.5
 
 ## Simulate Data Storage called MemAssistant that mimics MemGPT
 Initially for testing we will store data in JSON structure and write out to JSON
