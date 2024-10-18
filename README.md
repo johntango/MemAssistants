@@ -1,6 +1,7 @@
 # Assistant Manager Builder Mark 0.0.5
 
 ## Simulate Data Storage called MemAssistant that mimics MemGPT
+
 Initially for testing we will store data in JSON structure and write out to JSON
 
 We tell the LLM to store relevant facts by calling function store_in_memory
@@ -18,8 +19,9 @@ At presen store_in_memory "regains" its state by reading in file.
 
 We use the OpenAI inbuilt VectorDB that allows us 10,000 files with total storage 100GB
 A number VectorDBs can be attached but we will assume only one attached at a time.
-To upload files we check if the Assistant has a VectorDB already and if not we create one with random name
-We require a director path and take all files in it and attach them to Assistant and to the VectorDB
+Give name of the directory with files to be uploaded eg news
+We take all files in it and attach them to the VectorDB and then the VectorDB to the Assistant
+OpenAI will embed all the files automatically
 
 jrw@mit.edu (email me if you find issues)
 Thanks to following for their tools

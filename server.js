@@ -171,6 +171,7 @@ app.post('/delete_assistant', async (req, res) => {
 app.post('/upload_files', async (req, res) => {
 
     let dirname = req.body.dir_path
+    focus.dir_path = dirname;
     if(dirname == "") {
         res.status(200).json({ message: "Specify a directory path for the files to be uploaded from", focus: focus });
     }
@@ -193,7 +194,7 @@ app.post('/upload_files', async (req, res) => {
         // Create a vector store including our files.
         let fileIds = [];
         let vectorStore = await openai.beta.vectorStores.create({
-         name: "JohnVectorStore01",
+         name: "JohnVectorStore02",
         });
         focus.vector_store_id = vectorStore.id;
     
@@ -211,7 +212,7 @@ app.post('/upload_files', async (req, res) => {
             }
           )
         
-        let message = "Files uploaded: " + JSON.stringify(response);
+        let message = `Files from ${dirname} uploaded: ` + JSON.stringify(response);
         res.status(200).json({ message: message, focus: focus });
     }
     catch (error) {

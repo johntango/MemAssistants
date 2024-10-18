@@ -275,7 +275,7 @@ const write_tool_function = async (toolname, thefunc) => {
                 }
             },
         "required": ["input"],
-        "description": "This function ${toolname} executes the task spe."
+        "description": "This function ${toolname} executes the task specified."
         }
     }
 
