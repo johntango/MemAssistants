@@ -35,7 +35,7 @@ app.use(express.json());
 //get the root directory
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/index.html')); 
+    res.sendFile(path.join(__dirname, 'public/index.html')); 
 });
 async function readFromTable(db) {
     const sql = 'SELECT * FROM agent_memory';
