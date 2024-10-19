@@ -90,7 +90,14 @@
 
       async function get_data_from_elements() {
         for (let key in data) {
-          console.loc(key);
+          console.log(key); // assistant_id, assistant_name, dir_path, news_path, thread_id, message, run_id, run_status, vector_store_id, embed_type
+          if (document.getElementById(key) === null) {
+            console.log(`ERROR - Element with id ${key} not found`);
+          } else {
+            document.getElementById(key).value;
+            continue;
+          }
+
           data[key] = document.getElementById(key).value;
         }
         console.log(`getting data from elements: ${JSON.stringify(data)}`);
@@ -98,9 +105,13 @@
 
       function write_data_to_elements(data) {
         for (let key in data) {
-          document.getElementById(key).value = data[key];
+          if (document.getElementById(key) === null) {
+            console.log(`Element with id ${key} not found`);
+          } else {
+            document.getElementById(key).value = data[key];
+          }
+          console.log(`writing data to elements: ${JSON.stringify(data)}`);
         }
-        console.log(`writing data to elements: ${JSON.stringify(data)}`);
       }
 
       function write_to_div(route, message) {
@@ -201,7 +212,7 @@
         data = response.focus;
         console.log(`In UI parse_response data=: ${JSON.stringify(data)}`);
         write_data_to_elements(data);
-        console.log(`Updated data:: ${response.status}`);
+        console.log(`Updated data:: ${JSON.stringify(data)}`);
         console.log(`write to div: ${JSON.stringify(response.message)}`);
         write_to_div(route, response.message);
       }
@@ -263,6 +274,12 @@
           id="assistant_name"
           name="assistant_name"
           value="Agent Name"
+        />
+        <input
+          type="text"
+          id="assistant_id"
+          name="assistant_id"
+          value="Assistant ID"
         />
         <button
           class="btn btn-primary mr-1"
@@ -359,19 +376,15 @@
           name="news_path"
           value="Input News Topic"
         />
-
+        <label class="switch">
+          <input type="checkbox" id="switchAgent" />
+          <span class="slider round"></span>
+        </label>
         <label for="embed_type" class="label-container">Embed Type:</label>
-        <select
-          id="embed_type"
-          name="embed_type"
-          class="form-select"
-          value="openai"
-          onchange="toggleEmbedType()"
-        >
+        <select name="embed " id="embed_type" onchange="toggleEmbedType()">
           <option value="local">Embed Locally</option>
           <option value="openai">Embed OpenAI</option>
         </select>
-
         <button
           class="btn btn-primary mr-1"
           type="submit"
@@ -379,13 +392,7 @@
         >
           Embed Files
         </button>
-        <input
-          type="text"
-          id="dir_path"
-          name="dir_path"
-          value="news"
-          placeholder="news"
-        />
+        <input type="text" id="dir_path" name="dir_path" placeholder="news" />
         <input
           type="text"
           id="vector_store_id"

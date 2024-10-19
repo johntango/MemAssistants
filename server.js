@@ -65,6 +65,7 @@ async function insertIntoTable0(db, data) {
 //
 // Run 
 app.post('/run_assistant', async (req, res) => {
+    focus = req.body;
     let name = req.body.assistant_name;
     let instructions = req.body.message;
     if (instructions == "") {
@@ -97,6 +98,7 @@ app.post('/run_assistant', async (req, res) => {
 // Define routes
 app.post('/create_assistant', async (req, res) => {
     // we should define the system message for the assistant in the input
+    focus = req.body;
     let system_message = req.body.system_message;
     let name = req.body.assistant_name;
     let instruction = "you are a helpful tool calling assistnt."
@@ -114,6 +116,7 @@ app.post('/create_assistant', async (req, res) => {
 )
 // get assistant by name
 app.post('/get_assistant', async (req, res) => {
+    focus = req.body;
     let name = req.body.assistant_name;
     let instruction = "";
     let assistant = null;
@@ -132,6 +135,7 @@ app.post('/get_assistant', async (req, res) => {
 
 // this lists out all the assistants and extracts the latest assistant id and stores it in focus
 app.post('/list_assistants', async (req, res) => {
+    focus = req.body;
     try {
         const response = await openai.beta.assistants.list({
             order: "desc",
@@ -150,6 +154,7 @@ app.post('/list_assistants', async (req, res) => {
 
 
 app.post('/delete_assistant', async (req, res) => {
+    focus = req.body;
     try {
         let assistant_id = req.body.assistant_id;
         console.log("Deleting assistant_id: " + assistant_id);
@@ -170,10 +175,9 @@ app.post('/delete_assistant', async (req, res) => {
 
 // This uploads all files in a directory to a vectordb attached to an Assistant
 app.post('/upload_files', async (req, res) => {
-
-    let dirname = req.body.dir_path
-    focus.dir_path = dirname;
-    if(dirname == "") {
+    focus = req.body;
+    let dirname = focus.dir_path;
+    if(focus.dir_path == "") {
         res.status(200).json({ message: "Specify a directory path for the files to be uploaded from", focus: focus });
     }
     let files = [];
@@ -234,7 +238,7 @@ app.post('/upload_files', async (req, res) => {
 // typical purpose to upload a file to an assistant say for a code interpreter analysis
 app.post('/create_file', async (req, res) => {
 
-    let data = req.body;
+    let data = req.body.focus;
     // get the assistant id from the request as a string
     let assistant_id = data.assistant_id;
     // check that this assistant has either retrieve or code_interpreter active
@@ -261,6 +265,7 @@ app.post('/create_file', async (req, res) => {
 });
 // this takes all files in a directory and feeds them to whisper to create a single transcription but with each document given metadata header
 app.post('/run_whisper', async (req, res) => {
+    focus = req.body;
     let dirname = req.body.dir_path
     let types = ["wav", "mp3", "mp4"]
     let files = get_files_from_directory(dirname, types);
@@ -338,6 +343,7 @@ function check_assistant_capability() {
 }
 // get the news are write to news directory
 app.post('/news_path', async (req, res) => {
+    focus = req.body;
     let dirname = req.body.dir_path;
     let topic = req.body.news_path;
 // get news from newsapi and write to a file to news directory with name + date
@@ -369,7 +375,7 @@ async function get_news(topic){
 
 app.post('/list_files', async (req, res) => {
 
-    let data = req.body;
+    let data = req.body.focus
     let assistant_id = data.assistant_id;
     try {
         let response = await openai.beta.assistants.files.list(
@@ -391,7 +397,7 @@ app.post('/list_files', async (req, res) => {
 });
 
 app.post('/delete_file', async (req, res) => {
-    let data = req.body;
+    let data = req.body.focus
     let assistant_id = data.assistant_id;
     let file_id = data.file_id;
     try {
@@ -410,6 +416,7 @@ app.post('/delete_file', async (req, res) => {
 });
 
 app.post('/create_thread', async (req, res) => {
+    data = req.body.focus
     let assistant_id = req.body.assistant_id;
     try {
         let response = await openai.beta.threads.create(
