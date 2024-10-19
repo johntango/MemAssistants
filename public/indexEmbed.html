@@ -85,10 +85,12 @@
         run_id: "",
         run_status: "",
         vector_store_id: "",
+        embed_type: "openai",
       };
 
       async function get_data_from_elements() {
         for (let key in data) {
+          console.loc(key);
           data[key] = document.getElementById(key).value;
         }
         console.log(`getting data from elements: ${JSON.stringify(data)}`);
@@ -203,6 +205,19 @@
         console.log(`write to div: ${JSON.stringify(response.message)}`);
         write_to_div(route, response.message);
       }
+
+      function toggleEmbedType() {
+        let embedType = document.getElementById("embed_type").value;
+        if (embedType === "local") {
+          data.embed_type = "local";
+          // Logic for embedding locally
+          console.log("Switched to Embed Locally");
+        } else if (embedType === "openai") {
+          data.embed_type = "openai";
+          // Logic for embedding OpenAI
+          console.log("Switched to Embed OpenAI");
+        }
+      }
     </script>
   </head>
   <body>
@@ -222,7 +237,7 @@
                 />
               </div>
               <div class="col-sm-4">
-                <h4 class="left-side-text">MIT Assistant Builder 0.0.3</h4>
+                <h4 class="left-side-text">MIT Assistant Builder 0.0.7</h4>
               </div>
             </div>
           </div>
@@ -254,28 +269,9 @@
           type="submit"
           onclick="sendRequest('list_assistants')"
         >
-          List
+          List Assistants
         </button>
-        <button
-          class="btn btn-primary mr-1"
-          type="submit"
-          onclick="sendRequest('delete_assistant')"
-        >
-          Delete
-        </button>
-        <input
-          type="text"
-          id="assistant_id"
-          name="assistant_id"
-          value="Agent_id"
-        />
-        <button
-          class="btn btn-primary mr-1"
-          type="submit"
-          onclick="sendRequest('delete_assistant')"
-        >
-          Delete
-        </button>
+
         <label for="thread_id" class="label-container">Thread ID:</label>
         <button
           class="btn btn-primary mr-1"
@@ -363,22 +359,31 @@
           name="news_path"
           value="Input News Topic"
         />
-        <label for="dir_path" class="label-container"
-          >File Load from Directory to Vector DB:</label
+
+        <label for="embed_type" class="label-container">Embed Type:</label>
+        <select
+          id="embed_type"
+          name="embed_type"
+          class="form-select"
+          value="openai"
+          onchange="toggleEmbedType()"
         >
+          <option value="local">Embed Locally</option>
+          <option value="openai">Embed OpenAI</option>
+        </select>
 
         <button
           class="btn btn-primary mr-1"
           type="submit"
           onclick="sendRequest('upload_files')"
         >
-          Upload Files to VectorDB
+          Embed Files
         </button>
         <input
           type="text"
           id="dir_path"
           name="dir_path"
-          value="Input Directory Path"
+          value="news"
           placeholder="news"
         />
         <input

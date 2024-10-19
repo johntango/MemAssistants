@@ -35,7 +35,7 @@ app.use(express.json());
 //get the root directory
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html')); 
+    res.sendFile(path.join(__dirname, 'public/indexEmbed.html')); 
 });
 async function readFromTable(db) {
     const sql = 'SELECT * FROM agent_memory';
@@ -135,11 +135,12 @@ app.post('/list_assistants', async (req, res) => {
     try {
         const response = await openai.beta.assistants.list({
             order: "desc",
-            limit: 10,
+            limit: 20,
         })
         console.log(`list of assistants ${JSON.stringify(response.data)}`);
-        focus.assistant_id = extract_assistant_id(response.data).assistant_id;
-        let message = JSON.stringify(response.data);
+        // extract name from response.data array
+        let message = response.data.map((assistant) => {return assistant.name;});
+     
         res.status(200).json({ message: message, focus: focus });
     }
     catch (error) {
@@ -190,29 +191,38 @@ app.post('/upload_files', async (req, res) => {
         );
         // get all files in the assistant
  
+        if(focus.embed_type == "openai") {
+            // Create a vector store including our files.
+            let fileIds = [];
+            let vectorStore = await openai.beta.vectorStores.create({
+            name: "JohnVectorStore02",
+            });
+            focus.vector_store_id = vectorStore.id;
         
-        // Create a vector store including our files.
-        let fileIds = [];
-        let vectorStore = await openai.beta.vectorStores.create({
-         name: "JohnVectorStore02",
-        });
-        focus.vector_store_id = vectorStore.id;
-    
 
-        // get the vector store by its id - no need to retrieve it as we have it
-        //vectorStore = await openai.beta.vectorStores.retrieve(vectorStore.id);
-        let response = await openai.beta.vectorStores.fileBatches.uploadAndPoll(
-         vectorStore.id, {files:fileStreams});
+            // get the vector store by its id - no need to retrieve it as we have it
+            //vectorStore = await openai.beta.vectorStores.retrieve(vectorStore.id);
+            let response = await openai.beta.vectorStores.fileBatches.uploadAndPoll(
+            vectorStore.id, {files:fileStreams});
 
-        // Update the assistant to use the vector store.
-        let assistant = openai.beta.assistants.update(
-            focus.assistant_id,
-            {
-                tool_resources: { file_search: { vector_store_ids: [vectorStore.id] } },
-            }
-          )
-        
-        let message = `Files from ${dirname} uploaded: ` + JSON.stringify(response);
+            // Update the assistant to use the vector store.
+            let assistant = openai.beta.assistants.update(
+                focus.assistant_id,
+                {
+                    tool_resources: { file_search: { vector_store_ids: [vectorStore.id] } },
+                }
+            )
+            
+            let message = `Files from ${dirname} uploaded: ` + JSON.stringify(response);
+        }else {
+
+            //embed locally - we need to call our Agent and tell it to embed the files
+            // we need to call the Agent to embed the files from focus.dir_path
+            let prompt = `Call function craweDomainGenEmbeds with the query "what is the news" and domain ${focus.dir_path}`;
+            run 
+
+
+        }
         res.status(200).json({ message: message, focus: focus });
     }
     catch (error) {

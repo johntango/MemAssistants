@@ -85,6 +85,7 @@
         run_id: "",
         run_status: "",
         vector_store_id: "",
+        embed_type: "local",
       };
 
       async function get_data_from_elements() {
@@ -366,7 +367,13 @@
         <label for="dir_path" class="label-container"
           >File Load from Directory to Vector DB:</label
         >
-
+        <input
+          type="text"
+          id="embed_type"
+          name="embed_type"
+          placeholder="embed_type"
+          value="embed_type"
+        />
         <button
           class="btn btn-primary mr-1"
           type="submit"
@@ -374,6 +381,14 @@
         >
           Upload Files to VectorDB
         </button>
+
+        <input
+          type="text"
+          id="dir_path"
+          name="dir_path"
+          placeholder="dir_path"
+          value="dir_path"
+        />
         <input
           type="text"
           id="vector_store_id"
