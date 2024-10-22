@@ -90,15 +90,13 @@
 
       async function get_data_from_elements() {
         for (let key in data) {
-          console.log(key); // assistant_id, assistant_name, dir_path, news_path, thread_id, message, run_id, run_status, vector_store_id, embed_type
           if (document.getElementById(key) === null) {
             console.log(`ERROR - Element with id ${key} not found`);
           } else {
-            document.getElementById(key).value;
+            data[key] = document.getElementById(key).value;
+            //console.log(`get_data_from_element  ${key} : ${data[key]}`);
             continue;
           }
-
-          data[key] = document.getElementById(key).value;
         }
         console.log(`getting data from elements: ${JSON.stringify(data)}`);
       }
@@ -391,6 +389,13 @@
           onclick="sendRequest('upload_files')"
         >
           Embed Files
+        </button>
+        <button
+          class="btn btn-primary mr-1"
+          type="submit"
+          onclick="sendRequest('queryFiles')"
+        >
+          Run Local Query on Files
         </button>
         <input type="text" id="dir_path" name="dir_path" placeholder="news" />
         <input

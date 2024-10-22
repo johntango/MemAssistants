@@ -26,189 +26,25 @@ const execute = async (domain, question) => {
 
     // check if url has https:// if it does strip it out for domain
 
-    const protocol = "https";
-    if (domain.startsWith("http://")) {
-        domain = domain.slice(7);
-    } else if (domain.startsWith("https://")) {
-        domain = domain.slice(8);
-    }
-    const fullUrl = new URL(`${protocol}://${domain}`);
-    let path =  path.resolve(path.dirname('domain'));
-    
-    console.log(fullUrl);
-
-
-    class HyperlinkParser {
-        constructor() {
-            this.hyperlinks = [];
-        }
-
-        parse(html) {
-            const root = parse(html);
-            const anchors = root.querySelectorAll("a");
-
-            anchors.forEach((anchor) => {
-                const href = anchor.getAttribute("href");
-                if (href) {
-                    this.hyperlinks.push(href);
-                }
-            });
-        }
-    }
-    console.log(`starting main with args ${domain} ${fullUrl}`);
-    let crawledData = { contents: {} };
-    
-    const crawledUrlsOutputPath = path.join(process.cwd(), "crawled_urls.csv");
-    console.log("crawledUrlsOutputPath", crawledUrlsOutputPath);
-
-    const contentsOutputPath = path.join(process.cwd(), "contents.csv");
-    console.log("contentsOutputPath", contentsOutputPath);
-
     try {
-        await fs.accessSync(crawledUrlsOutputPath);
-        await fs.accessSync(contentsOutputPath);
-
-        console.log("Using existing CSV files...");
-
-        const urls = new Set();
-        await new Promise((resolve) => {
-            fs.createReadStream(crawledUrlsOutputPath)
-                .pipe(csvParser())
-                .on("data", (data) => {
-                    urls.add(data.url);
-                })
-                .on("end", () => {
-                    console.log("Loaded crawled URLs from file.");
-                    resolve();
-                });
+        let files = [];
+        // get list of files from directory
+        fs.readdirSync(dirname).forEach(file => {
+            files.push(`${dirname}/${file}`)
         });
-
-        const contents = [];
-        await new Promise((resolve) => {
-            fs.createReadStream(contentsOutputPath)
-                .pipe(csvParser())
-                .on("data", (data) => {
-                    contents.push({
-                        url: data.URL,
-                        tokens:
-                            typeof data.Content === "string"
-                                ? data.Content
-                                : data.Content.toString(),
-                    });
-                })
-                .on("end", () => {
-                    console.log("Loaded contents from file.");
-                    resolve();
-                });
-        });
-
-        crawledData.contents = contents;
-        console.log("finish main...");
-    } catch (error) {
-        console.log("CSV files not found. Crawling domain...", error);
-        crawledData = await crawlSingleDomain(domain, fullUrl);
-        await saveUrlsToCsv(crawledData.urls, crawledUrlsOutputPath);
-
-        // Save crawled contents to CSV file
-        const csvWriter = createCsvWriter.createObjectCsvWriter({
-            path: contentsOutputPath,
-            header: [
-                { id: "url", title: "URL" },
-                { id: "content", title: "Content" },
-            ],
-        });
-        const records = crawledData.contents.map(({ url, tokens }) => ({
-            url,
-            content: typeof tokens === "string" ? tokens : tokens.join(" "),
-        }));
-        await csvWriter.writeRecords(records);
-        console.log(`Contents saved to ${contentsOutputPath}`);
-    }
-
-    /**
-     * Takes an array of hyperlinks and a domain string as input.
-     * Returns an array of filtered and converted URLs.
-     * @param {string[]} hyperlinks - The array of hyperlinks.
-     * @param {string} domain - The domain string.
-     * @returns {string[]} The array of filtered and converted URLs.
-     */
-    function filterAndConvertUrls(hyperlinks, domain) {
-        const baseUrl = new URL(
-            domain.startsWith("http") ? domain : `https://${domain}`
-        );
-        return hyperlinks
-            .map((url) => {
-                try {
-                    return new URL(url, baseUrl).href;
-                } catch {
-                    return null;
-                }
-            })
-            .filter((url) => url && url.startsWith(baseUrl.href));
-    }
-
-    /**
-     * Takes a domain string and a starting URL as input.
-     * Returns an object containing crawled URLs and their tokenized contents.
-     * @param {string} domain - The domain string.
-     * @param {string} startingUrl - The starting URL.
-     * @returns {object} The object containing crawled URLs and their tokenized contents.
-     */
-    async function crawlSingleDomain(domain, startingUrl) {
-        // Initialize the queue and the set of visited URLs
-        const queue = [startingUrl];
-        const visitedUrls = new Set([startingUrl]);
-        const tokenizedContents = [];
-        let counter = 0;
-        // Continue crawling until the queue is empty
-        while (queue?.length > 0 && counter < MAXCOUNT) {
-            // Get the next URL from the queue
-            const currentUrl = queue.shift();
-            counter++;
-
-            console.log("Crawling:", currentUrl);
-
-            try {
-                // Fetch the HTML content of the current URL
-                let response;
-                let htmlContent;
-                try {
-                    response = await axios.get(currentUrl);
-                    //response = await fetch(currentUrl);
-                    htmlContent = response.data;
-                } catch (e) {
-                    console.error("Error fetching URL:", currentUrl);
-                    continue;
-                }
-
-                if (!htmlContent) continue;
-
-                // Parse the HTML content to extract the hyperlinks
-                const parser = new HyperlinkParser();
-                parser.parse(htmlContent);
-
-                // Filter and convert the extracted URLs
-                const filteredUrls = filterAndConvertUrls(parser.hyperlinks, domain);
-
-                // Add the filtered URLs to the queue and visitedUrls set
-                for (const url of filteredUrls) {
-                    if (!visitedUrls.has(url)) {
-                        queue.push(url);
-                        visitedUrls.add(url);
-                    }
-                }
-
-                // Tokenize the content and save it to the tokenizedContents array
-                const tokens = await tokenizeContent(htmlContent);
-                tokenizedContents.push({ url: currentUrl, tokens });
-            } catch (error) {
-                console.error("Error while crawling:", currentUrl, error);
-            }
+        if (files.length<1) {
+            return res.status(400).json({message:'No files were uploaded.',focus:focus});
+        }
+        try {
+            // loop over filelist and create a stream for each file
+            const fileStreams = files.map((path) =>
+                fs.createReadStream(path),
+            );
+        } catch (error) {
+            return console.error('Error:', error);
         }
 
-        return { urls: visitedUrls, contents: tokenizedContents };
-    }
-
+     
     /**
      * Takes an HTML content string as input.
      * Returns an array of tokenized words.
@@ -234,23 +70,9 @@ const execute = async (domain, question) => {
      * @param {Set<string>} visitedUrls - The set of visited URLs.
      * @param {string} outputPath - The output file path.
      */
-    async function saveUrlsToCsv(visitedUrls, outputPath) {
-        const csvWriter = createCsvWriter.createObjectCsvWriter({
-            path: outputPath,
-            header: [{ id: "url", title: "URL" }],
-        });
+   
 
-        const records = Array.from(visitedUrls).map((url) => ({ url }));
-        await csvWriter.writeRecords(records);
-        console.log(`URLs saved to ${outputPath}`);
-    }
-
-    /**
-     * Takes a set of tokens as input.
-     * Returns an array of the most relevant tokens.
-     * @param {string[] | string} tokens - The set of tokens.
-     * @returns {string[]} The array of the most relevant tokens.
-     */
+    
     async function getRelevantTokens(tokens) {
         console.log("start getRelevantTokens");
         const tokenString = typeof tokens === "string" ? tokens : tokens.join(" ");

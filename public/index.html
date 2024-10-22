@@ -90,7 +90,13 @@
 
       async function get_data_from_elements() {
         for (let key in data) {
-          data[key] = document.getElementById(key).value;
+          if (document.getElementById(key) === null) {
+            console.log(`ERROR - Element with id ${key} not found`);
+          } else {
+            data[key] = document.getElementById(key).value;
+            //console.log(`get_data_from_element  ${key} : ${data[key]}`);
+            continue;
+          }
         }
         console.log(`getting data from elements: ${JSON.stringify(data)}`);
       }

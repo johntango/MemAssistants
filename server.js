@@ -4,11 +4,11 @@ import express from 'express';
 import path from 'path';
 import Dayjs from 'dayjs';
 const app = express();
-const port = 4000;
+const port = 4001;
 import fs, { read } from 'fs';
 import OpenAI from 'openai';
 import { URL } from 'url';
-import {openai, __dirname, focus, assistants, tools, get_and_run_tool, extract_assistant_id, create_or_get_assistant, create_thread, getFunctions} from './workerFunctions.js';
+import {openai, __dirname, focus, assistants, tools, get_and_run_tool, extract_assistant_id, create_or_get_assistant, create_thread, getFunctions,readFilesFromDirectory, chunkText, embedChunks, cosineSimilarity, findRelevantChunks, saveEmbeddings} from './workerFunctions.js';
 import { get } from 'http';
 import { types } from 'util';
 import sqlite3 from 'sqlite3';
@@ -20,7 +20,9 @@ let scratchdb = {};   // this is a scratchpad for the server to store data in me
 
 
 app.use(express.static(__dirname +'/images'));
-
+// Serve files in the './data' directory at the '/files' URL path
+app.use('/embed', express.static(path.join(__dirname, "/news")));
+let url = "https://orange-happiness-9j9v7j7w749cx54r-4000.app.github.dev/embed";
 
 // connect to db and get cursor
 // Example usage:
@@ -65,7 +67,7 @@ async function insertIntoTable0(db, data) {
 //
 // Run 
 app.post('/run_assistant', async (req, res) => {
-    focus = req.body;
+    Object.assign(focus, req.body);
     let name = req.body.assistant_name;
     let instructions = req.body.message;
     if (instructions == "") {
@@ -98,7 +100,7 @@ app.post('/run_assistant', async (req, res) => {
 // Define routes
 app.post('/create_assistant', async (req, res) => {
     // we should define the system message for the assistant in the input
-    focus = req.body;
+    Object.assign(focus, req.body);
     let system_message = req.body.system_message;
     let name = req.body.assistant_name;
     let instruction = "you are a helpful tool calling assistnt."
@@ -116,7 +118,8 @@ app.post('/create_assistant', async (req, res) => {
 )
 // get assistant by name
 app.post('/get_assistant', async (req, res) => {
-    focus = req.body;
+    // turn message into object
+    Object.assign(focus, req.body);
     let name = req.body.assistant_name;
     let instruction = "";
     let assistant = null;
@@ -135,7 +138,9 @@ app.post('/get_assistant', async (req, res) => {
 
 // this lists out all the assistants and extracts the latest assistant id and stores it in focus
 app.post('/list_assistants', async (req, res) => {
-    focus = req.body;
+    // get req as object
+    
+    
     try {
         const response = await openai.beta.assistants.list({
             order: "desc",
@@ -154,7 +159,7 @@ app.post('/list_assistants', async (req, res) => {
 
 
 app.post('/delete_assistant', async (req, res) => {
-    focus = req.body;
+    Object.assign(focus, req.body);
     try {
         let assistant_id = req.body.assistant_id;
         console.log("Deleting assistant_id: " + assistant_id);
@@ -175,7 +180,7 @@ app.post('/delete_assistant', async (req, res) => {
 
 // This uploads all files in a directory to a vectordb attached to an Assistant
 app.post('/upload_files', async (req, res) => {
-    focus = req.body;
+    Object.assign(focus, req.body);
     let dirname = focus.dir_path;
     if(focus.dir_path == "") {
         res.status(200).json({ message: "Specify a directory path for the files to be uploaded from", focus: focus });
@@ -193,13 +198,14 @@ app.post('/upload_files', async (req, res) => {
         const fileStreams = files.map((path) =>
             fs.createReadStream(path),
         );
+        let message = "";
         // get all files in the assistant
  
         if(focus.embed_type == "openai") {
             // Create a vector store including our files.
             let fileIds = [];
             let vectorStore = await openai.beta.vectorStores.create({
-            name: "JohnVectorStore02",
+            name: "JohnVectorStore03",
             });
             focus.vector_store_id = vectorStore.id;
         
@@ -217,13 +223,15 @@ app.post('/upload_files', async (req, res) => {
                 }
             )
             
-            let message = `Files from ${dirname} uploaded: ` + JSON.stringify(response);
+            message = `Files from ${dirname} uploaded: ` + JSON.stringify(response);
         }else {
 
+            
             //embed locally - we need to call our Agent and tell it to embed the files
             // we need to call the Agent to embed the files from focus.dir_path
-            let prompt = `Call function craweDomainGenEmbeds with the query "what is the news" and domain ${focus.dir_path}`;
-            run 
+            let prompt = `Call function craweDomainGenEmbeds with the query "what is the news" and domain ${url}`;
+            let response = await runAssistant(assistant_id, thread_id, prompt);
+
 
 
         }
@@ -238,7 +246,7 @@ app.post('/upload_files', async (req, res) => {
 // typical purpose to upload a file to an assistant say for a code interpreter analysis
 app.post('/create_file', async (req, res) => {
 
-    let data = req.body.focus;
+    let data = req.body;
     // get the assistant id from the request as a string
     let assistant_id = data.assistant_id;
     // check that this assistant has either retrieve or code_interpreter active
@@ -265,7 +273,7 @@ app.post('/create_file', async (req, res) => {
 });
 // this takes all files in a directory and feeds them to whisper to create a single transcription but with each document given metadata header
 app.post('/run_whisper', async (req, res) => {
-    focus = req.body;
+    Object.assign(focus, req.body);
     let dirname = req.body.dir_path
     let types = ["wav", "mp3", "mp4"]
     let files = get_files_from_directory(dirname, types);
@@ -343,7 +351,7 @@ function check_assistant_capability() {
 }
 // get the news are write to news directory
 app.post('/news_path', async (req, res) => {
-    focus = req.body;
+    Object.assign(focus, req.body);
     let dirname = req.body.dir_path;
     let topic = req.body.news_path;
 // get news from newsapi and write to a file to news directory with name + date
@@ -375,7 +383,7 @@ async function get_news(topic){
 
 app.post('/list_files', async (req, res) => {
 
-    let data = req.body.focus
+    Object.assign(focus, req.body);
     let assistant_id = data.assistant_id;
     try {
         let response = await openai.beta.assistants.files.list(
@@ -397,7 +405,7 @@ app.post('/list_files', async (req, res) => {
 });
 
 app.post('/delete_file', async (req, res) => {
-    let data = req.body.focus
+    Object.assign(focus, req.body);
     let assistant_id = data.assistant_id;
     let file_id = data.file_id;
     try {
@@ -416,8 +424,7 @@ app.post('/delete_file', async (req, res) => {
 });
 
 app.post('/create_thread', async (req, res) => {
-    data = req.body.focus
-    let assistant_id = req.body.assistant_id;
+    Object.assign(focus, req.body);
     try {
         let response = await openai.beta.threads.create(
             /*messages=[
@@ -441,6 +448,7 @@ app.post('/create_thread', async (req, res) => {
 });
 
 app.post('/delete_thread', async (req, res) => {
+    Object.assign(focus, req.body);
     let thread_id = req.body.thread_id;
     try {
         let response = await openai.beta.threads.del(thread_id)
@@ -453,8 +461,9 @@ app.post('/delete_thread', async (req, res) => {
         res.status(500).json({ message: 'Thread Delete failed' , focus: focus});
     }
 });
-
+// create run assumes the assistant_id, thread_id complete with prompt message are already set
 app.post('/create_run', async (req, res) => {
+    Object.assign(focus, req.body);
     let thread_id = req.body.thread_id;
     let assistant_id = req.body.assistant_id;
     console.log("create_run thread_id: " + thread_id + " assistant_id: " + assistant_id);
@@ -487,6 +496,7 @@ app.post('/create_run', async (req, res) => {
 //
 
 app.post('/delete_run', async (req, res) => {
+    Object.assign(focus, req.body);
     let thread_id = req.body.thread_id;
     let assistant_id = req.body.assistant_id;
     let run_id = req.body.run_id;
@@ -502,6 +512,7 @@ app.post('/delete_run', async (req, res) => {
     }
 });
 app.post('/create_message', async (req, res) => {
+    Object.assign(focus, req.body);
     let prompt = req.body.message;
     let thread_id = req.body.thread_id;
     console.log("create_message: " + prompt + " thread_id: " + thread_id);
@@ -523,6 +534,7 @@ app.post('/create_message', async (req, res) => {
 
 
 app.post('/get_messages', async (req, res) => {
+    Object.assign(focus, req.body);
     let thread_id = focus.thread_id;
     let run_id = focus.run_id;
     console.log("get_messages: on thread_id: " + thread_id + " run_id: " + run_id);
@@ -626,6 +638,7 @@ function addLastMessagetoArray(message, messages) {
 }
 // Langchain version of Looping over Assistants - Runable 
 app.post('/loopLC', async (req, res) => {
+    Object.assign(focus, req.body);
     let thread_id = focus.thread_id;
     let writer = assistants.Writer;
     let critic = assistants.Critic;
@@ -663,6 +676,7 @@ app.post('/loopLC', async (req, res) => {
 });
 
 app.post('/loop', async (req, res) => {
+    Object.assign(focus, req.body);
     let thread_id = focus.thread_id;
     let writer = assistants.Writer;
     let critic = assistants.Critic;
@@ -694,6 +708,7 @@ app.post('/loop', async (req, res) => {
 //messages.append({"role": "tool", "tool_call_id": assistant_message["tool_calls"][0]['id'], "name": assistant_message["tool_calls"][0]["function"]["name"], "content": results})
 
 async function get_tools(assistant_id) {
+
     let response = await openai.beta.assistants.retrieve(assistant_id);
     let tools = response.tools;
     return tools;
@@ -704,6 +719,7 @@ async function get_tools(assistant_id) {
 // This means any previous context is lost
 //
 app.post('/list_tools', async (req, res) => {
+    Object.assign(focus, req.body);
     let assistant_id = focus.assistant_id;
     const functions = await getFunctions();
 
@@ -743,6 +759,7 @@ app.post('/list_tools', async (req, res) => {
 })
 
 app.post('/run_function', async (req, res) => {
+    Object.assign(focus, req.body);
     // Step 1: send the conversation and available functions to the model
     const messages = [
         { role: "user", content: "What's the weather like in San Francisco, Tokyo, and Paris?" },
@@ -760,6 +777,7 @@ app.post('/run_function', async (req, res) => {
 });
 
 app.post('/table', (req, res) => {
+    Object.assign(focus, req.body);
     const sql = "SELECT * FROM prompts";
     db.all(sql, [], (err, rows) => {
         if (err) {
@@ -798,6 +816,7 @@ function getConnection(dbPath) {
     });
 }
 app.post('/switch_db', (req, res) => {
+    Object.assign(focus, req.body);
         // check if table memory exists if not create table called memory with unique url as primary key
     // table consists of url, document (TEXT), embeddings (float array)
     // using dayjs for dates console.log(now.isBefore(futureDate)); // true if now is before futureDate
@@ -835,8 +854,66 @@ app.post('/switch_db', (req, res) => {
     */
     res.status(200).json({ message: "Database connection closed." , focus: focus});
 });
+
+// Route for processing the user query and returning the answer
+app.post('/queryFiles', express.json(), async (req, res) => {
+ 
+    let question = req.body.message;
+    let directory = req.body.dir_path;
+  
+    // 1. Read files and chunk them
+    const files = readFilesFromDirectory(directory);
+    
+    const allChunks = [];
+    const allEmbeddings = [];
+  
+    for (const { file, content } of files) {
+      const chunks = chunkText(content);
+  
+      // 2. Embed chunks
+      const embeddings = await embedChunks(chunks);
+  
+      // 3. Save chunks and embeddings to Embed directory
+      saveEmbeddings(file, chunks, embeddings);
+  
+      allChunks.push(...chunks);
+      allEmbeddings.push(...embeddings);
+    }
+  
+    // 4. Embed the query
+    const queryEmbedding = await embedChunks([question]);
+    
+    // 5. Find the most relevant chunks
+    const relevantIndices = findRelevantChunks(queryEmbedding[0], allEmbeddings);
+    const relevantChunks = relevantIndices.map(idx => allChunks[idx]);
+  
+    // 6. Send relevant chunks and query to the LLM
+    const prompt = `
+    Here are the relevant chunks: ${relevantChunks.join('\n')}
+    Answer the following question based on the provided context:
+    Question: ${question}
+    `;
+    let messages = [
+        { role: 'system', content: 'You are a helpful assistant.' },
+        { role: 'user', content: prompt }
+    ];
+    const response = await openai.chat.completions.create({
+        model: 'gpt-3.5-turbo-1106',
+        messages: messages,
+        max_tokens: 200,
+    });
+    let message = response.choices[0].message.content 
+   
+  
+    // 7. Send the answer back to the client
+    res.json({ message: message, focus: focus });
+  });
+
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
 
 export {memory_db, scratchdb }
+
+
+

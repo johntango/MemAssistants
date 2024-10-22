@@ -1,4 +1,5 @@
 # Assistant Manager Builder Mark 0.0.5
+## This Demo's 2 main capabilities 1) is memory storate and 2) Embedding files either locally or on OpenAI Assistant with VectorDB
 
 ## Simulate Data Storage called MemAssistant that mimics MemGPT
 
@@ -11,10 +12,6 @@ These documents could be attached to OpenAI Assistant's VectorDB or ChromaDB loc
 The advantage of OpenAI VectorDB is that it is integrated into our Assistant and has been tuned by them
 The advantage of ChromaDB is it gives us more flexibility in interaction with other LLMS or Agents
 
-Problem: store_in_memory does not have access to web-server data structure eg MEMORY.
-Can we pass pointer in when store_in_memory is called eg execute(memory, document, question)
-At presen store_in_memory "regains" its state by reading in file.
-
 ## VectorDB and File Upload from Directory
 
 We use the OpenAI inbuilt VectorDB that allows us 10,000 files with total storage 100GB
@@ -22,6 +19,8 @@ A number VectorDBs can be attached but we will assume only one attached at a tim
 Give name of the directory with files to be uploaded eg news
 We take all files in it and attach them to the VectorDB and then the VectorDB to the Assistant
 OpenAI will embed all the files automatically
+
+Alternatively we can embed files locally to answer a query message. In this case there is no Assistant involved and we use a GPT model directly with both a message query and 
 
 jrw@mit.edu (email me if you find issues)
 Thanks to following for their tools

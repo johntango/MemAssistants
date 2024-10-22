@@ -7,8 +7,6 @@ import { URL } from 'url';
 import {memory_db} from './server.js';
 
 
-const __dirname = new URL('.', import.meta.url).pathname;
-
 let assistants = {}
 //let tools = [{ role:"function", type: "code_interpreter" }, { role:"function",type: "retrieval" }]
 let tools = [];
@@ -17,6 +15,8 @@ let tools = [];
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });
+const __dirname = process.cwd();
+
 // Define global variables focus to keep track of the assistant, file, thread and run
 let focus = { assistant_id: "", assistant_name: "", dir_path: "",news_path:"", thread_id: "", message: "", run_id: "", run_status: "", vector_store_id:"" ,embed_type: "openai"}
 
@@ -221,6 +221,8 @@ const write_assistant_function = async (name, instructions) => {
     import fs from 'fs';
     import { get } from 'http';
     import { run_named_assistant } from '../write_run_named_assistant.js';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
     const execute = async (name, instructions) => {
         let message = await run_named_assistant("${name}", instructions);
@@ -302,4 +304,78 @@ const write_tool_function = async (toolname, thefunc) => {
 
     console.log( `The ${toolname} tool has been created.`);
 }
-export {openai, __dirname, focus, assistants, tools, get_and_run_tool, extract_assistant_id, create_or_get_assistant, create_thread, getFunctions, run_named_assistant, write_assistant_function, write_tool_function};
+
+// Function to read files from a directory and return their content
+const readFilesFromDirectory = (directory) => {
+  const files = fs.readdirSync(directory);
+  return files.map((file) => {
+    const filePath = path.join(directory, file);
+    const content = fs.readFileSync(filePath, 'utf8');
+    return { file, content };
+  });
+};
+
+// Function to chunk text into smaller parts
+const chunkText = (text, chunkSize = 500) => {
+  const chunks = [];
+  for (let i = 0; i < text.length; i += chunkSize) {
+    chunks.push(text.substring(i, i + chunkSize));
+  }
+  return chunks;
+};
+
+// Function to embed text using sentence-transformers
+
+// Function to embed text using OpenAI's embedding API
+const embedChunks = async (chunks) => {
+    let embeddings = await Promise.all(
+      chunks.map(async (chunk) => {
+        const response = await openai.embeddings.create({
+            model: "text-embedding-3-small",
+            input: chunk,
+            embedding_format: "float"
+        });
+        //console.log("Embedding: " + response.data[0].embedding);
+        return response.data[0].embedding;
+      })
+    );
+    return embeddings;
+  };
+// Function to compute similarity between query and embeddings
+const cosineSimilarity = (vecA, vecB) => {
+  let dotProduct = 0.0;
+  let normA = 0.0;
+  let normB = 0.0;
+  for (let i = 0; i < vecA.length; i++) {
+    dotProduct += vecA[i] * vecB[i];
+    normA += vecA[i] ** 2;
+    normB += vecB[i] ** 2;
+  }
+  return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+};
+
+// Function to find the most relevant chunks based on query
+const findRelevantChunks = (queryEmbedding, chunkEmbeddings, topK = 3) => {
+  const similarities = chunkEmbeddings.map(chunkEmbedding =>
+    cosineSimilarity(queryEmbedding, chunkEmbedding)
+  );
+  const ranked = similarities
+    .map((sim, idx) => ({ sim, idx }))
+    .sort((a, b) => b.sim - a.sim)
+    .slice(0, topK);
+  return ranked.map(rank => rank.idx);
+};
+
+// Function to save embeddings and chunks to the Embed directory
+const saveEmbeddings = (fileName, chunks, embeddings) => {
+  const filePath = path.join('embed', `${fileName}.json`);
+  const data = chunks.map((chunk, idx) => ({
+    chunk,
+    embedding: embeddings[idx]
+  }));
+
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+};
+
+
+export {openai, __dirname, focus, assistants, tools, get_and_run_tool, extract_assistant_id, create_or_get_assistant, create_thread, getFunctions, run_named_assistant, write_assistant_function, write_tool_function, readFilesFromDirectory, chunkText, embedChunks, cosineSimilarity, findRelevantChunks, saveEmbeddings};
