@@ -1,7 +1,7 @@
 # Assistant Manager Builder Mark 0.0.5
-## This Demo's 2 main capabilities 1) is memory storate and 2) Embedding files either locally or on OpenAI Assistant with VectorDB
+## This Demo's 2 main capabilities 1) memory store for facts learned from prompts 2) RAG Embedding files either locally or on OpenAI Assistant with VectorDB
 
-## Simulate Data Storage called MemAssistant that mimics MemGPT
+## Simulate Data Storage called MemAssistant that mimics MemGPT (see MemGPT paper online)
 
 Initially for testing we will store data in JSON structure and write out to JSON
 
